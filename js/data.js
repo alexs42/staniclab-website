@@ -370,7 +370,8 @@ const LAB_DATA = {
     {
       "name": "Rhesus Macaque",
       "strength": "Gold standard primate model; cross-gestational sampling",
-      "use": "Spatial atlas, PCOS pilot"
+      "use": "Spatial atlas, PCOS pilot",
+      "partner": "In partnership with Dr. Jenna Schmidt, Wisconsin National Primate Research Center"
     },
     {
       "name": "Human",
@@ -385,7 +386,8 @@ const LAB_DATA = {
     {
       "name": "MPS (Vessel-on-chip)",
       "strength": "Controlled conditions; therapeutic testing",
-      "use": "PE immune-endothelial crosstalk"
+      "use": "PE immune-endothelial crosstalk",
+      "partner": "In partnership with Dr. Maria Virumbrales-Munoz, Biomedical Engineering"
     }
   ],
   "methods": [

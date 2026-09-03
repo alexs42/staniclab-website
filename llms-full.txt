@@ -123,10 +123,10 @@ Riley Huddleston (AE-PCOS 2025 travel award), Emily Grimes (Hilldale Fellowship,
 
 ## Model Systems
 
-- **Rhesus Macaque**: Gold standard primate model; cross-gestational sampling. Used for spatial atlas and PCOS pilot.
+- **Rhesus Macaque**: Gold standard primate model; cross-gestational sampling. Used for spatial atlas and PCOS pilot. Led in partnership with Dr. Jenna Schmidt (Wisconsin National Primate Research Center).
 - **Human**: Clinical translation and biomarker validation. Used for CITE-seq and clinical sample analysis.
 - **Mouse**: Genetic manipulation and fate mapping. Used for T-bet/NK cell trafficking studies.
-- **MPS (Vessel-on-chip)**: Controlled conditions for therapeutic testing. Used for PE immune-endothelial crosstalk.
+- **MPS (Vessel-on-chip)**: Controlled conditions for therapeutic testing. Used for PE immune-endothelial crosstalk. Led in partnership with Dr. Maria Virumbrales-Munoz (Biomedical Engineering, UW-Madison).
 
 ---
 
