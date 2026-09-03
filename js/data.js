@@ -47,7 +47,11 @@ const LAB_DATA = {
         ],
         "bio": "Jessica earned her BS from California State University Long Beach and MS from California State University Los Angeles before joining UW-Madison for her PhD in the Endocrinology and Reproductive Physiology program, where her doctoral work produced foundational studies on decidual innate lymphoid cells and computational flow cytometry at the maternal-fetal interface. Her postdoctoral training spanned the Stanic and Golos laboratories, building expertise across human reproductive immunology and nonhuman primate placental biology. Now as Scientist I with an NIH K01 (NIAID), she leads a research program investigating how sterile placental inflammation programs the fetal immune system using a rhesus macaque model at WNPRC, supported by additional NIH L70 and WNPRC Pilot awards. Her group developed the serial intravascular staining technique for deciphering leukocyte trafficking through the primate decidua and the cytoPipe computational pipeline for high-parameter flow cytometry. She has mentored five undergraduate researchers and serves as a peer reviewer for multiple reproductive immunology journals.",
         "initials": "JV",
-        "photo": "images/team/vazquez.jpg"
+        "photo": "images/team/vazquez.jpg",
+        "awards": [
+          "SRI President's Presenter Award (2018)",
+          "AAI Minority Scientist Travel Award (2020, 2023–2025)"
+        ]
       },
       {
         "name": "Dr. Andrea Wegrzynowicz",
@@ -62,7 +66,12 @@ const LAB_DATA = {
         ],
         "bio": "Andrea earned her BS from Lafayette College, where she spent three years studying prion-like proteins in budding yeast, before completing her PhD in biochemistry at UW-Madison under Dr. Katherine Henzler-Wildman. Her doctoral research on small multidrug resistance transporters demonstrated that these proteins can confer either drug resistance or susceptibility depending on substrate, funded by an NIH F31 fellowship from NIAID. She joined the Stanic Lab in 2024 as an iPEnd T32 postdoctoral fellow, bringing a distinctive combination of protein biochemistry, biomolecular NMR, and computational biology to the study of ovarian immunology. Her CITE-seq analyses of follicular fluid from PCOS and control patients revealed that ovarian immune dysregulation in PCOS is distinct from peripheral blood signatures, challenging the prevailing systemic inflammation hypothesis. She is co-mentored by Dr. Laura Cooney (clinical PCOS) and Dr. Samantha Schon (U Michigan) and also leads bioinformatic analysis for the macaque spatial transcriptomics atlas.",
         "initials": "AW",
-        "photo": "images/team/wegrzynowicz.png"
+        "photo": "images/team/wegrzynowicz.png",
+        "roleNow": "Assistant Professor, Colby College",
+        "awards": [
+          "SRI President's Presenter Award (2026)",
+          "Best Oral Presentation, Madison Scholars Symposium (2025)"
+        ]
       },
       {
         "name": "Dr. Logan Keding",
@@ -98,7 +107,11 @@ const LAB_DATA = {
         ],
         "bio": "Mona is a physician-scientist from Alexandria, Egypt, where she earned her medical degree (MBBCh) and MSc in immunology from Alexandria University. Before joining UW-Madison, she held a faculty appointment as Assistant Lecturer in the Department of Immunology and Allergy at the Medical Research Institute, teaching six graduate-level immunology modules and conducting research on macrophage innate immune receptors and cytokine responses in H. pylori infection. Her dissertation research in the Endocrinology and Reproductive Physiology program uses T-bet fate-mapping mouse models to track decidual NK cell trafficking and proliferation across gestation, combining intravascular staining, spectral flow cytometry, and confocal imaging. This work revealed gestational stage-specific transcriptional adaptation of decidual NK cells, recently published in the American Journal of Reproductive Immunology, and has been presented as oral abstracts at SRI and ASRI.",
         "initials": "MM",
-        "photo": "images/team/mohamed.png"
+        "photo": "images/team/mohamed.png",
+        "awards": [
+          "ASRI Travel Award (2025)",
+          "ASRI Trainee Poster Competition Finalist (2025)"
+        ]
       },
       {
         "name": "Marco Cordero",
@@ -114,7 +127,11 @@ const LAB_DATA = {
         ],
         "bio": "Marco is a first-generation college student who earned his BS in neuroscience from UC Riverside and MS in biomedical science from San Francisco State University, where he received the competitive CIRM Bridges to Stem Cell Research Fellowship. At UCSF, he worked with Dr. Tippi MacKenzie on prenatal gene therapy approaches, contributing to studies on alpha-thalassemia gene correction published in Cell Reports and prenatal antisense oligonucleotide treatment for spinal muscular atrophy published in Science Translational Medicine. He brings experience in iPSC culture, CRISPR gene editing, and confocal imaging to his PhD work in the Endocrinology and Reproductive Physiology program, co-mentored by Dr. Stanic and Dr. Laura Hernandez (Animal and Dairy Sciences). His dissertation focuses on digital 2D and 3D pathology of the human placenta, developing confocal imaging and whole-mount clearing methods to characterize placental architecture, with committee members Dr. Maria Virumbrales-Munoz (BME) and Dr. Joao Dorea (CALS, AI/ML).",
         "initials": "MC",
-        "photo": "images/team/cordero.jpg"
+        "photo": "images/team/cordero.jpg",
+        "awards": [
+          "CIRM Bridges Science Masters Fellowship (2023)",
+          "SciMed Graduate Research Scholars Fellowship, UW–Madison (2025–2026)"
+        ]
       }
     ],
     "specialist": [
@@ -130,7 +147,11 @@ const LAB_DATA = {
         ],
         "bio": "Fernanda built her career at UW-Madison from animal caretaker through certified veterinary technician to research specialist, developing expertise across increasingly sophisticated molecular and immunological platforms. Before joining the Stanic Lab, she contributed to cholesterol metabolism research in the Parks Lab, co-authoring a study in Cell Metabolism that integrated mouse liver co-expression networks with human lipid GWAS data. As the lab's research specialist since 2023, she manages high-dimensional spectral flow cytometry, LEGENDplex multiplex immunoassays, CITE-seq sample preparation, and primary cell isolation across human, mouse, and rhesus macaque model systems. She coordinates all technical aspects of the multi-institutional NIH R01 collaboration with the Medical College of Wisconsin and supports virtually every project in the lab, from decidual immune profiling to follicular fluid cytokine measurements. Nominated for the SMPH Dean's Research Staff Award, she has co-authored eight peer-reviewed publications and mentored over twelve trainees including undergraduates, medical students, and residents.",
         "initials": "FL",
-        "photo": "images/team/fernanda.png"
+        "photo": "images/team/fernanda.png",
+        "awards": [
+          "Nominee, SMPH Dean's Research Staff Award (2025)",
+          "Associate degree in Veterinary Technology with Honors, Madison College (2015)"
+        ]
       }
     ],
     "undergraduate": [
@@ -138,25 +159,29 @@ const LAB_DATA = {
         "name": "Riley Huddleston",
         "project": "PCOS rhesus macaque model",
         "initials": "RH",
-        "bio": "Riley is conducting her honors thesis on the lab's PCOS rhesus macaque program, characterizing hormonal and immune profiles in naturally hyperandrogenic macaques as a translational model for human PCOS, in collaboration with Dr. Jenna Schmidt at WNPRC."
+        "bio": "Riley is conducting her honors thesis on the lab's PCOS rhesus macaque program, characterizing hormonal and immune profiles in naturally hyperandrogenic macaques as a translational model for human PCOS, in collaboration with Dr. Jenna Schmidt at WNPRC.",
+        "award": "AE-PCOS 2025 travel award for a first-author oral presentation · UW–Madison Dean's List"
       },
       {
         "name": "Emily Grimes",
         "project": "PCOS immunology",
-        "award": "Hilldale Fellowship",
+        "award": "Hilldale Undergraduate Research Fellowship · Phi Beta Kappa",
         "initials": "EG",
         "bio": "Emily received a Hilldale Undergraduate Research Fellowship for her work on the lab's PCOS immunology program. She contributes to manuscript figure analysis and pilot tissue culture experiments investigating androgen effects on immune cell cytokine secretion, in collaboration with Dr. Laura Cooney."
       },
       {
         "name": "Eavan Finnerty",
-        "project": "Research assistant",
-        "initials": "EF"
+        "project": "Flow cytometry and multiplex immunoassays",
+        "initials": "EF",
+        "award": "UW–Madison Sophomore Research Fellowship (2026)",
+        "bio": "Eavan is a UW–Madison undergraduate majoring in neurobiology who joined the lab in fall 2025, beginning with a gene expression and gene ontology analysis from the lab's PCOS program. Awarded a UW–Madison Sophomore Research Fellowship in 2026, she has since trained in flow cytometry and bead-based multiplex cytokine immunoassays and now runs cytokine and angiogenic-factor panels for a preeclampsia biomarker study and immune profiling of specimens from the lab's PCOS rhesus macaque program, while also coordinating lab organization and purchasing. She has been mentored by Dr. Andrea Wegrzynowicz, Fernanda Leyva Jaimes, and Mona Mohamed."
       },
       {
         "name": "Roghyah Hasan",
         "project": "Research assistant",
         "initials": "RoH",
-        "bio": "Roghyah is a freshman in molecular and cell biology who brings clinical research experience from over 400 hours as a UW Health apprentice at the Carbone Cancer Center and prior STEM research on lignin biomass characterization."
+        "bio": "Roghyah is a freshman in molecular and cell biology who brings clinical research experience from over 400 hours as a UW Health apprentice at the Carbone Cancer Center and prior STEM research on lignin biomass characterization.",
+        "award": "National Honor Society"
       },
       {
         "name": "Xiang Yi Chen",
@@ -164,9 +189,9 @@ const LAB_DATA = {
         "initials": "XC"
       },
       {
-        "name": "Arya Banerjee",
+        "name": "Arya Choudhury",
         "project": "Placental annotation; neural networks",
-        "initials": "AB",
+        "initials": "AC",
         "bio": "Arya is developing computational approaches for automated placental annotation as part of the lab's digital pathology pipeline, building the foundation for machine learning-based histological analysis under the mentorship of Dr. Logan Keding."
       },
       {
@@ -175,7 +200,8 @@ const LAB_DATA = {
         "role": "M1 Medical Student, Shapiro Research Fellow",
         "project": "PCOS rhesus macaque immune profiling",
         "initials": "SS",
-        "bio": "Sophia is an M1 medical student at UW School of Medicine and Public Health pursuing the Path of Distinction in Research. She earned her BS in biology with honors from UW-Madison, where her thesis with Dr. Laura Hernandez elucidated an SSRI-sensitive serotonin pathway in lactation-associated bone metabolism, contributing to publications in Biology of Reproduction and Reproduction, Fertility and Development. A Hilldale Fellow and Ginsberg Family Award recipient, she brings experience in RT-qPCR, immunohistochemistry, and ELISA from the Hernandez and Wiltbank laboratories, where she also trained nine undergraduate researchers. Her Shapiro Summer Research project focuses on immune profiling in the lab's PCOS rhesus macaque program, in collaboration with Dr. Jenna Schmidt at WNPRC."
+        "bio": "Sophia is an M1 medical student at UW School of Medicine and Public Health pursuing the Path of Distinction in Research. She earned her BS in biology with honors from UW-Madison, where her thesis with Dr. Laura Hernandez elucidated an SSRI-sensitive serotonin pathway in lactation-associated bone metabolism, contributing to publications in Biology of Reproduction and Reproduction, Fertility and Development. A Hilldale Fellow and Ginsberg Family Award recipient, she brings experience in RT-qPCR, immunohistochemistry, and ELISA from the Hernandez and Wiltbank laboratories, where she also trained nine undergraduate researchers. Her Shapiro Summer Research project focuses on immune profiling in the lab's PCOS rhesus macaque program, in collaboration with Dr. Jenna Schmidt at WNPRC.",
+        "award": "Hilldale Research Fellowship (2023) · Ginsberg Family Award (2024)"
       },
       {
         "name": "Eiman Mir",
@@ -188,7 +214,16 @@ const LAB_DATA = {
         "role": "M2 Medical Student, Shapiro Research Fellow",
         "project": "Maternal hypertensive disorders biomarker research",
         "initials": "ET",
-        "bio": "Elizabeth is an M2 medical student at UW School of Medicine and Public Health and Shapiro Summer Research Fellow whose project examines longitudinal serum biomarkers through ten days postpartum in patients with and without hypertensive disorders of pregnancy, in collaboration with Dr. Kara Hoppe (MFM). She presented this work at the Annual Medical Student Research Forum in November 2025 and continues contributing to the lab's translational clinical research program."
+        "bio": "Elizabeth is an M2 medical student at UW School of Medicine and Public Health and Shapiro Summer Research Fellow whose project examines longitudinal serum biomarkers through ten days postpartum in patients with and without hypertensive disorders of pregnancy, in collaboration with Dr. Kara Hoppe (MFM). She presented this work at the Annual Medical Student Research Forum in November 2025 and continues contributing to the lab's translational clinical research program.",
+        "award": "Outstanding Medical Student Award, UW OB/GYN Research Day (2026) · Shapiro Summer Research Fellowship (2025)"
+      },
+      {
+        "name": "Mercy Kim",
+        "role": "Visiting undergraduate, Bowdoin College (Summer 2026)",
+        "project": "PCOS rhesus macaque follicular-fluid immune profiling",
+        "award": "Bowdoin College summer research fellowship (2026)",
+        "initials": "MK",
+        "bio": "Mercy joined the lab for a ten-week summer research fellowship in 2026 as a visiting undergraduate from Bowdoin College, working with Dr. Jessica Vazquez at the Wisconsin National Primate Research Center. She profiled cytokines in follicular fluid from the lab's PCOS rhesus macaque program using bead-based multiplex immunoassays and flow cytometry, and presented her analyses, including a protein-normalized comparison of cytokine levels, at lab meetings."
       }
     ]
   },
@@ -216,6 +251,23 @@ const LAB_DATA = {
       ]
     },
     {
+      "id": "pcos",
+      "title": "PCOS Immune Mechanisms",
+      "subtitle": "Ovarian-specific inflammation and immunometabolic profiling",
+      "summary": "Challenging the assumption that PCOS inflammation is purely systemic. Our CITE-seq studies reveal ovarian-specific immune signatures distinct from peripheral blood, and a paradoxical pattern of lower cytokine levels but upregulated inflammatory responsiveness.",
+      "icon": "layers",
+      "image": "images/themes/theme-pcos.png",
+      "color": "#B45309",
+      "detail": "Polycystic ovary syndrome affects up to 15% of reproductive-age women, yet its immune dimensions have been largely overlooked. Our PCOS program, led by Dr. Andrea Wegrzynowicz in collaboration with Dr. Laura Cooney (REI) and Dr. Samantha Schon (U Michigan), produced the first high-dimensional immune profiling of follicular fluid and systemic circulation in PCOS patients. Using CITE-seq, we discovered that ovarian immune dysregulation in PCOS is distinct from peripheral blood signatures — a finding that fundamentally challenges the prevailing systemic inflammation hypothesis. Single-cell analysis of follicular fluid further revealed dysregulation of ovulatory immune function during ovarian stimulation. We have also reviewed the broader landscape of immune dysfunction in PCOS and maternal complications of pregnancy associated with the syndrome. Ongoing work explores the rhesus macaque as a translational model for PCOS immune mechanisms.",
+      "keyPapers": [
+        "41766605",
+        "40861442",
+        "41175857",
+        "37195871"
+      ],
+      "grants": []
+    },
+    {
       "id": "pe",
       "title": "Preeclampsia Immunopathology",
       "subtitle": "Immune-endothelial crosstalk and checkpoint dysregulation",
@@ -232,24 +284,13 @@ const LAB_DATA = {
       ],
       "grants": [
         "R01 HL163623-01A1"
-      ]
-    },
-    {
-      "id": "pcos",
-      "title": "PCOS Immune Mechanisms",
-      "subtitle": "Ovarian-specific inflammation and immunometabolic profiling",
-      "summary": "Challenging the assumption that PCOS inflammation is purely systemic. Our CITE-seq studies reveal ovarian-specific immune signatures distinct from peripheral blood, and a paradoxical pattern of lower cytokine levels but upregulated inflammatory responsiveness.",
-      "icon": "layers",
-      "image": "images/themes/theme-pcos.png",
-      "color": "#B45309",
-      "detail": "Polycystic ovary syndrome affects up to 15% of reproductive-age women, yet its immune dimensions have been largely overlooked. Our PCOS program, led by Dr. Andrea Wegrzynowicz in collaboration with Dr. Laura Cooney (REI) and Dr. Samantha Schon (U Michigan), produced the first high-dimensional immune profiling of follicular fluid and systemic circulation in PCOS patients. Using CITE-seq, we discovered that ovarian immune dysregulation in PCOS is distinct from peripheral blood signatures — a finding that fundamentally challenges the prevailing systemic inflammation hypothesis. Single-cell analysis of follicular fluid further revealed dysregulation of ovulatory immune function during ovarian stimulation. We have also reviewed the broader landscape of immune dysfunction in PCOS and maternal complications of pregnancy associated with the syndrome. Ongoing work explores the rhesus macaque as a translational model for PCOS immune mechanisms.",
-      "keyPapers": [
-        "41766605",
-        "40861442",
-        "41175857",
-        "37195871"
       ],
-      "grants": []
+      "keyPaperNotes": {
+        "35750926": "with the Bazalakova lab",
+        "36717462": "with the Boeldt lab",
+        "41001725": "with the Bird lab",
+        "41426449": "with the Bazalakova lab"
+      }
     },
     {
       "id": "tissue",
@@ -724,6 +765,12 @@ const LAB_DATA = {
   ],
   "collaborators": [
     {
+      "name": "Dr. Rashmi Sood",
+      "affiliation": "Medical College of Wisconsin",
+      "area": "Shared NIH R01 (HL163623, NHLBI): coagulation–inflammation crosstalk in placental abruption. In mice lacking the anticoagulant receptor EPCR, decidual blood clots progress to abruption through thrombin signaling and an acute leukocyte response, changes also detected in human placentas. Our lab contributes the immune and tissue analysis: spatial transcriptomics and digital histopathology across the decidua and placenta, and immune-cell profiling of the decidua.",
+      "theme": "immunology"
+    },
+    {
       "name": "Dr. Jenna Schmidt",
       "affiliation": "WNPRC / OB-GYN, UW-Madison",
       "area": "Macaque biology, NHP models",
@@ -778,10 +825,10 @@ const LAB_DATA = {
       "theme": "clinical"
     },
     {
-      "name": "Dr. Rashmi Sood",
-      "affiliation": "Medical College of Wisconsin",
-      "area": "Decidual immune regulation in thrombophilia-associated abruption",
-      "theme": "immunology"
+      "name": "Dr. João Dorea",
+      "affiliation": "Animal and Dairy Sciences, CALS, UW-Madison",
+      "area": "",
+      "theme": "computational"
     }
   ],
   "societiesLabel": "Professional Societies",
@@ -1137,7 +1184,10 @@ const LAB_DATA = {
       "currentPosition": "Postdoctoral Fellow, Dr. Manish Patankar's Laboratory, UW-Madison",
       "photo": "images/team/banerjee.jpg",
       "initials": "SB",
-      "bio": "Soma is a physician-scientist who earned her MBBS from Calcutta Medical College and completed OB-GYN residency in India before pursuing research training at UW-Madison. After an MS with Dr. Manish Patankar studying glucose transport in immune cells, she returned for her PhD in the Stanic Lab, where she founded the PCOS immune profiling program. Using high-dimensional flow cytometry and CITE-seq, her doctoral work produced the first comprehensive immune characterization of paired blood and follicular fluid in PCOS patients, demonstrating that ovarian immune dysregulation is distinct from peripheral blood signatures. She defended her PhD in July 2024 and is now an iPEnd T32 postdoctoral fellow in Dr. Patankar's laboratory at UW-Madison."
+      "bio": "Soma is a physician-scientist who earned her MBBS from Calcutta Medical College and completed OB-GYN residency in India before pursuing research training at UW-Madison. After an MS with Dr. Manish Patankar studying glucose transport in immune cells, she returned for her PhD in the Stanic Lab, where she founded the PCOS immune profiling program. Using high-dimensional flow cytometry and CITE-seq, her doctoral work produced the first comprehensive immune characterization of paired blood and follicular fluid in PCOS patients, demonstrating that ovarian immune dysregulation is distinct from peripheral blood signatures. She defended her PhD in July 2024 and is now an iPEnd T32 postdoctoral fellow in Dr. Patankar's laboratory at UW-Madison.",
+      "awards": [
+        "iPEnd T32 Postdoctoral Fellowship (2024)"
+      ]
     },
     {
       "name": "Dr. Yan Li",
@@ -1148,16 +1198,21 @@ const LAB_DATA = {
       "currentPosition": "Pathology Resident, LSU Health Shreveport",
       "photo": "images/team/yanli.jpg",
       "initials": "YL",
-      "bio": "Yan earned his MD from Shandong Medical University in China and PhD at UW-Madison before joining the Stanic Lab as a Research Associate, where he founded the murine pregnancy model program. His first-author studies established the decidual-placental immune landscape during syngeneic pregnancy and characterized RORγt-expressing innate lymphoid cell dynamics at the maternal-fetal interface, demonstrating their dispensability for reproductive efficiency. His foundational mouse work directly enabled the T-bet fate mapping studies that continue to define the lab's NK cell biology program. An AAI Career Development Award recipient, he is now a pathology resident at LSU Health Shreveport."
+      "bio": "Yan earned his MD from Shandong Medical University in China and PhD at UW-Madison before joining the Stanic Lab as a Research Associate, where he founded the murine pregnancy model program. His first-author studies established the decidual-placental immune landscape during syngeneic pregnancy and characterized RORγt-expressing innate lymphoid cell dynamics at the maternal-fetal interface, demonstrating their dispensability for reproductive efficiency. His foundational mouse work directly enabled the T-bet fate mapping studies that continue to define the lab's NK cell biology program. An AAI Career Development Award recipient, he is now a pathology resident at LSU Health Shreveport.",
+      "awards": [
+        "AAI Career Development Award (2017)",
+        "Roland K. Meyer Graduate Trainee Award, UW–Madison (2015)"
+      ]
     },
     {
       "name": "Sophia Beaulieu",
       "credentials": "BS",
       "formerRole": "Undergraduate Researcher",
-      "period": "2023-2025",
-      "focus": "",
+      "period": "2023–2025",
+      "focus": "Postpartum serum biomarkers in hypertensive disorders of pregnancy",
       "currentPosition": "",
-      "initials": "SBe"
+      "initials": "SBe",
+      "bio": "Sophia joined the lab in January 2023 as an undergraduate researcher and worked with research specialist Fernanda Leyva Jaimes on the lab's clinical biomarker program, contributing to a study of longitudinal serum biomarkers through ten days postpartum in patients with and without hypertensive disorders of pregnancy that was presented at the 2025 SRI Annual Scientific Meeting. She earned her BS in Biochemistry with a Certificate in Gender and Women's Studies from UW–Madison in May 2025, having been drawn to the lab by an interest in women's health and in the immune cell networks of the maternal-fetal interface."
     }
   ]
 };

@@ -247,8 +247,9 @@
       const papers = (t.keyPapers || []).map(pmid => {
         const p = pubMap[pmid];
         if (!p) return '';
+        const note = (t.keyPaperNotes && t.keyPaperNotes[pmid]) ? ' · ' + t.keyPaperNotes[pmid] : '';
         return '<li><a href="https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/" target="_blank" rel="noopener">' +
-          p.title + '</a> <span class="pub-meta">' + p.journal + ' (' + p.year + ')</span></li>';
+          p.title + '</a> <span class="pub-meta">' + p.journal + ' (' + p.year + ')' + note + '</span></li>';
       }).filter(Boolean).join('');
 
       // Grants

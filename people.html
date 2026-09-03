@@ -21,6 +21,8 @@
   <link rel="stylesheet" href="css/variant-A.css" id="theme-css">
   <link rel="stylesheet" href="css/responsive.css">
   <style>
+    .role-former { text-decoration: line-through; text-decoration-color: #C5050C; text-decoration-thickness: 2px; color: var(--text-muted); }
+    .role-arrow { color: #C5050C; }
     .pi-feature {
       display: grid;
       grid-template-columns: 200px 1fr;
@@ -328,7 +330,7 @@
           <div class="avatar">${m.photo ? `<img src="${m.photo}" alt="${m.name}">` : m.initials}</div>
           <div>
             <h4>${m.name}${m.credentials ? ', ' + m.credentials : ''}</h4>
-            <p class="role">${m.role}${m.funding ? ' · ' + m.funding : ''}</p>
+            <p class="role">${m.roleNow ? '<span class="role-former">' + m.role + '</span> <span class="role-arrow" aria-hidden="true">&rarr;</span> ' + m.roleNow : m.role}${m.funding ? ' · ' + m.funding : ''}</p>
             <p class="focus">${m.focus}</p>
             ${awards}
             ${bio}
@@ -376,6 +378,7 @@
             <h4>${a.name}${a.credentials ? ', ' + a.credentials : ''}</h4>
             <p class="role">${a.formerRole} · ${a.period}</p>
             <p class="focus">${a.focus}</p>
+            ${a.awards ? '<p style="font-size:0.7rem;color:var(--accent-secondary);margin-top:0.3em">' + a.awards.join(' · ') + '</p>' : ''}
             ${a.currentPosition ? '<p style="font-size:var(--text-sm);color:var(--accent-secondary);margin-top:0.3em">Now: ' + a.currentPosition + '</p>' : ''}
             ${a.bio ? '<p class="member-bio">' + a.bio + '</p>' : ''}
           </div>

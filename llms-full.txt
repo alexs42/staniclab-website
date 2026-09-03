@@ -53,17 +53,17 @@ Development of next-generation tools including decidual vessel-on-chip microphys
 
 ### Scientists and Postdoctoral Fellows
 
-- **Dr. Jessica Vazquez, PhD** — Scientist I. Focus: immune architecture of the maternal-fetal interface, spatiotemporal mapping in human/NHP models. Funded by NIH K01 (2024-2029). Skills: spectral flow cytometry, Visium spatial transcriptomics, CITE-seq, immunofluorescence.
+- **Dr. Jessica Vazquez, PhD** — Scientist I. Awards: SRI President's Presenter Award (2018), AAI Minority Scientist Travel Award (2020, 2023–2025). Focus: immune architecture of the maternal-fetal interface, spatiotemporal mapping in human/NHP models. Funded by NIH K01 (2024-2029). Skills: spectral flow cytometry, Visium spatial transcriptomics, CITE-seq, immunofluorescence.
 
-- **Dr. Andrea Wegrzynowicz, PhD** — Postdoctoral Fellow. Focus: PCOS immune mechanisms, follicular fluid immune profiling, granulosa-immune cell interactions. Skills: single-cell RNA-seq/CITE-seq analysis, spatial transcriptomics, bioinformatics.
+- **Dr. Andrea Wegrzynowicz, PhD** — Postdoctoral Fellow (2024–2026); now Assistant Professor, Colby College. Awards: SRI President's Presenter Award (2026), Best Oral Presentation, Madison Scholars Symposium (2025). Focus: PCOS immune mechanisms, follicular fluid immune profiling, granulosa-immune cell interactions. Skills: single-cell RNA-seq/CITE-seq analysis, spatial transcriptomics, bioinformatics.
 
 - **Dr. Logan Keding, PhD** — Postdoctoral Fellow. Focus: placental injury modeling, quantitative imaging, digital histopathology biomarkers. Awards: ASRI 2025 Poster Award, IFPA 2025 Oral Presentation Award. Skills: quantitative image analysis, MRI data analysis, flow cytometry.
 
 ### Graduate Students
 
-- **Mona Mohamed, MSc** — PhD Candidate, Endocrinology and Reproductive Physiology Program. Focus: decidual NK cell trafficking and proliferation, T-bet fate mapping. Skills: murine pregnancy models, spectral flow cytometry, confocal imaging.
+- **Mona Mohamed, MD, MSc** — PhD Candidate (ASRI Travel Award and Trainee Poster Competition Finalist, 2025), Endocrinology and Reproductive Physiology Program. Focus: decidual NK cell trafficking and proliferation, T-bet fate mapping. Skills: murine pregnancy models, spectral flow cytometry, confocal imaging.
 
-- **Marco Cordero** — PhD Student, Endocrinology and Reproductive Physiology Program. Focus: digital 2D and 3D pathology, confocal imaging of human placenta. Skills: confocal microscopy, whole-mount clearing, iPSC culture, CRISPR.
+- **Marco Cordero, MS** — PhD Student (CIRM Bridges Fellowship 2023; SciMed GRS Fellowship 2025–2026), Endocrinology and Reproductive Physiology Program. Focus: digital 2D and 3D pathology, confocal imaging of human placenta. Skills: confocal microscopy, whole-mount clearing, iPSC culture, CRISPR.
 
 ### Research Staff
 
@@ -71,24 +71,23 @@ Development of next-generation tools including decidual vessel-on-chip microphys
 
 ### Undergraduate Researchers
 
-Riley Huddleston, Emily Grimes (Hilldale Fellowship), Eavan Finnerty, Roghyah Hasan, Xiang Yi Chen, Arya Banerjee, Sophia Schoenfeld, Eiman Mir.
+Riley Huddleston (AE-PCOS 2025 travel award), Emily Grimes (Hilldale Fellowship, Phi Beta Kappa), Eavan Finnerty (Sophomore Research Fellowship 2026), Roghyah Hasan, Xiang Yi Chen, Arya Choudhury, Sophia Schoenfeld (M1, Shapiro Fellow; Hilldale Fellowship, Ginsberg Family Award), Eiman Mir, Elizabeth Tressler (M2, Shapiro Fellow; Outstanding Medical Student Award 2026), Mercy Kim (visiting from Bowdoin College, summer 2026).
 
 ---
 
 ## Key Collaborators
 
-- **Dr. Jenna Schmidt** — WNPRC / OB-GYN, UW-Madison. Macaque biology, NHP models.
-- **Dr. Ian Bird** — OB-GYN, UW-Madison. Endothelial biology, Ca2+ signaling.
-- **Dr. Laura Cooney** — REI, UW-Madison. Clinical PCOS.
-- **Dr. Maria Virumbrales-Munoz** — BME, UW-Madison. Microphysiological systems.
-- **Dr. Samantha Schon** — University of Michigan. PCOS / obesity, proteomics.
-- **Dr. Oliver Wieben** — Medical Physics, UW-Madison. MRI methodology.
-- **Dr. Andrea Putnam** — Biomolecular Chemistry, UW-Madison. Molecular interactions.
-- **Dr. Irene Ong** — Biostatistics, UW-Madison. Data science, bioinformatics.
-- **Dr. Ryan McAdams** — Pediatrics / Neonatology, UW-Madison. AI/ML.
-- **Dr. Joao Dorea** — CALS, UW-Madison. AI/ML, computer vision.
-
----
+- **Dr. Rashmi Sood** — Medical College of Wisconsin. Shared NIH R01 (HL163623, NHLBI): coagulation–inflammation crosstalk in placental abruption. In mice lacking the anticoagulant receptor EPCR, decidual blood clots progress to abruption through thrombin signaling and an acute leukocyte response, changes also detected in human placentas. Our lab contributes the immune and tissue analysis: spatial transcriptomics and digital histopathology across the decidua and placenta, and immune-cell profiling of the decidua.
+- **Dr. Jenna Schmidt** — WNPRC / OB-GYN, UW-Madison. Macaque biology, NHP models
+- **Dr. Ian Bird** — OB-GYN, UW-Madison. Endothelial biology, Ca2+ signaling
+- **Dr. Laura Cooney** — REI, UW-Madison. Clinical PCOS
+- **Dr. Maria Virumbrales-Munoz** — BME, UW-Madison. Microphysiological systems
+- **Dr. Samantha Schon** — U Michigan. PCOS / obesity, proteomics
+- **Dr. Oliver Wieben** — Medical Physics, UW-Madison. MRI methodology
+- **Dr. Andrea Putnam** — Biomolecular Chemistry, UW-Madison. Molecular interactions
+- **Dr. Irene Ong** — Biostatistics, UW-Madison. Data science, bioinformatics
+- **Dr. Kara Hoppe** — MFM, OB-GYN, UW-Madison. Hypertensive disorders of pregnancy, clinical trials
+- **Dr. João Dorea** — Animal and Dairy Sciences, CALS, UW-Madison.
 
 ## Active NIH Funding
 

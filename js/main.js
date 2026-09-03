@@ -463,9 +463,9 @@ bio: |
       const parent = tierSections[0].parentElement;
       if (parent) {
         const detailedYaml = [
-          ...LAB_DATA.team.senior.map(m => `  - name: "${m.name.replace(/^Dr\.\s*/, '')}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"\n    focus: "${m.focus}"\n    bio: "${(m.bio || '').substring(0, 200)}..."`),
-          ...LAB_DATA.team.graduate.map(m => `  - name: "${m.name}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"\n    focus: "${m.focus}"\n    bio: "${(m.bio || '').substring(0, 200)}..."`),
-          ...(LAB_DATA.team.specialist || []).map(m => `  - name: "${m.name}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"\n    focus: "${m.focus}"`),
+          ...LAB_DATA.team.senior.map(m => `  - name: "${m.name.replace(/^Dr\.\s*/, '')}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"${m.roleNow ? `\n    now: "${m.roleNow}"` : ''}\n    focus: "${m.focus}"\n    bio: "${(m.bio || '').substring(0, 200)}..."`),
+          ...LAB_DATA.team.graduate.map(m => `  - name: "${m.name}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"${m.roleNow ? `\n    now: "${m.roleNow}"` : ''}\n    focus: "${m.focus}"\n    bio: "${(m.bio || '').substring(0, 200)}..."`),
+          ...(LAB_DATA.team.specialist || []).map(m => `  - name: "${m.name}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"${m.roleNow ? `\n    now: "${m.roleNow}"` : ''}\n    focus: "${m.focus}"`),
           ...(LAB_DATA.team.undergraduate || []).map(u => `  - name: "${u.name}"\n    role: "${u.role || 'Undergraduate Researcher'}"\n    project: "${u.project}"${u.bio ? '\n    bio: "' + (u.bio || '').substring(0, 150) + '..."' : ''}`)
         ].join('\n');
         const alumniYaml = (LAB_DATA.alumni || []).map(a =>
