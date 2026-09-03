@@ -57,6 +57,14 @@
         jobTitle: m.role
       }))
     ],
+    contactPoint: LAB_DATA.lab.contact ? [{
+      '@type': 'ContactPoint',
+      contactType: 'inquiries',
+      name: LAB_DATA.lab.contact.name + ', ' + LAB_DATA.lab.contact.title,
+      email: LAB_DATA.lab.contact.email,
+      telephone: LAB_DATA.lab.contact.phone,
+      url: LAB_DATA.lab.contact.profileUrl
+    }] : undefined,
     knowsAbout: LAB_DATA.themes.map(t => t.title),
     funding: LAB_DATA.grants.map(g => ({
       '@type': 'Grant',

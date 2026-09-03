@@ -10,7 +10,16 @@ const LAB_DATA = {
     "address": "",
     "twitter": "@StanicLabUW",
     "departmentUrl": "https://www.obgyn.wisc.edu",
-    "uwUrl": "https://www.wisc.edu"
+    "uwUrl": "https://www.wisc.edu",
+    "contact": {
+      "name": "Ally Torres",
+      "title": "Medical Program Assistant",
+      "email": "atorres36@wisc.edu",
+      "phone": "608-263-6066",
+      "profileUrl": "https://www.obgyn.wisc.edu/directory/profile/259426545",
+      "office": "McConnell Hall, 2nd Floor, 1010 Mound St., Madison, WI 53715",
+      "note": "Inquiries and meeting requests for Dr. Stanic-Kostic and the lab are coordinated by Ally Torres, Medical Program Assistant."
+    }
   },
   "pi": {
     "name": "Dr. Aleksandar Stanic Kostic",
@@ -27,7 +36,12 @@ const LAB_DATA = {
     "links": {
       "orcid": "https://orcid.org/0000-0003-1946-6436",
       "pubmed": "https://www.ncbi.nlm.nih.gov/myncbi/aleksandar.stanic-kostic.2/bibliography/public/",
-      "scholar": "https://scholar.google.com/citations?user=0w_z_EoAAAAJ&amp;hl=en"
+      "scholar": "https://scholar.google.com/citations?user=0w_z_EoAAAAJ",
+      "OB-GYN Faculty Profile": "https://www.obgyn.wisc.edu/directory/profile/46689171",
+      "Stanic-Kostic Research Team (OB-GYN)": "https://www.obgyn.wisc.edu/stanic-kostic-research-team#home",
+      "Endocrinology and Reproductive Physiology Program": "https://erp.wisc.edu/staff/stanic-kostic-aleksandar/",
+      "Immunology Program": "https://immunology.wisc.edu/staff/stanic-md-phd-aleksandar/",
+      "UW Health Provider Profile": "https://www.uwhealth.org/providers/aleksandar-stanic-kostic-md-phd"
     },
     "photo": "images/team/stanic.jpg"
   },
@@ -224,6 +238,20 @@ const LAB_DATA = {
         "award": "Bowdoin College summer research fellowship (2026)",
         "initials": "MK",
         "bio": "Mercy joined the lab for a ten-week summer research fellowship in 2026 as a visiting undergraduate from Bowdoin College, working with Dr. Jessica Vazquez at the Wisconsin National Primate Research Center. She profiled cytokines in follicular fluid from the lab's PCOS rhesus macaque program using bead-based multiplex immunoassays and flow cytometry, and presented her analyses, including a protein-normalized comparison of cytokine levels, at lab meetings."
+      }
+    ],
+    "administration": [
+      {
+        "name": "Ally Torres",
+        "role": "Medical Program Assistant",
+        "focus": "Administrative support for Dr. Stanic-Kostic and the Division of Reproductive Sciences; first point of contact for inquiries and meeting requests",
+        "email": "atorres36@wisc.edu",
+        "phone": "608-263-6066",
+        "profileUrl": "https://www.obgyn.wisc.edu/directory/profile/259426545",
+        "office": "McConnell Hall, 2nd Floor, 1010 Mound St., Madison, WI 53715",
+        "bio": "Ally is the Medical Program Assistant who supports Dr. Stanic-Kostic in his role as Director of the Division of Reproductive Sciences, together with faculty across the Reproductive Sciences and Reproductive and Population Health divisions of the Department of Obstetrics and Gynecology. She coordinates scheduling and correspondence for the lab. Prospective trainees, collaborators, and visitors should reach the lab through her; she routes messages to Dr. Stanic-Kostic and the team.",
+        "photo": "images/team/torres.jpg",
+        "initials": "AT"
       }
     ]
   },

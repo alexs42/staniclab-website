@@ -238,6 +238,14 @@
           <!-- Rendered by JS -->
         </div>
       </div>
+
+      <!-- Administration Team -->
+      <div class="tier-section">
+        <h3>Administration Team</h3>
+        <div class="grid grid-1" id="admin-grid">
+          <!-- Rendered by JS -->
+        </div>
+      </div>
     </div>
   </section>
 
@@ -276,7 +284,8 @@
         <span class="section-label">Opportunities</span>
         <h3>Join the Lab</h3>
         <p>We are a mentorship-driven lab that values intellectual curiosity, collaborative spirit, and diverse perspectives. We welcome inquiries from prospective postdocs, graduate students, medical students, and undergraduates interested in reproductive immunology, spatial transcriptomics, computational biology, or translational research.</p>
-        <a href="mailto:astanic@wisc.edu" class="btn btn-primary">Get in Touch</a>
+        <p id="join-contact"><!-- Rendered from data.js --></p>
+        <div id="join-actions" style="display:flex;gap:0.75rem;flex-wrap:wrap;justify-content:center"><!-- Rendered from data.js --></div>
       </div>
     </div>
   </section>
@@ -348,6 +357,38 @@
     document.getElementById('senior-grid').innerHTML = LAB_DATA.team.senior.map(renderMemberCard).join('');
     document.getElementById('grad-grid').innerHTML = LAB_DATA.team.graduate.map(renderMemberCard).join('');
     document.getElementById('staff-grid').innerHTML = LAB_DATA.team.specialist.map(renderMemberCard).join('');
+
+    // Administration team: same card, plus contact details
+    function renderAdminCard(m) {
+      const contact = [
+        m.email ? '<a href="' + safeHref('mailto:' + m.email) + '">' + m.email + '</a>' : '',
+        m.phone || '',
+        m.profileUrl ? '<a href="' + safeHref(m.profileUrl) + '" target="_blank" rel="noopener">Department profile</a>' : ''
+      ].filter(Boolean).join(' · ');
+      const bio = m.bio ? `<p class="member-bio">${m.bio}</p>` : '';
+      return `
+        <div class="member-card">
+          <div class="avatar">${m.photo ? `<img src="${m.photo}" alt="${m.name}">` : m.initials}</div>
+          <div>
+            <h4>${m.name}${m.credentials ? ', ' + m.credentials : ''}</h4>
+            <p class="role">${m.role}</p>
+            <p class="focus">${m.focus || ''}</p>
+            ${contact ? '<p class="focus">' + contact + '</p>' : ''}
+            ${bio}
+          </div>
+        </div>`;
+    }
+    const adminGrid = document.getElementById('admin-grid');
+    if (adminGrid) adminGrid.innerHTML = (LAB_DATA.team.administration || []).map(renderAdminCard).join('');
+
+    // Join the Lab: contact routing from data.js
+    const joinContact = LAB_DATA.lab.contact;
+    if (joinContact) {
+      document.getElementById('join-contact').textContent = joinContact.note || '';
+      document.getElementById('join-actions').innerHTML =
+        (joinContact.email ? '<a href="' + safeHref('mailto:' + joinContact.email) + '" class="btn btn-primary">Email ' + joinContact.name + '</a>' : '') +
+        (joinContact.profileUrl ? '<a href="' + safeHref(joinContact.profileUrl) + '" class="btn btn-ghost" target="_blank" rel="noopener">Department Profile</a>' : '');
+    }
 
     document.getElementById('undergrad-grid').innerHTML = LAB_DATA.team.undergraduate.map(u => `
       <div class="undergrad-card${u.bio ? ' has-bio' : ''}">

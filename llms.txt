@@ -10,11 +10,11 @@
 - [News](news.html): Lab news, UW OB/GYN news mirror, photo gallery, timeline
 
 ## Research Themes
-1. **Maternal-Fetal Tolerance** — Decidual T cell biology, temporal immune dynamics, restraint gene mechanisms
-2. **Preeclampsia Immunopathology** — Immune-endothelial crosstalk, checkpoint dysregulation, network topology
-3. **PCOS Immune Mechanisms** — Ovarian-specific inflammation, CITE-seq profiling, macaque models
-4. **Spatial Transcriptomics** — Cross-gestational atlas of primate maternal-fetal interface (Visium FFPE)
-5. **Translational Platforms** — Microphysiological systems, digital pathology, AI/ML integration
+1. **Decidual Immune Regulation** — T cells, innate lymphoid cells, and immune-vascular crosstalk at the maternal-fetal interface
+2. **PCOS Immune Mechanisms** — Ovarian-specific inflammation and immunometabolic profiling
+3. **Preeclampsia Immunopathology** — Immune-endothelial crosstalk and checkpoint dysregulation
+4. **Tissue Architecture &amp; Injury** — Quantitative, multi-modal investigation of placental and decidual biology
+5. **Translational Platforms** — MPS, digital pathology, AI/ML, and new approach methodologies
 
 ## Key Methods
 - Visium FFPE Spatial Transcriptomics
@@ -43,3 +43,4 @@ JSON-LD (Schema.org) on every page. See [llms-full.txt](llms-full.txt) for compl
 Department of Obstetrics and Gynecology
 University of Wisconsin-Madison School of Medicine and Public Health
 1111 Highland Ave, Madison, WI 53705
+Inquiries and meeting requests: Ally Torres, Medical Program Assistant, atorres36@wisc.edu, 608-263-6066 (https://www.obgyn.wisc.edu/directory/profile/259426545)

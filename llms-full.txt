@@ -20,6 +20,12 @@ His professional identity centers on bridging clinical REI practice with cutting
 **External profiles:**
 - ORCID: https://orcid.org/0000-0003-1946-6436
 - PubMed: https://pubmed.ncbi.nlm.nih.gov/?term=stanic+ak
+- Google Scholar: https://scholar.google.com/citations?user=0w_z_EoAAAAJ
+- OB-GYN faculty profile: https://www.obgyn.wisc.edu/directory/profile/46689171
+- Stanic-Kostic Research Team (OB-GYN): https://www.obgyn.wisc.edu/stanic-kostic-research-team
+- Endocrinology and Reproductive Physiology Program: https://erp.wisc.edu/staff/stanic-kostic-aleksandar/
+- Immunology Program: https://immunology.wisc.edu/staff/stanic-md-phd-aleksandar/
+- UW Health provider profile: https://www.uwhealth.org/providers/aleksandar-stanic-kostic-md-phd
 
 ---
 
@@ -68,6 +74,10 @@ Development of next-generation tools including decidual vessel-on-chip microphys
 ### Research Staff
 
 - **Fernanda Leyva Jaimes, BSc** — Research Specialist. Focus: preeclampsia and PCOS immunoassay panels, flow cytometry standardization.
+
+### Administration Team
+
+- **Ally Torres** — Medical Program Assistant, Department of Obstetrics and Gynecology. Administrative support for Dr. Stanic-Kostic and the Division of Reproductive Sciences; first point of contact for inquiries and meeting requests. Email: atorres36@wisc.edu. Phone: 608-263-6066. Profile: https://www.obgyn.wisc.edu/directory/profile/259426545
 
 ### Undergraduate Researchers
 
@@ -147,5 +157,7 @@ University of Wisconsin-Madison
 School of Medicine and Public Health
 1111 Highland Ave, Madison, WI 53705
 
+Inquiries and meeting requests: Ally Torres, Medical Program Assistant (atorres36@wisc.edu, 608-263-6066), https://www.obgyn.wisc.edu/directory/profile/259426545
+Office: McConnell Hall, 2nd Floor, 1010 Mound St., Madison, WI 53715
 Department website: https://www.obgyn.wisc.edu
-Twitter: @WiscObGyn
+Twitter: @StanicLabUW (lab), @WiscObGyn (department)

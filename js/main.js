@@ -377,6 +377,9 @@
       m.funding ? `    funding: ${q(m.funding)}` : '',
       m.focus ? `    focus: ${q(m.focus)}` : '',
       m.project ? `    project: ${q(m.project)}` : '',
+      m.email ? `    email: ${q(m.email)}` : '',
+      m.phone ? `    phone: ${q(m.phone)}` : '',
+      m.profileUrl ? `    profile: ${q(m.profileUrl)}` : '',
       m.awards && m.awards.length ? `    awards:${list(m.awards, 6)}` : '',
       m.award ? `    awards:${list(m.award.split(' · '), 6)}` : '',
       m.skills && m.skills.length ? `    skills:${list(m.skills, 6)}` : '',
@@ -388,7 +391,8 @@
       ...LAB_DATA.team.senior.map(m => memberYaml(m, 'senior')),
       ...LAB_DATA.team.graduate.map(m => memberYaml(m, 'graduate')),
       ...(LAB_DATA.team.specialist || []).map(m => memberYaml(m, 'specialist')),
-      ...(LAB_DATA.team.undergraduate || []).map(m => memberYaml(m, 'undergraduate'))
+      ...(LAB_DATA.team.undergraduate || []).map(m => memberYaml(m, 'undergraduate')),
+      ...(LAB_DATA.team.administration || []).map(m => memberYaml(m, 'administration'))
     ].join('\n');
 
     const alumniYaml = (LAB_DATA.alumni || []).map(a => [
@@ -483,7 +487,7 @@ Full list: [news.html](news.html)`);
         parentOrganization: LAB_DATA.lab.institution,
         member: [
           { '@type': 'Person', name: LAB_DATA.pi.shortName + ', ' + LAB_DATA.pi.credentials, jobTitle: 'Principal Investigator', sameAs: LAB_DATA.pi.links.orcid },
-          ...['senior', 'graduate', 'specialist', 'undergraduate'].flatMap(tier => (LAB_DATA.team[tier] || []).map(m => {
+          ...['senior', 'graduate', 'specialist', 'undergraduate', 'administration'].flatMap(tier => (LAB_DATA.team[tier] || []).map(m => {
             const o = { '@type': 'Person', name: nameOf(m), jobTitle: m.roleNow ? m.role + ' (now ' + m.roleNow + ')' : (m.role || 'Undergraduate Researcher') };
             const aw = m.awards || (m.award ? m.award.split(' · ') : null);
             if (aw && aw.length) o.award = aw;
@@ -508,9 +512,8 @@ ${JSON.stringify(jsonLd, null, 2)}`);
 name: ${q(pi.shortName + ', ' + pi.credentials)}
 title: ${q(pi.title)}
 roles:${list(pi.roles, 2)}
-orcid: ${q(pi.links.orcid)}
-pubmed: ${q(pi.links.pubmed)}
-scholar: ${q(pi.links.scholar)}
+links:
+${Object.entries(pi.links).map(([k, v]) => `  ${q(k)}: ${q(v)}`).join('\n')}
 
 bio: ${block(pi.bio, 2)}`);
     }
@@ -536,6 +539,21 @@ ${collabYaml}`);
 
 alumni:
 ${alumniYaml}`);
+    }
+    if (document.getElementById('join-contact') && LAB_DATA.lab.contact) {
+      const c = LAB_DATA.lab.contact;
+      injectMachine('#join .container',
+`## Contact
+
+${c.note}
+
+contact:
+  name: ${q(c.name)}
+  title: ${q(c.title)}
+  email: ${q(c.email)}
+  phone: ${q(c.phone)}
+  office: ${q(c.office)}
+  profile: ${q(c.profileUrl)}`);
     }
 
     // ── RESEARCH PAGE ──
