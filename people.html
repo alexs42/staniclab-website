@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha384-9EQoUIJYrv09/oYhSxnw1VpLcfPw3BM9dE7+D/3wGUPeLLa7F9Z6OAoD+i/M6FK9' 'sha384-bOv+b6RV+dlZvdQAx6+cJ+FK9ab8JCSVWyJ1JPhMVQjPW+4C8V2cOKK+qZDfnRnx' 'sha384-D6Vi74NVmijKQf1pli4I6bI+2tgDqRYLXsmZyVTkgToClCy0td6CwjcovDvODoUu' 'sha384-L0sjdcIWJ156WmvbxIBHx79j1WrCqANCyw456nl/aPWSYiHNywEU2VIAcbSJeIiX' 'sha384-4N159hD5KsRJPR0Bub9/kGaL08keSCBdLT77h0xP+j8sH6kdTQ/suJi2OU2D6dq7' 'sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt' 'sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Stanic Lab team — scientists, postdocs, graduate students, and collaborators in reproductive immunology at UW-Madison.">
   <title>People — Stanic Lab | UW-Madison</title>
 
@@ -323,114 +325,14 @@
   </footer>
 
   <script src="js/data.js"></script>
-  <script>
-    // Security helpers (must be defined before rendering code, before main.js loads)
-    function safeHref(url) { if (!url) return '#'; try { var u = new URL(url, location.href); return ['http:', 'https:', 'mailto:'].includes(u.protocol) ? url : '#'; } catch(e) { return '#'; } }
-    function safeColor(c) { return /^#[0-9a-fA-F]{3,8}$/.test(c) ? c : '#666'; }
-  </script>
-  <script>
-    // Render team sections from data.js
-    function renderMemberCard(m) {
-      const skills = (m.skills || []).map(s => `<span class="skill-tag">${s}</span>`).join('');
-      const awards = m.awards ? `<p style="font-size:0.7rem;color:var(--accent-secondary);margin-top:0.3em">${m.awards.join(' · ')}</p>` : '';
-      const bio = m.bio ? `<p class="member-bio">${m.bio}</p>` : '';
-      return `
-        <div class="member-card">
-          <div class="avatar">${m.photo ? `<img src="${m.photo}" alt="${m.name}">` : m.initials}</div>
-          <div>
-            <h4>${m.name}${m.credentials ? ', ' + m.credentials : ''}</h4>
-            <p class="role">${m.roleNow ? '<span class="role-former">' + m.role + '</span> <span class="role-arrow" aria-hidden="true">&rarr;</span> ' + m.roleNow : m.role}${m.funding ? ' · ' + m.funding : ''}</p>
-            <p class="focus">${m.focus}</p>
-            ${awards}
-            ${bio}
-            <div class="skills">${skills}</div>
-          </div>
-        </div>`;
-    }
-
-    // PI bio + links from data.js
-    document.getElementById('pi-bio').textContent = LAB_DATA.pi.bio || LAB_DATA.pi.identity;
-    document.getElementById('pi-links').innerHTML = Object.entries(LAB_DATA.pi.links).map(([name, url]) =>
-      '<a href="' + safeHref(url) + '" target="_blank" rel="noopener" class="btn btn-sm btn-ghost">' + name.charAt(0).toUpperCase() + name.slice(1) + '</a>'
-    ).join('');
-
-    document.getElementById('senior-grid').innerHTML = LAB_DATA.team.senior.map(renderMemberCard).join('');
-    document.getElementById('grad-grid').innerHTML = LAB_DATA.team.graduate.map(renderMemberCard).join('');
-    document.getElementById('staff-grid').innerHTML = LAB_DATA.team.specialist.map(renderMemberCard).join('');
-
-    // Administration team: same card, plus contact details
-    function renderAdminCard(m) {
-      const contact = [
-        m.email ? '<a href="' + safeHref('mailto:' + m.email) + '">' + m.email + '</a>' : '',
-        m.phone || '',
-        m.profileUrl ? '<a href="' + safeHref(m.profileUrl) + '" target="_blank" rel="noopener">Department profile</a>' : ''
-      ].filter(Boolean).join(' · ');
-      const bio = m.bio ? `<p class="member-bio">${m.bio}</p>` : '';
-      return `
-        <div class="member-card">
-          <div class="avatar">${m.photo ? `<img src="${m.photo}" alt="${m.name}">` : m.initials}</div>
-          <div>
-            <h4>${m.name}${m.credentials ? ', ' + m.credentials : ''}</h4>
-            <p class="role">${m.role}</p>
-            <p class="focus">${m.focus || ''}</p>
-            ${contact ? '<p class="focus">' + contact + '</p>' : ''}
-            ${bio}
-          </div>
-        </div>`;
-    }
-    const adminGrid = document.getElementById('admin-grid');
-    if (adminGrid) adminGrid.innerHTML = (LAB_DATA.team.administration || []).map(renderAdminCard).join('');
-
-    // Join the Lab: contact routing from data.js
-    const joinContact = LAB_DATA.lab.contact;
-    if (joinContact) {
-      document.getElementById('join-contact').textContent = joinContact.note || '';
-      document.getElementById('join-actions').innerHTML =
-        (joinContact.email ? '<a href="' + safeHref('mailto:' + joinContact.email) + '" class="btn btn-primary">Email ' + joinContact.name + '</a>' : '') +
-        (joinContact.profileUrl ? '<a href="' + safeHref(joinContact.profileUrl) + '" class="btn btn-ghost" target="_blank" rel="noopener">Department Profile</a>' : '');
-    }
-
-    document.getElementById('undergrad-grid').innerHTML = LAB_DATA.team.undergraduate.map(u => `
-      <div class="undergrad-card${u.bio ? ' has-bio' : ''}">
-        <div class="avatar">${u.initials}</div>
-        <h4>${u.name}${u.role ? ' <span style="font-weight:400;font-size:0.75em;color:var(--text-muted)">' + u.role + '</span>' : ''}</h4>
-        <p>${u.project}${u.award ? ' · ' + u.award : ''}</p>
-        ${u.bio ? '<p class="undergrad-bio">' + u.bio + '</p>' : ''}
-      </div>
-    `).join('');
-
-    document.getElementById('collab-grid').innerHTML = LAB_DATA.collaborators.map(c => `
-      <div class="collab-card" data-theme="${c.theme}">
-        <div>
-          <h4>${c.name}</h4>
-          <p class="affiliation">${c.affiliation}</p>
-          <p class="area">${c.area}</p>
-        </div>
-      </div>
-    `).join('');
-
-    // Alumni
-    const alumniGrid = document.getElementById('alumni-grid');
-    if (alumniGrid && LAB_DATA.alumni.length > 0) {
-      alumniGrid.innerHTML = LAB_DATA.alumni.map(a => `
-        <div class="member-card">
-          <div class="avatar">${a.photo ? `<img src="${a.photo}" alt="${a.name}">` : a.initials}</div>
-          <div>
-            <h4>${a.name}${a.credentials ? ', ' + a.credentials : ''}</h4>
-            <p class="role">${a.formerRole} · ${a.period}</p>
-            <p class="focus">${a.focus}</p>
-            ${a.awards ? '<p style="font-size:0.7rem;color:var(--accent-secondary);margin-top:0.3em">' + a.awards.join(' · ') + '</p>' : ''}
-            ${a.currentPosition ? '<p style="font-size:var(--text-sm);color:var(--accent-secondary);margin-top:0.3em">Now: ' + a.currentPosition + '</p>' : ''}
-            ${a.bio ? '<p class="member-bio">' + a.bio + '</p>' : ''}
-          </div>
-        </div>
-      `).join('');
-    }
-  </script>
   <script src="js/main.js"></script>
+  <script src="js/people-page.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
   <script src="js/animations.js"></script>
   <script src="js/agents.js"></script>
+  <!-- Visitor statistics: GoatCounter (no cookies, no personal data). count.js is self-hosted; see CLAUDE.md "Analytics". -->
+  <script>window.goatcounter = { path: function (p) { return (p || location.pathname).replace(/[?#].*$/, "").replace(/\/index\.html$/, "/") || "/"; } };</script>
+  <script data-goatcounter="https://staniclab-website.goatcounter.com/count" async src="js/count.js"></script>
 </body>
 </html>

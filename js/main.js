@@ -9,14 +9,21 @@
   // ─── Security Helpers ──────────────────────────────────────
   function safeHref(url) {
     if (!url) return '#';
-    try { const u = new URL(url, location.href); return ['http:', 'https:', 'mailto:'].includes(u.protocol) ? url : '#'; }
+    try { const u = new URL(url, location.href); return ['http:', 'https:', 'mailto:'].includes(u.protocol) ? u.href : '#'; }
     catch { return '#'; }
   }
   function safeColor(c) { return /^#[0-9a-fA-F]{3,8}$/.test(c) ? c : '#666'; }
+  function escapeHtml(value) {
+    if (value === null || value === undefined) return '';
+    return String(value).replace(/[&<>"']/g, character => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+    })[character]);
+  }
 
   // Expose for inline scripts in HTML pages
   window.safeHref = safeHref;
   window.safeColor = safeColor;
+  window.escapeHtml = escapeHtml;
 
   // ─── Theme Switcher ─────────────────────────────────────────
   const VARIANTS = ['A', 'B', 'C', 'D'];
@@ -751,15 +758,15 @@ ${milestones}`);
       if (!theme) return '';
       const pos = POSITIONS[id];
       return `
-        <a href="research.html#${theme.id}"
+        <a href="research.html#${escapeHtml(theme.id)}"
            class="theme-node"
-           data-theme="${theme.id}"
+           data-theme="${escapeHtml(theme.id)}"
            style="left:${pos.x}%; top:${pos.y}%;"
-           aria-label="Explore ${theme.title}">
+           aria-label="Explore ${escapeHtml(theme.title)}">
           <div class="theme-node__img" style="border-color: ${safeColor(theme.color)};">
-            <img src="${safeHref(theme.image)}" alt="${theme.title}" loading="lazy">
+            <img src="${escapeHtml(safeHref(theme.image))}" alt="${escapeHtml(theme.title)}" loading="lazy">
           </div>
-          <span class="theme-node__label">${theme.title}</span>
+          <span class="theme-node__label">${escapeHtml(theme.title)}</span>
         </a>`;
     }).join('\n');
 
@@ -790,10 +797,10 @@ ${milestones}`);
 
     container.innerHTML = preview.map(m => `
       <div class="team-member">
-        <div class="avatar">${m.photo ? `<img src="${m.photo}" alt="${m.name}">` : m.initials}</div>
-        <h4>${m.name}</h4>
-        <p class="role">${m.role}</p>
-        <p class="focus">${m.focus}</p>
+        <div class="avatar">${m.photo ? `<img src="${escapeHtml(safeHref(m.photo))}" alt="${escapeHtml(m.name)}">` : escapeHtml(m.initials)}</div>
+        <h4>${escapeHtml(m.name)}</h4>
+        <p class="role">${escapeHtml(m.role)}</p>
+        <p class="focus">${escapeHtml(m.focus)}</p>
       </div>
     `).join('');
   }
@@ -806,10 +813,10 @@ ${milestones}`);
 
     container.innerHTML = recent.map(item => `
       <div class="news-card">
-        <span class="news-date">${item.date}</span>
+        <span class="news-date">${escapeHtml(item.date)}</span>
         <div>
-          <h4>${item.title}</h4>
-          <p>${item.description}</p>
+          <h4>${escapeHtml(item.title)}</h4>
+          <p>${escapeHtml(item.description)}</p>
         </div>
       </div>
     `).join('');

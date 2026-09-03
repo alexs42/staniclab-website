@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <base href="/">
   <meta name="robots" content="noindex">
   <title>Page not found — Stanic Lab | UW-Madison</title>
@@ -60,5 +62,8 @@
 
   <script src="js/data.js"></script>
   <script src="js/main.js"></script>
+  <!-- Visitor statistics: GoatCounter (no cookies, no personal data). count.js is self-hosted; see CLAUDE.md "Analytics". -->
+  <script>window.goatcounter = { path: function (p) { return (p || location.pathname).replace(/[?#].*$/, "").replace(/\/index\.html$/, "/") || "/"; } };</script>
+  <script data-goatcounter="https://staniclab-website.goatcounter.com/count" async src="js/count.js"></script>
 </body>
 </html>

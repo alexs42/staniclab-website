@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha384-9EQoUIJYrv09/oYhSxnw1VpLcfPw3BM9dE7+D/3wGUPeLLa7F9Z6OAoD+i/M6FK9' 'sha384-bOv+b6RV+dlZvdQAx6+cJ+FK9ab8JCSVWyJ1JPhMVQjPW+4C8V2cOKK+qZDfnRnx' 'sha384-D6Vi74NVmijKQf1pli4I6bI+2tgDqRYLXsmZyVTkgToClCy0td6CwjcovDvODoUu' 'sha384-L0sjdcIWJ156WmvbxIBHx79j1WrCqANCyw456nl/aPWSYiHNywEU2VIAcbSJeIiX' 'sha384-4N159hD5KsRJPR0Bub9/kGaL08keSCBdLT77h0xP+j8sH6kdTQ/suJi2OU2D6dq7' 'sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt' 'sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Stanic Lab news, history, photo gallery, and UW OB/GYN department updates.">
   <title>News — Stanic Lab | UW-Madison</title>
 
@@ -281,53 +283,14 @@
   </footer>
 
   <script src="js/data.js"></script>
-  <script>
-    function safeHref(url) { if (!url) return '#'; try { var u = new URL(url, location.href); return ['http:', 'https:', 'mailto:'].includes(u.protocol) ? url : '#'; } catch(e) { return '#'; } }
-  </script>
-  <script>
-    // Lab news
-    document.getElementById('lab-news-list').innerHTML = LAB_DATA.labNews.map(n => `
-      <div class="lab-news-item">
-        <span class="lab-news-date">${n.date}</span>
-        <div>
-          <h4>${n.title}</h4>
-          <p>${n.description}</p>
-          <div class="news-tags">${n.tags.map(t => `<span class="news-tag">${t}</span>`).join('')}</div>
-        </div>
-      </div>
-    `).join('');
-
-    // Gallery
-    const galleryGrid = document.getElementById('gallery-grid');
-    if (galleryGrid && LAB_DATA.gallery.length > 0) {
-      galleryGrid.innerHTML = LAB_DATA.gallery.map(p => `
-        <figure class="gallery-item">
-          <img src="${p.src}" alt="${p.caption}" loading="lazy">
-          <figcaption>${p.caption}</figcaption>
-        </figure>
-      `).join('');
-    }
-
-    // UW News mirror — load from cache if available
-    fetch('data/uw-news-cache.json')
-      .then(r => r.ok ? r.json() : null)
-      .then(data => {
-        if (!data || !data.articles || data.articles.length === 0) return;
-        const container = document.getElementById('uw-news-container');
-        container.innerHTML = '<div class="uw-news-grid">' + data.articles.map(a => `
-          <div class="uw-news-card">
-            <p class="date">${a.date || ''}</p>
-            <h4><a href="${safeHref(a.link)}" target="_blank" rel="noopener">${a.title}</a></h4>
-            <p>${a.summary || ''}</p>
-          </div>
-        `).join('') + '</div>';
-      })
-      .catch(() => {});
-  </script>
   <script src="js/main.js"></script>
+  <script src="js/news-page.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
   <script src="js/animations.js"></script>
   <script src="js/agents.js"></script>
+  <!-- Visitor statistics: GoatCounter (no cookies, no personal data). count.js is self-hosted; see CLAUDE.md "Analytics". -->
+  <script>window.goatcounter = { path: function (p) { return (p || location.pathname).replace(/[?#].*$/, "").replace(/\/index\.html$/, "/") || "/"; } };</script>
+  <script data-goatcounter="https://staniclab-website.goatcounter.com/count" async src="js/count.js"></script>
 </body>
 </html>

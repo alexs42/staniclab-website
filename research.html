@@ -3,6 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'sha384-9EQoUIJYrv09/oYhSxnw1VpLcfPw3BM9dE7+D/3wGUPeLLa7F9Z6OAoD+i/M6FK9' 'sha384-bOv+b6RV+dlZvdQAx6+cJ+FK9ab8JCSVWyJ1JPhMVQjPW+4C8V2cOKK+qZDfnRnx' 'sha384-D6Vi74NVmijKQf1pli4I6bI+2tgDqRYLXsmZyVTkgToClCy0td6CwjcovDvODoUu' 'sha384-L0sjdcIWJ156WmvbxIBHx79j1WrCqANCyw456nl/aPWSYiHNywEU2VIAcbSJeIiX' 'sha384-4N159hD5KsRJPR0Bub9/kGaL08keSCBdLT77h0xP+j8sH6kdTQ/suJi2OU2D6dq7' 'sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt' 'sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; media-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'; frame-src 'none'; worker-src 'none'; upgrade-insecure-requests">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <meta name="description" content="Stanic Lab research — maternal-fetal tolerance, preeclampsia, PCOS, spatial transcriptomics, and translational platforms.">
   <title>Research — Stanic Lab | UW-Madison</title>
 
@@ -232,86 +234,14 @@
   </footer>
 
   <script src="js/data.js"></script>
-  <script>
-    function safeHref(url) { if (!url) return '#'; try { var u = new URL(url, location.href); return ['http:', 'https:', 'mailto:'].includes(u.protocol) ? url : '#'; } catch(e) { return '#'; } }
-    function safeColor(c) { return /^#[0-9a-fA-F]{3,8}$/.test(c) ? c : '#666'; }
-  </script>
-  <script>
-    // Research themes (deep detail with image, papers, grants)
-    const pubMap = {};
-    LAB_DATA.publications.forEach(p => { if (p.pmid) pubMap[p.pmid] = p; });
-    const grantMap = {};
-    LAB_DATA.grants.forEach(g => { grantMap[g.number] = g; });
-
-    document.getElementById('themes-deep').innerHTML = LAB_DATA.themes.map(t => {
-      // Key papers
-      const papers = (t.keyPapers || []).map(pmid => {
-        const p = pubMap[pmid];
-        if (!p) return '';
-        const note = (t.keyPaperNotes && t.keyPaperNotes[pmid]) ? ' · ' + t.keyPaperNotes[pmid] : '';
-        return '<li><a href="https://pubmed.ncbi.nlm.nih.gov/' + pmid + '/" target="_blank" rel="noopener">' +
-          p.title + '</a> <span class="pub-meta">' + p.journal + ' (' + p.year + ')' + note + '</span></li>';
-      }).filter(Boolean).join('');
-
-      // Grants
-      const grants = (t.grants || []).map(num => {
-        const g = grantMap[num];
-        if (!g) return '<li>' + num + '</li>';
-        return '<li>' + g.number + ' (' + g.institute + ', ' + g.role + ') — ' + g.period + '</li>';
-      }).join('');
-
-      return '<div class="theme-deep" id="' + t.id + '">' +
-        (t.image ? '<div class="theme-deep__img"><img src="' + safeHref(t.image) + '" alt="' + t.title + '" loading="lazy"></div>' : '') +
-        '<div class="theme-deep__content">' +
-          '<h3 style="color:' + safeColor(t.color) + '">' + t.title + '</h3>' +
-          '<p class="subtitle">' + t.subtitle + '</p>' +
-          '<p class="detail">' + (t.detail || t.summary) + '</p>' +
-          (papers ? '<div class="theme-papers"><h4>Key Publications</h4><ul>' + papers + '</ul></div>' : '') +
-          (grants ? '<div class="theme-grants"><h4>Funding</h4><ul>' + grants + '</ul></div>' : '') +
-        '</div>' +
-      '</div>';
-    }).join('');
-
-    // Model systems
-    document.getElementById('model-grid').innerHTML = LAB_DATA.models.map(m => `
-      <div class="model-card">
-        <h4>${m.name}</h4>
-        <p class="strength">${m.strength}</p>
-        <p class="use">${m.use}</p>
-        ${m.partner ? '<p class="partner">' + m.partner + '</p>' : ''}
-      </div>
-    `).join('');
-
-    // Methods
-    document.getElementById('methods-grid').innerHTML = LAB_DATA.methods.map(m => `<span class="method-pill">${m}</span>`).join('');
-
-    // Publications
-    document.getElementById('pub-list').innerHTML = LAB_DATA.publications.map(p => {
-      const links = [];
-      if (p.pmid) links.push('<a href="https://pubmed.ncbi.nlm.nih.gov/' + p.pmid + '/" target="_blank" rel="noopener">PubMed</a>');
-      if (p.doi) links.push('<a href="https://doi.org/' + p.doi + '" target="_blank" rel="noopener">DOI</a>');
-      return '<div class="pub-item" data-pmid="' + (p.pmid || '') + '">' +
-        '<p class="pub-year">' + p.year + '</p>' +
-        '<p class="pub-title">' + p.title + '</p>' +
-        '<p class="pub-authors">' + p.authors + '</p>' +
-        '<p class="pub-journal">' + p.journal + (links.length ? ' · ' + links.join(' · ') : '') + '</p>' +
-      '</div>';
-    }).join('');
-
-    // Grants
-    document.getElementById('grant-tbody').innerHTML = LAB_DATA.grants.map(g => `
-      <tr><td>${g.number}</td><td>${g.institute}</td><td>${g.role}</td><td>${g.period}</td></tr>
-    `).join('');
-
-    // Societies
-    document.getElementById('society-list').innerHTML = LAB_DATA.societies.map(s => `
-      <span class="society-item"><abbr title="${s.name}">${s.abbrev}</abbr> ${s.name}</span>
-    `).join('');
-  </script>
   <script src="js/main.js"></script>
+  <script src="js/research-page.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
   <script src="js/animations.js"></script>
   <script src="js/agents.js"></script>
+  <!-- Visitor statistics: GoatCounter (no cookies, no personal data). count.js is self-hosted; see CLAUDE.md "Analytics". -->
+  <script>window.goatcounter = { path: function (p) { return (p || location.pathname).replace(/[?#].*$/, "").replace(/\/index\.html$/, "/") || "/"; } };</script>
+  <script data-goatcounter="https://staniclab-website.goatcounter.com/count" async src="js/count.js"></script>
 </body>
 </html>
