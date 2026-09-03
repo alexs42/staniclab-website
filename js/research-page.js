@@ -74,6 +74,6 @@
   `).join('');
 
   document.getElementById('society-list').innerHTML = LAB_DATA.societies.map(society => `
-    <span class="society-item"><abbr title="${html(society.name)}">${html(society.abbrev)}</abbr> ${html(society.name)}</span>
+    ${/^https?:\/\//.test(society.url || '') ? `<a class="society-item" href="${html(society.url)}" target="_blank" rel="noopener">` : '<span class="society-item">'}<abbr title="${html(society.name)}">${html(society.abbrev)}</abbr> ${html(society.name)}${/^https?:\/\//.test(society.url || '') ? '</a>' : '</span>'}
   `).join('');
 })();

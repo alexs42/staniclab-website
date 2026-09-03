@@ -82,6 +82,8 @@
     .society-list { display: flex; flex-wrap: wrap; gap: var(--space-sm); justify-content: center; }
     .society-item { padding: 0.4em 1em; background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: 8px; font-size: var(--text-sm); }
     .society-item abbr { font-weight: 600; color: var(--accent-primary); text-decoration: none; }
+    a.society-item { color: var(--text-primary); text-decoration: none; transition: border-color 0.2s ease, transform 0.2s ease; }
+    a.society-item:hover, a.society-item:focus-visible { border-color: var(--accent-primary); transform: translateY(-2px); }
 
     @media (max-width: 768px) {
       .model-grid { grid-template-columns: repeat(2, 1fr); }

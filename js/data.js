@@ -866,27 +866,33 @@ const LAB_DATA = {
   "societies": [
     {
       "abbrev": "SRI",
-      "name": "Society for Reproductive Investigation"
+      "name": "Society for Reproductive Investigation",
+      "url": "https://www.sri-online.org/"
     },
     {
       "abbrev": "ASRI",
-      "name": "American Society for Reproductive Immunology"
+      "name": "American Society for Reproductive Immunology",
+      "url": "https://www.theasri.org/"
     },
     {
       "abbrev": "ASRM",
-      "name": "American Society for Reproductive Medicine"
+      "name": "American Society for Reproductive Medicine",
+      "url": "https://www.asrm.org/"
     },
     {
       "abbrev": "SMFM",
-      "name": "Society for Maternal-Fetal Medicine"
+      "name": "Society for Maternal-Fetal Medicine",
+      "url": "https://www.smfm.org/"
     },
     {
       "abbrev": "IFPA",
-      "name": "International Federation of Placenta Associations"
+      "name": "International Federation of Placenta Associations",
+      "url": "https://ifpaofficial.com/"
     },
     {
       "abbrev": "AAI",
-      "name": "American Association of Immunologists"
+      "name": "American Association of Immunologists",
+      "url": "https://www.aai.org/"
     }
   ],
   "labNews": [

@@ -647,7 +647,7 @@ ${(LAB_DATA.grants || []).map(g => `| ${g.number} | ${g.institute} | ${g.role} |
 ${LAB_DATA.societiesDescription || ''}
 
 societies:
-${(LAB_DATA.societies || []).map(s => `  - abbrev: ${q(s.abbrev)}\n    name: ${q(s.name)}`).join('\n')}`);
+${(LAB_DATA.societies || []).map(s => `  - abbrev: ${q(s.abbrev)}\n    name: ${q(s.name)}` + (s.url ? `\n    url: ${q(s.url)}` : '')).join('\n')}`);
     }
 
     // ── NEWS PAGE ──
