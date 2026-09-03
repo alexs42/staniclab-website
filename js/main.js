@@ -348,7 +348,13 @@
       b.classList.toggle('mode-toggle__btn--active', active);
       b.setAttribute('aria-checked', active);
     });
-    if (mode === 'machine') renderMachineContent();
+    if (mode === 'machine') {
+      // Count the first switch to machine mode per page view as a GoatCounter event.
+      if (!document.body.hasAttribute('data-machine-rendered') && window.goatcounter && typeof goatcounter.count === 'function') {
+        try { goatcounter.count({ path: 'machine-mode', title: 'Switched to machine mode', event: true }); } catch (e) { /* analytics must never break the page */ }
+      }
+      renderMachineContent();
+    }
   }
 
   function renderMachineContent() {
