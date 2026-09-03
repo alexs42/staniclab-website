@@ -1,0 +1,45 @@
+# Stanic Lab — Reproductive Immunology
+> University of Wisconsin-Madison, Dept. of Obstetrics and Gynecology
+> Led by Dr. Aleksandar Stanic-Kostic (MD, PhD)
+> Associate Professor with Tenure | Vice Chair for Research | Division Director, Reproductive Sciences
+
+## Pages
+- [Home](index.html): Lab overview, mission, research highlights, team preview
+- [People](people.html): Team members, collaborator network, alumni
+- [Research](research.html): Research directions, publications, methods, model systems
+- [News](news.html): Lab news, UW OB/GYN news mirror, photo gallery, timeline
+
+## Research Themes
+1. **Maternal-Fetal Tolerance** — Decidual T cell biology, temporal immune dynamics, restraint gene mechanisms
+2. **Preeclampsia Immunopathology** — Immune-endothelial crosstalk, checkpoint dysregulation, network topology
+3. **PCOS Immune Mechanisms** — Ovarian-specific inflammation, CITE-seq profiling, macaque models
+4. **Spatial Transcriptomics** — Cross-gestational atlas of primate maternal-fetal interface (Visium FFPE)
+5. **Translational Platforms** — Microphysiological systems, digital pathology, AI/ML integration
+
+## Key Methods
+- Visium FFPE Spatial Transcriptomics
+- CITE-seq (simultaneous protein + RNA)
+- Spectral Flow Cytometry (18+ colors)
+- Microphysiological Systems (vessel-on-chip)
+- Digital Histopathology / QuPath
+- AI/ML Multi-Omic Integration
+
+## Model Systems
+- Rhesus Macaque (cross-gestational sampling)
+- Human (clinical samples, biomarker validation)
+- Mouse (genetic manipulation, fate mapping)
+- MPS/Vessel-on-chip (therapeutic testing)
+
+## Active NIH Funding
+- R21 AI175753-01 (NIAID) — PI
+- R01 HL163623-01A1 (NHLBI) — Site-PI
+- R01 AI182082-01 (NIAID) — Co-I
+- R01 HD103443-01 (NICHD) — Co-I
+
+## Structured Data
+JSON-LD (Schema.org) on every page. See [llms-full.txt](llms-full.txt) for complete documentation.
+
+## Contact
+Department of Obstetrics and Gynecology
+University of Wisconsin-Madison School of Medicine and Public Health
+1111 Highland Ave, Madison, WI 53705

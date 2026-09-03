@@ -1,0 +1,145 @@
+/* ============================================
+   Variant C — "Clinical Modern"
+   Clean white, UW cardinal red + navy,
+   institutional polish, medical precision
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Clinical white backgrounds */
+  --bg-void: #FAFBFC;
+  --bg-primary: #FFFFFF;
+  --bg-secondary: #F1F4F8;
+  --bg-tertiary: #E2E8F0;
+
+  /* UW-inspired accents: cardinal red + navy */
+  --accent-primary: #C5050C;
+  --accent-secondary: #0D47A1;
+  --accent-tertiary: #37474F;
+  --accent-warning: #F57C00;
+  --accent-success: #2E7D32;
+  --accent-danger: #C62828;
+
+  /* Sharp professional text */
+  --text-primary: #1A202C;
+  --text-secondary: #4A5568;
+  --text-muted: #A0AEC0;
+  --text-accent: #C5050C;
+
+  /* Borders: clean and precise */
+  --border-color: #E2E8F0;
+  --border-strong: #CBD5E0;
+
+  /* Fonts: DM Sans (geometric clarity) + Source Serif (scholarly headings) */
+  --font-display: 'Source Serif 4', Georgia, serif;
+  --font-body: 'DM Sans', sans-serif;
+  --font-mono: 'IBM Plex Mono', monospace;
+
+  /* Hero overlay */
+  --hero-overlay-rgb: 250, 251, 252;
+}
+
+/* Nav: crisp white with red underline accent */
+.site-nav.scrolled {
+  background: rgba(255, 255, 255, 0.97);
+  border-bottom-color: var(--border-color);
+}
+
+/* Hero: clinical illustration + clean gradient */
+.hero-bg {
+  background: url('../images/hero/hero-C.png') center center / cover no-repeat,
+    linear-gradient(160deg, #FFFFFF 0%, #F1F4F8 40%, #E8EDF4 70%, #E2E8F0 100%);
+}
+
+/* Cards: crisp white with shadow, red top border */
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  border-color: var(--border-color);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+.theme-card {
+  border-left-color: var(--accent-primary);
+}
+
+/* For Machines: navy accent */
+.for-machines {
+  border-color: var(--accent-secondary);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.for-machines h2 {
+  color: var(--accent-secondary);
+}
+
+/* Buttons: cardinal red primary */
+.btn-ghost {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-ghost:hover {
+  background: var(--accent-primary);
+  color: #FFFFFF;
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: #FFFFFF;
+}
+
+.btn-primary:hover {
+  background: #A30409;
+  border-color: #A30409;
+  color: #FFFFFF;
+}
+
+/* Links: navy hover */
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Selection: red highlight */
+::selection {
+  background: rgba(197, 5, 12, 0.12);
+  color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Section label: navy */
+.section-label {
+  color: var(--accent-secondary);
+}
+
+/* Tag accent: cardinal tint */
+.tag-accent {
+  background: rgba(197, 5, 12, 0.06);
+  color: var(--accent-primary);
+}
+
+/* Nav active underline: cardinal red */
+.nav-links a::after {
+  background: var(--accent-primary);
+}

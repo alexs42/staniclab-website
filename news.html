@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stanic Lab news, history, photo gallery, and UW OB/GYN department updates.">
+  <title>News — Stanic Lab | UW-Madison</title>
+
+  <!-- Canonical address and link-preview (Open Graph) metadata -->
+  <link rel="canonical" href="https://staniclab.org/news.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Stanic Lab">
+  <meta property="og:title" content="News — Stanic Lab">
+  <meta property="og:description" content="Stanic Lab news, history, photo gallery, and UW OB/GYN department updates.">
+  <meta property="og:url" content="https://staniclab.org/news.html">
+  <meta property="og:image" content="https://staniclab.org/images/hero/hero-A.png">
+  <meta property="og:image:alt" content="Watercolor illustration of immune cells at the maternal-fetal interface">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231B4332' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%231B4332' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%231B4332'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/variant-A.css" id="theme-css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <style>
+    /* UW News Mirror */
+    .uw-mirror-header {
+      display: flex; align-items: center; gap: var(--space-sm);
+      margin-bottom: var(--space-md); padding-bottom: var(--space-sm);
+      border-bottom: 1px solid var(--border-color);
+    }
+    .uw-mirror-header img { width: 24px; height: 24px; }
+    .uw-mirror-header span { font-size: var(--text-xs); color: var(--text-muted); }
+    .uw-news-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-md); }
+    .uw-news-card { padding: var(--space-md); background: var(--bg-primary); border: 1px solid var(--border-color); border-radius: var(--card-radius); }
+    .uw-news-card .date { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); margin-bottom: 0.3em; }
+    .uw-news-card h4 { font-size: var(--text-base); margin-bottom: 0.3em; }
+    .uw-news-card p { font-size: var(--text-sm); color: var(--text-secondary); }
+    .uw-fallback { text-align: center; padding: var(--space-xl); color: var(--text-muted); }
+    .uw-fallback a { color: var(--accent-primary); }
+
+    /* Lab News */
+    .lab-news-list { max-width: 800px; margin: 0 auto; }
+    .lab-news-item {
+      display: flex; gap: var(--space-md); padding: var(--space-md) 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .lab-news-item:last-child { border-bottom: none; }
+    .lab-news-date { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--text-muted); min-width: 5em; padding-top: 0.2em; }
+    .lab-news-item h4 { font-size: var(--text-base); margin-bottom: 0.2em; }
+    .lab-news-item p { font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: 0.3em; }
+    .news-tags { display: flex; gap: 4px; }
+    .news-tag { font-size: 0.65rem; padding: 0.2em 0.5em; background: rgba(27,67,50,0.08); color: var(--accent-primary); border-radius: 3px; }
+
+    /* Photo Gallery placeholder */
+    .gallery-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: var(--space-md); }
+    .gallery-item { border-radius: var(--card-radius); overflow: hidden; border: 1px solid var(--border-color); background: var(--bg-primary); }
+    .gallery-item img { width: 100%; height: 220px; object-fit: cover; display: block; }
+    .gallery-item figcaption { padding: var(--space-sm) var(--space-md); font-size: var(--text-sm); color: var(--text-secondary); }
+    .gallery-placeholder {
+      text-align: center; padding: var(--space-2xl) var(--space-lg);
+      background: var(--bg-primary); border: 2px dashed var(--border-color);
+      border-radius: var(--card-radius); color: var(--text-muted);
+    }
+    .gallery-placeholder svg { width: 48px; height: 48px; margin-bottom: var(--space-sm); opacity: 0.4; }
+    .gallery-placeholder h3 { color: var(--text-secondary); margin-bottom: var(--space-xs); }
+
+    /* Timeline */
+    .timeline { position: relative; max-width: 700px; margin: 0 auto; }
+    .timeline::before {
+      content: ''; position: absolute; left: 50%; top: 0; bottom: 0;
+      width: 2px; background: var(--border-color); transform: translateX(-50%);
+    }
+    .timeline-item {
+      display: flex; gap: var(--space-md); margin-bottom: var(--space-lg);
+      position: relative;
+    }
+    .timeline-item:nth-child(even) { flex-direction: row-reverse; text-align: right; }
+    .timeline-dot {
+      position: absolute; left: 50%; top: 0.5em;
+      width: 12px; height: 12px; border-radius: 50%;
+      background: var(--accent-primary); border: 2px solid var(--bg-void);
+      transform: translateX(-50%); z-index: 1;
+    }
+    .timeline-content {
+      width: calc(50% - var(--space-lg));
+      padding: var(--space-md);
+      background: var(--bg-primary);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+    }
+    .timeline-year { font-family: var(--font-mono); font-size: var(--text-xs); color: var(--accent-secondary); margin-bottom: 0.2em; }
+    .timeline-content h4 { font-size: var(--text-sm); margin-bottom: 0.2em; }
+    .timeline-content p { font-size: var(--text-xs); color: var(--text-secondary); margin-bottom: 0; }
+
+    /* Twitter embed area */
+    .twitter-section { text-align: center; }
+    .twitter-link {
+      display: inline-flex; align-items: center; gap: 0.5em;
+      padding: 0.75em 1.5em; border: 1px solid var(--border-color);
+      border-radius: 8px; font-size: var(--text-sm); color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+    .twitter-link:hover { border-color: #1DA1F2; color: #1DA1F2; }
+    .twitter-link svg { width: 18px; height: 18px; }
+
+    @media (max-width: 768px) {
+      .timeline::before { left: 16px; }
+      .timeline-item, .timeline-item:nth-child(even) { flex-direction: row; text-align: left; padding-left: 40px; }
+      .timeline-dot { left: 16px; }
+      .timeline-content { width: 100%; }
+      .lab-news-item { flex-direction: column; gap: var(--space-xs); }
+    }
+  </style>
+</head>
+<body data-mode="human">
+
+  <!-- Mode Toggle -->
+  <div class="mode-toggle" id="mode-toggle" role="radiogroup" aria-label="View mode">
+    <button class="mode-toggle__btn mode-toggle__btn--active" data-mode-btn="human" role="radio" aria-checked="true">
+      <span class="mode-toggle__dot"></span> HUMAN
+    </button>
+    <button class="mode-toggle__btn" data-mode-btn="machine" role="radio" aria-checked="false">
+      <span class="mode-toggle__dot"></span> MACHINE
+    </button>
+  </div>
+
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Stanic Lab home">
+        <svg viewBox="0 0 36 36" fill="none" aria-hidden="true"><circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5"/><circle cx="18" cy="18" r="9" stroke="currentColor" stroke-width="1.2"/><circle cx="18" cy="18" r="3.5" fill="currentColor"/></svg>
+        <span>Stanic Lab</span>
+      </a>
+      <div class="nav-links" id="nav-links">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Publications</a>
+        <a href="news.html" class="active">News</a>
+      </div>
+      <div class="nav-right">
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <a href="#uw-news" class="visually-hidden">Skip to main content</a>
+
+  <section class="hero" style="min-height: 40vh;">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-content">
+      <span class="hero-label">Updates</span>
+      <h1>News &amp; History</h1>
+      <p class="hero-tagline">Lab milestones, department news, and the story of our research</p>
+    </div>
+  </section>
+
+  <!-- UW News Mirror -->
+  <section class="section" id="uw-news">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Department</span>
+        <h2>UW OB/GYN News</h2>
+      </div>
+      <div class="uw-mirror-header">
+        <span>Mirrored from <a href="https://www.obgyn.wisc.edu/categories/stanic-kostic-research-team" target="_blank" rel="noopener">UW-Madison Dept. of Obstetrics &amp; Gynecology</a></span>
+      </div>
+      <div id="uw-news-container">
+        <div class="uw-fallback">
+          <p>Department news will appear here when available.</p>
+          <a href="https://www.obgyn.wisc.edu/categories/stanic-kostic-research-team" target="_blank" rel="noopener" class="btn btn-ghost mt-sm">Visit Department News &rarr;</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lab News -->
+  <section class="section" id="lab-news" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Lab</span>
+        <h2>Lab News &amp; Announcements</h2>
+      </div>
+      <div class="lab-news-list" id="lab-news-list">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Photo Gallery (placeholder) -->
+  <section class="section" id="gallery">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Gallery</span>
+        <h2>Lab Photos</h2>
+        <p>Conference presentations, social events, and lab life</p>
+      </div>
+      <div class="gallery-grid" id="gallery-grid">
+        <!-- Rendered by JS -->
+      </div>
+      <p style="text-align: center; color: var(--text-muted); font-size: var(--text-sm); margin-top: var(--space-md);">More photos coming soon — conference presentations, social events, and lab life.</p>
+    </div>
+  </section>
+
+  <!-- Lab Timeline -->
+  <section class="section" id="timeline" style="background: var(--bg-secondary);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">History</span>
+        <h2>Lab Milestones</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-year">2026</p>
+            <h4>Vice Chair &amp; Division Director</h4>
+            <p>Dr. Stanic appointed Vice Chair for Basic and Translational Research and Director of the Division of Reproductive Sciences.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-year">2025</p>
+            <h4>Multiple Conference Awards</h4>
+            <p>Logan Keding wins ASRI Poster Award and IFPA Oral Presentation Award. Lab presents at SRI, ASRI, and IFPA.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-year">2024</p>
+            <h4>Jessica Vazquez Awarded NIH K01</h4>
+            <p>First K01 from the lab — supporting an independent program on maternal immune programming in rhesus macaques.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-year">2024</p>
+            <h4>Spatial Transcriptomics Atlas Launched</h4>
+            <p>Cross-gestational Visium FFPE atlas of the rhesus macaque maternal-fetal interface — the first of its kind.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content">
+            <p class="timeline-year">2022</p>
+            <h4>Tenure Awarded</h4>
+            <p>Dr. Stanic receives tenure at UW-Madison, recognizing contributions to reproductive immunology.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Twitter / Social -->
+  <section class="section" id="social">
+    <div class="container twitter-section">
+      <div class="section-header">
+        <span class="section-label">Social</span>
+        <h2>Follow Us</h2>
+      </div>
+      <a href="https://twitter.com/StanicLabUW" target="_blank" rel="noopener" class="twitter-link">
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        @StanicLabUW — UW OB/GYN Department
+      </a>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Stanic Lab</h3>
+          <p>Reproductive Immunology &amp; Translational Research<br>Dept. OB/GYN, UW-Madison SMPH</p>
+        </div>
+        <div class="footer-col"><h4>Pages</h4><a href="index.html">Home</a><a href="people.html">People</a><a href="research.html">Research</a><a href="news.html">News</a></div>
+        <div class="footer-col"><h4>Resources</h4><a href="llms.txt">llms.txt</a><a href="llms-full.txt">Full AI docs</a></div>
+        <div class="footer-col"><h4>Connect</h4><a href="https://www.obgyn.wisc.edu" target="_blank" rel="noopener">Dept. OB/GYN</a><a href="https://twitter.com/StanicLabUW" target="_blank" rel="noopener">@StanicLabUW</a></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2026 Stanic Lab, University of Wisconsin-Madison.</span></div>
+    </div>
+  </footer>
+
+  <script src="js/data.js"></script>
+  <script>
+    function safeHref(url) { if (!url) return '#'; try { var u = new URL(url, location.href); return ['http:', 'https:', 'mailto:'].includes(u.protocol) ? url : '#'; } catch(e) { return '#'; } }
+  </script>
+  <script>
+    // Lab news
+    document.getElementById('lab-news-list').innerHTML = LAB_DATA.labNews.map(n => `
+      <div class="lab-news-item">
+        <span class="lab-news-date">${n.date}</span>
+        <div>
+          <h4>${n.title}</h4>
+          <p>${n.description}</p>
+          <div class="news-tags">${n.tags.map(t => `<span class="news-tag">${t}</span>`).join('')}</div>
+        </div>
+      </div>
+    `).join('');
+
+    // Gallery
+    const galleryGrid = document.getElementById('gallery-grid');
+    if (galleryGrid && LAB_DATA.gallery.length > 0) {
+      galleryGrid.innerHTML = LAB_DATA.gallery.map(p => `
+        <figure class="gallery-item">
+          <img src="${p.src}" alt="${p.caption}" loading="lazy">
+          <figcaption>${p.caption}</figcaption>
+        </figure>
+      `).join('');
+    }
+
+    // UW News mirror — load from cache if available
+    fetch('data/uw-news-cache.json')
+      .then(r => r.ok ? r.json() : null)
+      .then(data => {
+        if (!data || !data.articles || data.articles.length === 0) return;
+        const container = document.getElementById('uw-news-container');
+        container.innerHTML = '<div class="uw-news-grid">' + data.articles.map(a => `
+          <div class="uw-news-card">
+            <p class="date">${a.date || ''}</p>
+            <h4><a href="${safeHref(a.link)}" target="_blank" rel="noopener">${a.title}</a></h4>
+            <p>${a.summary || ''}</p>
+          </div>
+        `).join('') + '</div>';
+      })
+      .catch(() => {});
+  </script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/agents.js"></script>
+</body>
+</html>

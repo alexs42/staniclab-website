@@ -1,0 +1,169 @@
+/* ============================================
+   Variant B — "Deep Science"
+   Dark mode: midnight backgrounds, electric teal,
+   gold accents, crystalline glass effects
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Deep dark backgrounds */
+  --bg-void: #0B0F14;
+  --bg-primary: #111820;
+  --bg-secondary: #1A2230;
+  --bg-tertiary: #232E3F;
+
+  /* Electric science accents */
+  --accent-primary: #22D3EE;
+  --accent-secondary: #F59E0B;
+  --accent-tertiary: #818CF8;
+  --accent-warning: #F59E0B;
+  --accent-success: #34D399;
+  --accent-danger: #F87171;
+
+  /* Light text on dark */
+  --text-primary: #F1F5F9;
+  --text-secondary: #94A3B8;
+  --text-muted: #475569;
+  --text-accent: #22D3EE;
+
+  /* Borders */
+  --border-color: #1E293B;
+  --border-strong: #334155;
+
+  /* Fonts: Space Grotesk for geometric precision */
+  --font-display: 'Space Grotesk', sans-serif;
+  --font-body: 'Inter', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Hero overlay */
+  --hero-overlay-rgb: 11, 15, 20;
+}
+
+/* Dark nav: glass morphism */
+.site-nav.scrolled {
+  background: rgba(17, 24, 32, 0.85);
+  border-bottom-color: rgba(34, 211, 238, 0.1);
+}
+
+/* Hero: bioluminescent illustration + dark gradient */
+.hero-bg {
+  background: url('../images/hero/hero-B.png') center center / cover no-repeat,
+    linear-gradient(135deg, #0B0F14 0%, #111820 30%, #0F1A26 60%, #0B1622 100%);
+}
+
+.hero-bg::after {
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 50% 45%,
+      rgba(11, 15, 20, 0.82) 0%,
+      rgba(11, 15, 20, 0.45) 60%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(11, 15, 20, 0.35) 0%,
+      rgba(11, 15, 20, 0.55) 50%,
+      var(--bg-void) 100%
+    );
+}
+
+/* Cards: glass effect with subtle teal border */
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  border-color: var(--border-color);
+}
+
+.card:hover {
+  border-color: rgba(34, 211, 238, 0.2);
+  box-shadow: 0 4px 20px rgba(34, 211, 238, 0.05);
+}
+
+.theme-card {
+  border-left-color: var(--accent-primary);
+}
+
+/* For Machines: teal-accented dark glass */
+.for-machines {
+  border-color: rgba(34, 211, 238, 0.15);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.for-machines h2 {
+  color: var(--accent-primary);
+}
+
+/* Buttons: teal glow on hover */
+.btn-ghost {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-ghost:hover {
+  background: var(--accent-primary);
+  color: var(--bg-void);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.2);
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--bg-void);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent-primary);
+  box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
+}
+
+/* Links */
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Selection */
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+  color: var(--text-primary);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Nav brand in dark mode */
+.nav-brand svg circle,
+.nav-brand svg path {
+  stroke: var(--text-primary);
+}
+
+/* Section label: gold */
+.section-label {
+  color: var(--accent-secondary);
+}
+
+/* Tag accent: teal tint */
+.tag-accent {
+  background: rgba(34, 211, 238, 0.1);
+  color: var(--accent-primary);
+}
+
+/* Footer */
+.site-footer {
+  border-top-color: var(--border-color);
+}

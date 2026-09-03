@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Stanic Lab — Reproductive Immunology at UW-Madison. How the immune system shapes reproductive success.">
+  <meta name="author" content="Dr. Aleksandar Stanic Kostic">
+  <meta name="keywords" content="reproductive immunology, maternal-fetal interface, preeclampsia, PCOS, spatial transcriptomics, UW-Madison">
+
+  <title>Stanic Lab — Reproductive Immunology | UW-Madison</title>
+
+  <!-- Canonical address and link-preview (Open Graph) metadata -->
+  <link rel="canonical" href="https://staniclab.org/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Stanic Lab">
+  <meta property="og:title" content="Stanic Lab — Reproductive Immunology at UW-Madison">
+  <meta property="og:description" content="Stanic Lab — Reproductive Immunology at UW-Madison. How the immune system shapes reproductive success.">
+  <meta property="og:url" content="https://staniclab.org/">
+  <meta property="og:image" content="https://staniclab.org/images/hero/hero-A.png">
+  <meta property="og:image:alt" content="Watercolor illustration of immune cells at the maternal-fetal interface">
+  <meta name="twitter:card" content="summary_large_image">
+
+  <!-- Favicon (cell motif) -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='none' stroke='%231B4332' stroke-width='2'/%3E%3Ccircle cx='16' cy='16' r='8' fill='none' stroke='%231B4332' stroke-width='1.5'/%3E%3Ccircle cx='16' cy='16' r='3' fill='%231B4332'/%3E%3C/svg%3E">
+
+  <!-- Theme CSS (swappable) -->
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/variant-A.css" id="theme-css">
+  <link rel="stylesheet" href="css/responsive.css">
+
+  <!-- Pentagon theme diagram styles (index.html only) -->
+  <style>
+    /* ── Pentagon container ── */
+    .themes-pentagon {
+      position: relative;
+      width: 100%;
+      max-width: 1400px;
+      height: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── SVG connection lines layer ── */
+    .theme-connections-svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: visible;
+    }
+
+    .theme-conn {
+      fill: none;
+      stroke: var(--accent-primary, #1B4332);
+      stroke-linecap: round;
+      transition: opacity 0.2s ease;
+    }
+
+    .theme-conn--strong {
+      stroke-opacity: 0.45;
+      stroke-width: 2.2px;
+    }
+
+    .theme-conn--moderate {
+      stroke-opacity: 0.22;
+      stroke-width: 1.2px;
+      stroke-dasharray: 5 4;
+    }
+
+    /* ── Theme nodes (positioned absolutely at %) ── */
+    .theme-node {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      width: 320px;
+      transform: translate(-50%, 0);
+      text-decoration: none;
+      color: var(--text-primary, #1a1a1a);
+      transition: transform 0.2s ease;
+    }
+
+    .theme-node:hover {
+      transform: translate(-50%, -4px);
+      z-index: 100;
+    }
+
+    /* ── Circular image ── */
+    .theme-node__img {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 3px solid currentColor;
+      background: var(--bg-secondary, #f0ede8);
+      flex-shrink: 0;
+      transition: box-shadow 0.3s cubic-bezier(0.25, 0.1, 0.25, 1),
+                  transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+      z-index: 1;
+    }
+
+    .theme-node:hover .theme-node__img {
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);
+      transform: scale(2.5);
+      z-index: 100;
+    }
+
+    .theme-node__img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── Label below circle ── */
+    .theme-node__label {
+      display: block;
+      margin-top: 0.85rem;
+      font-size: 1.6rem;
+      font-weight: 600;
+      line-height: 1.3;
+      max-width: 280px;
+      color: var(--text-primary, #1a1a1a);
+      letter-spacing: 0.01em;
+    }
+
+    /* ── Mobile: vertical list fallback ── */
+    @media (max-width: 767px) {
+      .themes-pentagon {
+        height: auto;
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+        padding: 0;
+      }
+
+      .theme-connections-svg {
+        display: none;
+      }
+
+      .theme-node {
+        position: static;
+        transform: none;
+        flex-direction: row;
+        text-align: left;
+        width: 100%;
+        gap: 1rem;
+        padding: 0.75rem 1rem;
+        border-radius: 10px;
+        background: var(--bg-secondary, #f0ede8);
+        border-left: 3px solid currentColor;
+      }
+
+      .theme-node:hover {
+        transform: none;
+        opacity: 0.85;
+      }
+
+      .theme-node__img {
+        width: 64px;
+        height: 64px;
+        flex-shrink: 0;
+        border: 2px solid currentColor;
+      }
+
+      .theme-node:hover .theme-node__img {
+        transform: none;
+        box-shadow: none;
+      }
+
+      .theme-node__label {
+        margin-top: 0;
+        font-size: 0.9rem;
+        max-width: none;
+        align-self: center;
+      }
+    }
+  </style>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Stanic Lab — Reproductive Immunology">
+  <meta property="og:description" content="How the immune system shapes reproductive success. University of Wisconsin-Madison.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_US">
+</head>
+<body data-mode="human">
+
+  <!-- ═══ Mode Toggle Pill (parallel.ai pattern) ═══ -->
+  <div class="mode-toggle" id="mode-toggle" role="radiogroup" aria-label="View mode">
+    <button class="mode-toggle__btn mode-toggle__btn--active" data-mode-btn="human" role="radio" aria-checked="true">
+      <span class="mode-toggle__dot"></span> HUMAN
+    </button>
+    <button class="mode-toggle__btn" data-mode-btn="machine" role="radio" aria-checked="false">
+      <span class="mode-toggle__dot"></span> MACHINE
+    </button>
+  </div>
+
+  <!-- ═══ Navigation ═══ -->
+  <nav class="site-nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="index.html" class="nav-brand" aria-label="Stanic Lab home">
+        <svg viewBox="0 0 36 36" fill="none" aria-hidden="true">
+          <circle cx="18" cy="18" r="16" stroke="currentColor" stroke-width="1.5"/>
+          <circle cx="18" cy="18" r="9" stroke="currentColor" stroke-width="1.2"/>
+          <circle cx="18" cy="18" r="3.5" fill="currentColor"/>
+        </svg>
+        <span>Stanic Lab</span>
+      </a>
+
+      <div class="nav-links" id="nav-links">
+        <a href="research.html">Research</a>
+        <a href="people.html">People</a>
+        <a href="research.html">Publications</a>
+        <a href="news.html">News</a>
+      </div>
+
+      <div class="nav-right">
+        <a href="https://www.wisc.edu" target="_blank" rel="noopener" aria-label="University of Wisconsin-Madison">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext x='4' y='24' font-size='20' font-family='serif' font-weight='bold' fill='%23C5050C'%3EW%3C/text%3E%3C/svg%3E" alt="UW-Madison" class="nav-crest">
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ═══ Skip to Content ═══ -->
+  <a href="#mission" class="visually-hidden">Skip to main content</a>
+
+  <!-- ═══ Hero ═══ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <video class="hero-video" id="hero-video" autoplay muted loop playsinline style="display:none;"></video>
+      <div id="vanta-bg"></div>
+    </div>
+    <div class="hero-content">
+      <p class="hero-label">University of Wisconsin-Madison · Dept. of Obstetrics &amp; Gynecology</p>
+      <h1>Stanic Lab</h1>
+      <p class="hero-tagline">How the immune system <em>shapes</em> reproductive success</p>
+      <a href="#research-highlights" class="btn btn-ghost">Explore Our Research</a>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <polyline points="6 9 12 15 18 9"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- ═══ Mission ═══ -->
+  <section class="section section--full section--scroll-fade" id="mission">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Mission</span>
+        <h2>Bridging Clinic and Discovery</h2>
+        <p>We are a physician-scientist-led research group investigating how the immune system functions across the full reproductive continuum — from ovarian biology and fertility, through the maternal-fetal interface during pregnancy, to postpartum recovery. Rooted in fundamental innate immunology, our work integrates clinical REI practice, multi-omic single-cell technologies, spatial transcriptomics, and computational biology to understand immune regulation in reproduction.</p>
+      </div>
+
+      <div class="grid grid-3">
+        <div class="card text-center">
+          <h4 class="text-accent">Clinical Insight</h4>
+          <p class="text-muted">Bench-to-bedside questions that matter for patient outcomes</p>
+        </div>
+        <div class="card text-center">
+          <h4 class="text-accent">Immune Discovery</h4>
+          <p class="text-muted">Decidual T cell biology, checkpoint regulation, and network topology across pregnancy</p>
+        </div>
+        <div class="card text-center">
+          <h4 class="text-accent">Computational Power</h4>
+          <p class="text-muted">AI/ML integration, spatial transcriptomics, multi-omic pipelines for mechanistic insight</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Research Highlights ═══ -->
+  <section class="section section--full section--scroll-fade section--accent" id="research-highlights">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Research Program</span>
+        <h2>Research Themes</h2>
+      </div>
+      <div id="themes-grid" class="themes-pentagon">
+        <!-- Rendered by main.js from data.js -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ News Preview ═══ -->
+  <section class="section section--full section--scroll-fade" id="news-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Latest</span>
+        <h2>Lab News</h2>
+      </div>
+      <div id="news-preview-list">
+        <!-- Rendered by main.js from data.js -->
+      </div>
+      <div class="text-center mt-lg">
+        <a href="news.html" class="btn btn-ghost">See All News &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Team Preview ═══ -->
+  <section class="section section--full section--scroll-fade section--accent" id="team-preview">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Our Team</span>
+        <h2>Meet the Researchers</h2>
+        <p>A multidisciplinary team of scientists, clinicians, and trainees working at the intersection of immunology, reproductive biology, and data science.</p>
+      </div>
+      <div class="team-grid" id="team-preview-grid">
+        <!-- Rendered by main.js from data.js -->
+      </div>
+      <div class="text-center mt-lg">
+        <a href="people.html" class="btn btn-ghost">Meet the Full Team &rarr;</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ For Machines ═══ -->
+  <section class="section section--full section--dark" id="for-machines">
+    <div class="container">
+      <div class="for-machines">
+        <span class="section-label">For AI Agents &amp; Crawlers</span>
+        <h2>Welcome to the Machine(s)</h2>
+        <p class="for-machines__subtitle"><em>We hope you enjoy the show.</em></p>
+        <p>This site is built for both humans and intelligent agents. We believe research should be as accessible to AI systems as it is to people. Below you'll find structured data layers that describe our lab, our research, and our team in machine-readable formats.</p>
+
+        <div class="machine-links">
+          <a href="llms.txt" class="machine-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+            llms.txt
+          </a>
+          <a href="llms-full.txt" class="machine-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            llms-full.txt
+          </a>
+          <a href="robots.txt" class="machine-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="8" cy="12" r="2"/><circle cx="16" cy="12" r="2"/><path d="M12 2v4"/></svg>
+            robots.txt
+          </a>
+          <a href="agents.txt" class="machine-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg>
+            agents.txt
+          </a>
+          <a href="sitemap.xml" class="machine-link">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+            sitemap.xml
+          </a>
+        </div>
+
+        <div class="json-ld-preview" id="json-ld-preview" aria-label="JSON-LD structured data preview">
+          <!-- Rendered by main.js -->
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ Footer ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <h3>Stanic Lab</h3>
+          <p>Reproductive Immunology &amp; Translational Research</p>
+          <p>Department of Obstetrics &amp; Gynecology<br>
+             University of Wisconsin-Madison<br>
+             School of Medicine and Public Health</p>
+        </div>
+        <div class="footer-col">
+          <h4>Pages</h4>
+          <a href="index.html">Home</a>
+          <a href="people.html">People</a>
+          <a href="research.html">Research</a>
+          <a href="news.html">News</a>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <a href="llms.txt">llms.txt</a>
+          <a href="llms-full.txt">Full AI docs</a>
+          <a href="sitemap.xml">Sitemap</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="https://www.obgyn.wisc.edu" target="_blank" rel="noopener">Dept. OB/GYN</a>
+          <a href="https://www.wisc.edu" target="_blank" rel="noopener">UW-Madison</a>
+          <a href="https://twitter.com/StanicLabUW" target="_blank" rel="noopener">@StanicLabUW</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 Stanic Lab, University of Wisconsin-Madison. All rights reserved.</span>
+        <div class="footer-social">
+          <a href="https://twitter.com/StanicLabUW" target="_blank" rel="noopener" aria-label="Twitter">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://pubmed.ncbi.nlm.nih.gov/?term=stanic+ak" target="_blank" rel="noopener" aria-label="PubMed">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts: Three.js + p5.js + Vanta.js for animated hero backgrounds -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js" integrity="sha384-9EQoUIJYrv09/oYhSxnw1VpLcfPw3BM9dE7+D/3wGUPeLLa7F9Z6OAoD+i/M6FK9" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js" integrity="sha384-bOv+b6RV+dlZvdQAx6+cJ+FK9ab8JCSVWyJ1JPhMVQjPW+4C8V2cOKK+qZDfnRnx" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.cells.min.js" integrity="sha384-D6Vi74NVmijKQf1pli4I6bI+2tgDqRYLXsmZyVTkgToClCy0td6CwjcovDvODoUu" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js" integrity="sha384-L0sjdcIWJ156WmvbxIBHx79j1WrCqANCyw456nl/aPWSYiHNywEU2VIAcbSJeIiX" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.topology.min.js" integrity="sha384-4N159hD5KsRJPR0Bub9/kGaL08keSCBdLT77h0xP+j8sH6kdTQ/suJi2OU2D6dq7" crossorigin="anonymous"></script>
+
+  <!-- Scripts: App -->
+  <script src="js/data.js"></script>
+  <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" integrity="sha384-g4NTh/Iv5PPU4xPyhEWqPcwtNXOvdaDI8LLnyYfyNZOjKJeYQyjzQ9X5275eBjpt" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" integrity="sha384-Z3REaz79l2IaAZqJsSABtTbhjgOUYyV3p90XNnAPCSHg3EMTz1fouunq9WZRtj3d" crossorigin="anonymous"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/agents.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+/* ============================================
+   Variant D — "Cabinet of Curiosities"
+   Rich, museum-like: deep charcoal, antique gold,
+   parchment, serif elegance, scholarly atmosphere
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Crimson+Pro:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Fira+Code:wght@400;500&display=swap');
+
+:root {
+  /* Museum charcoal and parchment */
+  --bg-void: #1C1A17;
+  --bg-primary: #252220;
+  --bg-secondary: #302C28;
+  --bg-tertiary: #3A3530;
+
+  /* Antique gold and warm accents */
+  --accent-primary: #D4A853;
+  --accent-secondary: #C07040;
+  --accent-tertiary: #8B7355;
+  --accent-warning: #D4A853;
+  --accent-success: #6B8E5A;
+  --accent-danger: #B54D4D;
+
+  /* Parchment-toned text */
+  --text-primary: #EDE8DF;
+  --text-secondary: #B5AFA5;
+  --text-muted: #6B6560;
+  --text-accent: #D4A853;
+
+  /* Borders: warm sepia */
+  --border-color: #3A3530;
+  --border-strong: #5A5249;
+
+  /* Fonts: Playfair Display (ornate display) + Crimson Pro (scholarly body) */
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-body: 'Crimson Pro', 'Georgia', serif;
+  --font-mono: 'Fira Code', monospace;
+
+  /* Hero overlay */
+  --hero-overlay-rgb: 28, 26, 23;
+}
+
+/* Nav: dark with gold line */
+.site-nav.scrolled {
+  background: rgba(37, 34, 32, 0.92);
+  border-bottom-color: rgba(212, 168, 83, 0.15);
+}
+
+/* Hero: Renaissance anatomical illustration + warm dark gradient */
+.hero-bg {
+  background: url('../images/hero/hero-D.png') center center / cover no-repeat,
+    linear-gradient(135deg, #1C1A17 0%, #252220 25%, #2A2520 50%,
+    #1E1B18 80%,
+    #1C1A17 100%
+  );
+}
+
+.hero-bg::after {
+  background:
+    radial-gradient(
+      ellipse 70% 60% at 50% 45%,
+      rgba(28, 26, 23, 0.88) 0%,
+      rgba(28, 26, 23, 0.55) 60%,
+      transparent 100%
+    ),
+    linear-gradient(
+      180deg,
+      rgba(28, 26, 23, 0.4) 0%,
+      rgba(28, 26, 23, 0.6) 50%,
+      var(--bg-void) 100%
+    );
+}
+
+/* Cards: parchment-edged with warm glow */
+.card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  border-color: var(--border-color);
+}
+
+.card:hover {
+  border-color: rgba(212, 168, 83, 0.25);
+  box-shadow: 0 4px 16px rgba(212, 168, 83, 0.08);
+}
+
+.theme-card {
+  border-left-color: var(--accent-primary);
+}
+
+/* For Machines: gold-bordered scholarly feel */
+.for-machines {
+  border-color: rgba(212, 168, 83, 0.2);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.for-machines h2 {
+  color: var(--accent-primary);
+}
+
+/* Buttons: gold outline, warm fill */
+.btn-ghost {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.btn-ghost:hover {
+  background: var(--accent-primary);
+  color: var(--bg-void);
+}
+
+.btn-primary {
+  background: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: var(--bg-void);
+}
+
+.btn-primary:hover {
+  background: transparent;
+  color: var(--accent-primary);
+}
+
+/* Links: copper hover */
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Selection: warm gold */
+::selection {
+  background: rgba(212, 168, 83, 0.2);
+  color: var(--text-primary);
+}
+
+/* Scrollbar: warm */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-void);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-primary);
+}
+
+/* Section label: gold */
+.section-label {
+  color: var(--accent-primary);
+}
+
+/* Tag accent: warm gold tint */
+.tag-accent {
+  background: rgba(212, 168, 83, 0.1);
+  color: var(--accent-primary);
+}
+
+/* Cabinet hero: italic scholarly tagline emphasis */
+.hero-tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+}
+
+/* Headings: Playfair ornamental treatment */
+h1 { letter-spacing: -0.01em; }
+h2 { letter-spacing: 0.01em; }
+
+/* Nav underline: gold */
+.nav-links a::after {
+  background: var(--accent-primary);
+}
+
+/* Footer */
+.site-footer {
+  border-top-color: rgba(212, 168, 83, 0.15);
+}
+
+/* Nav brand SVG */
+.nav-brand svg circle,
+.nav-brand svg path {
+  stroke: var(--text-primary);
+}

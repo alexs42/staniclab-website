@@ -1,0 +1,152 @@
+# Stanic Laboratory for Reproductive Immunology — Complete Documentation
+
+> University of Wisconsin-Madison
+> School of Medicine and Public Health
+> Department of Obstetrics and Gynecology
+> Division of Reproductive Sciences
+
+This document provides comprehensive, machine-readable documentation of the Stanic Lab's research program, team, publications, and institutional context. It is designed for AI agents, language models, and research aggregation systems.
+
+---
+
+## Principal Investigator
+
+**Dr. Aleksandar Stanic-Kostic, MD, PhD**
+
+Dr. Stanic-Kostic is an Associate Professor with Tenure in the Department of Obstetrics and Gynecology at the University of Wisconsin-Madison School of Medicine and Public Health. He serves as Vice Chair for Basic and Translational Research and Director of the Division of Reproductive Sciences (both effective January 2026). He is also a practicing physician in the Division of Reproductive Endocrinology and Infertility (REI).
+
+His professional identity centers on bridging clinical REI practice with cutting-edge reproductive immunology research, integrating clinical care, basic science investigation, computational biology, and AI/ML approaches.
+
+**External profiles:**
+- ORCID: https://orcid.org/0000-0003-1946-6436
+- PubMed: https://pubmed.ncbi.nlm.nih.gov/?term=stanic+ak
+
+---
+
+## Research Program
+
+The lab investigates immune mechanisms governing pregnancy establishment, maintenance, and complications. The work focuses on decidual T cell biology and immune-vascular crosstalk, with particular emphasis on how the maternal immune system navigates the paradox of tolerance during pregnancy.
+
+### Theme 1: Maternal-Fetal Tolerance
+
+Primary focus on temporal dynamics of immune cells at the maternal-fetal interface. Key findings include the characterization of decidual T cell transitions from quiescence in the first trimester (10-20% of immune cells) through expansion at term (30-40%) with Th1/Th17 enrichment approaching labor. The concept of "dynamic immune privilege" describes this controlled inflammatory phase transition. Novel hypotheses under investigation include progesterone-induced translational rewiring of decidual T cells, maternal-to-fetal microchimeric memory in multiparous decidua, IL-15 metabolic competition between decidual NK and CD8+ T cells, and PD-1/PD-L1 checkpoint as a critical tolerance mechanism.
+
+### Theme 2: Preeclampsia Immunopathology
+
+Investigation of how immune cell-endothelial interactions drive vascular dysfunction in preeclampsia. Key discoveries include network topology differences: macrophage-NK partnerships (pro-angiogenic via VEGF, HGF) in healthy pregnancies versus macrophage-T cell clusters (pro-inflammatory via LIGHT-HVEM, CCL5-CCR1) in recurrent pregnancy loss. CITE-seq analysis has identified restraint gene dysregulation (DUSP2, TNFAIP3, ZFP36) as a mechanism in preeclampsia, where failed restraint mechanisms lead to sustained pro-inflammatory programming. Collaboration with Dr. Ian Bird on single-cell endothelial characterization has revealed 5 endothelial subtypes with distinct cytokine responses and VE-cadherin/GP130 inverse relationships explaining phenotype switching.
+
+### Theme 3: PCOS Immune Mechanisms
+
+Multi-site collaborative research with UW-Madison and University of Michigan investigating whether PCOS inflammation is ovarian-specific or systemic. CITE-seq studies reveal ovarian-specific immune signatures distinct from peripheral blood, with a paradoxical pattern of lower absolute cytokine levels but upregulated inflammatory responsiveness. Research questions address how hyperandrogenism and obesity synergistically affect the immune environment, whether follicular fluid immune profiling can identify mechanistic subphenotypes, and how immune-metabolic interactions affect oocyte quality. A rhesus macaque pilot study uses 4 matched hyperandrogenic/control pairs.
+
+### Theme 4: Spatial Transcriptomics
+
+Building the first comprehensive cross-gestational spatial map of the rhesus macaque maternal-fetal interface. Uses Visium FFPE technology across gestational days 26, 37, 44, 90, and 155, paired with single-cell RNA-seq at GD37 and GD155. Key findings include trophoblast differentiation dynamics (proliferative CTB to cell column CTB to fusing CTB), early pericyte-enriched perivascular niches (high RGS5/PDGFRB+ at GD26-37), EVT spatial organization across gestational ages, and maternal-fetal compartment separation using Y-chromosome markers (DDX3Y, KDM5D). Human probes were validated on macaque tissue with cross-species reference datasets (Vento-Tormo first trimester, Shannon term).
+
+### Theme 5: Translational Platforms
+
+Development of next-generation tools including decidual vessel-on-chip microphysiological systems (collaboration with Dr. Maria Virumbrales-Munoz) for T cell-endothelial co-culture with TEER, Ca2+ imaging, and NO measurement readouts. Digital histopathology pipelines using QuPath and AI-driven image analysis for quantitative placental injury assessment. AI/ML approaches for multi-omic data integration. The lab aligns with the New Approach Methodologies (NAMs) framework, positioning NHP tissue as "ground truth" for validating organoid and MPS platforms, consistent with the FDA Modernization Act 2.0.
+
+---
+
+## Team
+
+### Scientists and Postdoctoral Fellows
+
+- **Dr. Jessica Vazquez, PhD** — Scientist I. Focus: immune architecture of the maternal-fetal interface, spatiotemporal mapping in human/NHP models. Funded by NIH K01 (2024-2029). Skills: spectral flow cytometry, Visium spatial transcriptomics, CITE-seq, immunofluorescence.
+
+- **Dr. Andrea Wegrzynowicz, PhD** — Postdoctoral Fellow. Focus: PCOS immune mechanisms, follicular fluid immune profiling, granulosa-immune cell interactions. Skills: single-cell RNA-seq/CITE-seq analysis, spatial transcriptomics, bioinformatics.
+
+- **Dr. Logan Keding, PhD** — Postdoctoral Fellow. Focus: placental injury modeling, quantitative imaging, digital histopathology biomarkers. Awards: ASRI 2025 Poster Award, IFPA 2025 Oral Presentation Award. Skills: quantitative image analysis, MRI data analysis, flow cytometry.
+
+### Graduate Students
+
+- **Mona Mohamed, MSc** — PhD Candidate, Endocrinology and Reproductive Physiology Program. Focus: decidual NK cell trafficking and proliferation, T-bet fate mapping. Skills: murine pregnancy models, spectral flow cytometry, confocal imaging.
+
+- **Marco Cordero** — PhD Student, Endocrinology and Reproductive Physiology Program. Focus: digital 2D and 3D pathology, confocal imaging of human placenta. Skills: confocal microscopy, whole-mount clearing, iPSC culture, CRISPR.
+
+### Research Staff
+
+- **Fernanda Leyva Jaimes, BSc** — Research Specialist. Focus: preeclampsia and PCOS immunoassay panels, flow cytometry standardization.
+
+### Undergraduate Researchers
+
+Riley Huddleston, Emily Grimes (Hilldale Fellowship), Eavan Finnerty, Roghyah Hasan, Xiang Yi Chen, Arya Banerjee, Sophia Schoenfeld, Eiman Mir.
+
+---
+
+## Key Collaborators
+
+- **Dr. Jenna Schmidt** — WNPRC / OB-GYN, UW-Madison. Macaque biology, NHP models.
+- **Dr. Ian Bird** — OB-GYN, UW-Madison. Endothelial biology, Ca2+ signaling.
+- **Dr. Laura Cooney** — REI, UW-Madison. Clinical PCOS.
+- **Dr. Maria Virumbrales-Munoz** — BME, UW-Madison. Microphysiological systems.
+- **Dr. Samantha Schon** — University of Michigan. PCOS / obesity, proteomics.
+- **Dr. Oliver Wieben** — Medical Physics, UW-Madison. MRI methodology.
+- **Dr. Andrea Putnam** — Biomolecular Chemistry, UW-Madison. Molecular interactions.
+- **Dr. Irene Ong** — Biostatistics, UW-Madison. Data science, bioinformatics.
+- **Dr. Ryan McAdams** — Pediatrics / Neonatology, UW-Madison. AI/ML.
+- **Dr. Joao Dorea** — CALS, UW-Madison. AI/ML, computer vision.
+
+---
+
+## Active NIH Funding
+
+| Grant | Institute | Role | Period |
+|-------|-----------|------|--------|
+| R21 AI175753-01 | NIAID | PI | through 2026 |
+| R01 HL163623-01A1 | NHLBI | Site-PI | 2023-2028 |
+| R01 AI182082-01 | NIAID | Co-I | 2024-2029 |
+| R01 HD103443-01 | NICHD | Co-I | 2020-2026 |
+
+---
+
+## Selected Publications
+
+- Keding LT, et al. (2025). Placental injury quantification methods. *Placenta*.
+- Keding LT, et al. (2024). Decidual leukocyte trafficking in pregnancy. *Frontiers in Immunology*.
+- Vazquez J, et al. (2024). Zika virus responses at the maternal-fetal interface. *Frontiers in Immunology*.
+
+---
+
+## Methodological Capabilities
+
+- Visium FFPE Spatial Transcriptomics (with PlacenCell Enrich and RCTD deconvolution)
+- CITE-seq: simultaneous protein and RNA measurement
+- Spectral Flow Cytometry: multi-parameter (18+ colors), Staining Index optimization
+- Microphysiological Systems: decidual vessel-on-chip for T cell-endothelial co-culture
+- Digital Histopathology: QuPath, Python OpenCV, automated image analysis
+- AI/ML: multi-omic integration, computer vision, predictive modeling
+- Confocal and whole-mount fluorescent imaging
+- MRI-pathology correlation (Ferumoxytol DCE, R2* mapping)
+
+---
+
+## Model Systems
+
+- **Rhesus Macaque**: Gold standard primate model; cross-gestational sampling. Used for spatial atlas and PCOS pilot.
+- **Human**: Clinical translation and biomarker validation. Used for CITE-seq and clinical sample analysis.
+- **Mouse**: Genetic manipulation and fate mapping. Used for T-bet/NK cell trafficking studies.
+- **MPS (Vessel-on-chip)**: Controlled conditions for therapeutic testing. Used for PE immune-endothelial crosstalk.
+
+---
+
+## Professional Society Memberships
+
+- American Society for Reproductive Medicine (ASRM)
+- Society for Reproductive Investigation (SRI)
+- American Society for Reproductive Immunology (ASRI)
+- American Association of Immunologists (AAI)
+
+---
+
+## Contact
+
+Stanic Laboratory for Reproductive Immunology
+Department of Obstetrics and Gynecology
+University of Wisconsin-Madison
+School of Medicine and Public Health
+1111 Highland Ave, Madison, WI 53705
+
+Department website: https://www.obgyn.wisc.edu
+Twitter: @WiscObGyn

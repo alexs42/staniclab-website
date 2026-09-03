@@ -1,0 +1,56 @@
+# Stanic Lab — Agent Capability Declarations
+# Version: 1.0
+# Last-Updated: 2026-03-13
+
+# This file declares the structured data and machine-readable
+# resources available on this site for AI agents.
+
+## Identity
+Name: Stanic Laboratory for Reproductive Immunology
+Institution: University of Wisconsin-Madison
+Department: Obstetrics and Gynecology
+PI: Dr. Aleksandar Stanic-Kostic
+
+## Available Resources
+
+### llms.txt
+Path: /llms.txt
+Format: Markdown
+Size: ~2KB
+Description: Brief overview of lab, research themes, team, and methods.
+Use-Case: Quick context loading for LLM conversations about this lab.
+
+### llms-full.txt
+Path: /llms-full.txt
+Format: Markdown
+Size: ~8KB
+Description: Comprehensive documentation including PI bio, all research themes with scientific detail, complete team roster, collaborator list, grants, publications, methods, and model systems.
+Use-Case: Deep context for detailed queries about the lab's research program.
+
+### JSON-LD Structured Data
+Format: Schema.org JSON-LD
+Location: Embedded in HTML <head> of every page
+Types: ResearchOrganization, Person, WebSite, BreadcrumbList, ResearchProject, ScholarlyArticle
+Use-Case: Machine-readable entity extraction and knowledge graph integration.
+
+### Sitemap
+Path: /sitemap.xml
+Format: XML
+Description: All pages with last-modified dates and priority values.
+
+### robots.txt
+Path: /robots.txt
+Description: All crawlers and AI agents are explicitly welcomed.
+
+## Rate Limits
+None. This is a static site. Crawl freely.
+
+## Data Freshness
+Content is manually curated and updated periodically.
+Publications and team roster reflect the current state of the lab.
+UW OB/GYN news mirror is refreshed before each deployment.
+
+## Contact
+For data corrections or research inquiries, contact through:
+- Department website: https://www.obgyn.wisc.edu
+- PubMed: https://pubmed.ncbi.nlm.nih.gov/?term=stanic+ak
