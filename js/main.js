@@ -349,26 +349,71 @@
     document.body.setAttribute('data-machine-rendered', '');
     if (typeof LAB_DATA === 'undefined') return;
 
-    // ── Shared data builders ──
-    const allMembers = [
-      { n: LAB_DATA.pi.shortName + ', ' + LAB_DATA.pi.credentials, r: 'Principal Investigator', f: 'Reproductive Immunology', o: LAB_DATA.pi.links.orcid },
-      ...LAB_DATA.team.senior.map(m => ({ n: m.name.replace(/^Dr\.\s*/, '') + (m.credentials ? ', ' + m.credentials : ''), r: m.role, f: m.focus.split(';')[0], o: '' })),
-      ...LAB_DATA.team.graduate.map(m => ({ n: m.name + (m.credentials ? ', ' + m.credentials : ''), r: m.role, f: m.focus.split(';')[0], o: '' })),
-      ...(LAB_DATA.team.specialist || []).map(m => ({ n: m.name + (m.credentials ? ', ' + m.credentials : ''), r: m.role, f: m.focus.split(';')[0], o: '' })),
-      ...(LAB_DATA.team.undergraduate || []).map(u => ({ n: u.name, r: u.role || 'Undergraduate Researcher', f: u.project, o: '' }))
-    ];
-    const teamYaml = allMembers.map(m =>
-      `  - name: "${m.n}"\n    role: "${m.r}"\n    focus: "${m.f}"${m.o ? '\n    orcid: "' + m.o + '"' : ''}`
+    // ── Helpers: YAML-safe scalars, block text, DOM text ──
+    const q = s => '"' + String(s == null ? '' : s).replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\s*\n\s*/g, ' ') + '"';
+    const block = (s, indent) => {
+      const pad = ' '.repeat(indent);
+      const text = String(s == null ? '' : s).replace(/<[^>]+>/g, '').trim();
+      if (!text) return '""';
+      return '|\n' + text.split(/\n+/).map(line => pad + line.trim()).join('\n');
+    };
+    const list = (arr, indent) => (arr && arr.length)
+      ? '\n' + arr.map(x => ' '.repeat(indent) + '- ' + q(x)).join('\n')
+      : ' []';
+    const domText = el => (el ? el.textContent.replace(/\s+/g, ' ').trim() : '');
+    const nameOf = m => m.name.replace(/^Dr\.\s*/, '') + (m.credentials ? ', ' + m.credentials : '');
+    const pubMap = {};
+    (LAB_DATA.publications || []).forEach(p => { if (p.pmid) pubMap[p.pmid] = p; });
+    const grantMap = {};
+    (LAB_DATA.grants || []).forEach(g => { grantMap[g.number] = g; });
+
+    // ── Shared builders ──
+    const memberYaml = (m, tier) => [
+      `  - name: ${q(nameOf(m))}`,
+      `    tier: ${q(tier)}`,
+      `    role: ${q(m.role || (tier === 'undergraduate' ? 'Undergraduate Researcher' : ''))}`,
+      m.roleNow ? `    now: ${q(m.roleNow)}` : '',
+      m.program ? `    program: ${q(m.program)}` : '',
+      m.funding ? `    funding: ${q(m.funding)}` : '',
+      m.focus ? `    focus: ${q(m.focus)}` : '',
+      m.project ? `    project: ${q(m.project)}` : '',
+      m.awards && m.awards.length ? `    awards:${list(m.awards, 6)}` : '',
+      m.award ? `    awards:${list(m.award.split(' · '), 6)}` : '',
+      m.skills && m.skills.length ? `    skills:${list(m.skills, 6)}` : '',
+      m.bio ? `    bio: ${block(m.bio, 6)}` : ''
+    ].filter(Boolean).join('\n');
+
+    const teamYaml = [
+      `  - name: ${q(LAB_DATA.pi.shortName + ', ' + LAB_DATA.pi.credentials)}\n    tier: "pi"\n    role: "Principal Investigator"\n    titles: ${q(LAB_DATA.pi.roles.join(' | '))}\n    orcid: ${q(LAB_DATA.pi.links.orcid)}`,
+      ...LAB_DATA.team.senior.map(m => memberYaml(m, 'senior')),
+      ...LAB_DATA.team.graduate.map(m => memberYaml(m, 'graduate')),
+      ...(LAB_DATA.team.specialist || []).map(m => memberYaml(m, 'specialist')),
+      ...(LAB_DATA.team.undergraduate || []).map(m => memberYaml(m, 'undergraduate'))
+    ].join('\n');
+
+    const alumniYaml = (LAB_DATA.alumni || []).map(a => [
+      `  - name: ${q(nameOf(a))}`,
+      `    former_role: ${q(a.formerRole)}`,
+      `    period: ${q(a.period)}`,
+      a.focus ? `    focus: ${q(a.focus)}` : '',
+      a.awards && a.awards.length ? `    awards:${list(a.awards, 6)}` : '',
+      a.currentPosition ? `    now: ${q(a.currentPosition)}` : '',
+      a.bio ? `    bio: ${block(a.bio, 6)}` : ''
+    ].filter(Boolean).join('\n')).join('\n');
+
+    const collabYaml = (LAB_DATA.collaborators || []).map(c =>
+      `  - name: ${q(c.name)}\n    affiliation: ${q(c.affiliation)}` + (c.area ? `\n    area: ${q(c.area)}` : '')
     ).join('\n');
+
     const themeYaml = LAB_DATA.themes.map(t =>
-      `  - id: ${t.id}\n    title: "${t.title}"\n    summary: "${t.description}"`
+      `  - id: ${t.id}\n    title: ${q(t.title)}\n    subtitle: ${q(t.subtitle)}\n    summary: ${q(t.summary)}`
     ).join('\n');
     const connText = (LAB_DATA.themeConnections || []).map(c =>
       `  ${c.from} --${c.strength}--> ${c.to}`
     ).join('\n');
-    const newsLines = LAB_DATA.labNews.slice(0, 8).map(n =>
-      `- [${n.date}] ${n.title}: ${n.description}`
-    ).join('\n');
+    const newsItem = n => `- [${n.date}] ${n.title}: ${n.description}` +
+      (n.tags && n.tags.length ? ` (tags: ${n.tags.join(', ')})` : '') +
+      (n.sourceUrl ? `\n  source: ${n.sourceUrl}` : '');
 
     // ── Hero (all pages) ──
     injectMachine('.hero-content',
@@ -382,18 +427,22 @@ PI: [${LAB_DATA.pi.name}, ${LAB_DATA.pi.credentials}](${LAB_DATA.pi.links.orcid}
     ${LAB_DATA.pi.roles.join(' | ')}
 
 Pages: [Home](index.html) | [People](people.html) | [Research](research.html) | [News](news.html)
-Data:  [llms.txt](llms.txt) | [agents.txt](agents.txt) | [sitemap.xml](sitemap.xml)`);
+Data:  [llms.txt](llms.txt) | [llms-full.txt](llms-full.txt) | [agents.txt](agents.txt) | [sitemap.xml](sitemap.xml)`);
 
-    // ── HOME PAGE sections ──
-    if (document.getElementById('mission')) {
+    // ── HOME PAGE ──
+    const mission = document.getElementById('mission');
+    if (mission) {
+      const pillars = [...mission.querySelectorAll('.card')].map(c =>
+        `| ${domText(c.querySelector('h4'))} | ${domText(c.querySelector('p'))} |`
+      ).join('\n');
       injectMachine('#mission .container',
-`## Research Pillars
+`## ${domText(mission.querySelector('.section-header h2'))}
+
+${domText(mission.querySelector('.section-header p'))}
 
 | Pillar | Description |
 |--------|-------------|
-| Clinical Insight | Bench-to-bedside questions for patient outcomes |
-| Immune Discovery | Decidual T cell biology, checkpoint regulation |
-| Computational Power | AI/ML, spatial transcriptomics, multi-omics |`);
+${pillars}`);
     }
 
     if (document.getElementById('research-highlights')) {
@@ -419,7 +468,9 @@ ${teamYaml}`);
       injectMachine('#news-preview .container',
 `## Recent Updates
 
-${newsLines}`);
+${LAB_DATA.labNews.slice(0, 3).map(newsItem).join('\n')}
+
+Full list: [news.html](news.html)`);
     }
 
     if (document.getElementById('for-machines')) {
@@ -430,8 +481,17 @@ ${newsLines}`);
         url: window.location.origin,
         department: LAB_DATA.lab.department,
         parentOrganization: LAB_DATA.lab.institution,
-        member: allMembers.map(m => ({ '@type': 'Person', name: m.n, jobTitle: m.r })),
-        researchTheme: LAB_DATA.themes.map(t => ({ name: t.title, description: t.description }))
+        member: [
+          { '@type': 'Person', name: LAB_DATA.pi.shortName + ', ' + LAB_DATA.pi.credentials, jobTitle: 'Principal Investigator', sameAs: LAB_DATA.pi.links.orcid },
+          ...['senior', 'graduate', 'specialist', 'undergraduate'].flatMap(tier => (LAB_DATA.team[tier] || []).map(m => {
+            const o = { '@type': 'Person', name: nameOf(m), jobTitle: m.roleNow ? m.role + ' (now ' + m.roleNow + ')' : (m.role || 'Undergraduate Researcher') };
+            const aw = m.awards || (m.award ? m.award.split(' · ') : null);
+            if (aw && aw.length) o.award = aw;
+            return o;
+          }))
+        ],
+        alumni: (LAB_DATA.alumni || []).map(a => ({ '@type': 'Person', name: nameOf(a), jobTitle: a.formerRole, award: a.awards || undefined })),
+        researchTheme: LAB_DATA.themes.map(t => ({ name: t.title, description: t.summary }))
       };
       injectMachine('#for-machines .for-machines',
 `## Structured Data (JSON-LD)
@@ -439,64 +499,93 @@ ${newsLines}`);
 ${JSON.stringify(jsonLd, null, 2)}`);
     }
 
-    // ── PEOPLE PAGE sections ──
+    // ── PEOPLE PAGE ──
     if (document.querySelector('.pi-feature')) {
       const pi = LAB_DATA.pi;
       injectMachine('.pi-feature',
 `## Principal Investigator
 
-name: "${pi.shortName}, ${pi.credentials}"
-title: "${pi.title}"
-roles:
-  - "${pi.roles.join('"\n  - "')}"
-orcid: "${pi.links.orcid}"
-pubmed: "${pi.links.pubmed}"
-scholar: "${pi.links.scholar}"
+name: ${q(pi.shortName + ', ' + pi.credentials)}
+title: ${q(pi.title)}
+roles:${list(pi.roles, 2)}
+orcid: ${q(pi.links.orcid)}
+pubmed: ${q(pi.links.pubmed)}
+scholar: ${q(pi.links.scholar)}
 
-bio: |
-  ${pi.bio}`);
+bio: ${block(pi.bio, 2)}`);
     }
 
     const tierSections = document.querySelectorAll('.tier-section');
-    if (tierSections.length > 0) {
-      // Inject full team YAML into the first tier section's parent
-      const parent = tierSections[0].parentElement;
-      if (parent) {
-        const detailedYaml = [
-          ...LAB_DATA.team.senior.map(m => `  - name: "${m.name.replace(/^Dr\.\s*/, '')}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"${m.roleNow ? `\n    now: "${m.roleNow}"` : ''}\n    focus: "${m.focus}"\n    bio: "${(m.bio || '').substring(0, 200)}..."`),
-          ...LAB_DATA.team.graduate.map(m => `  - name: "${m.name}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"${m.roleNow ? `\n    now: "${m.roleNow}"` : ''}\n    focus: "${m.focus}"\n    bio: "${(m.bio || '').substring(0, 200)}..."`),
-          ...(LAB_DATA.team.specialist || []).map(m => `  - name: "${m.name}${m.credentials ? ', ' + m.credentials : ''}"\n    role: "${m.role}"${m.roleNow ? `\n    now: "${m.roleNow}"` : ''}\n    focus: "${m.focus}"`),
-          ...(LAB_DATA.team.undergraduate || []).map(u => `  - name: "${u.name}"\n    role: "${u.role || 'Undergraduate Researcher'}"\n    project: "${u.project}"${u.bio ? '\n    bio: "' + (u.bio || '').substring(0, 150) + '..."' : ''}`)
-        ].join('\n');
-        const alumniYaml = (LAB_DATA.alumni || []).map(a =>
-          `  - name: "${a.name}${a.credentials ? ', ' + a.credentials : ''}"\n    former_role: "${a.formerRole}"\n    period: "${a.period}"${a.currentPosition ? '\n    now: "' + a.currentPosition + '"' : ''}`
-        ).join('\n');
-        injectMachine(parent,
+    if (tierSections.length > 0 && tierSections[0].parentElement) {
+      injectMachine(tierSections[0].parentElement,
 `## Full Team Roster
 
 members:
-${detailedYaml}
-
-alumni:
-${alumniYaml}
+${teamYaml}`);
+    }
+    if (document.getElementById('collab-grid')) {
+      injectMachine('#collaborators .container',
+`## Key Collaborators
 
 collaborators:
-${(LAB_DATA.collaborators || []).map(c => `  - name: "${c.name}"\n    affiliation: "${c.affiliation}"\n    area: "${c.area}"`).join('\n')}`);
-      }
+${collabYaml}`);
+    }
+    if (document.getElementById('alumni-grid')) {
+      injectMachine('#alumni-grid',
+`## Alumni
+
+alumni:
+${alumniYaml}`);
     }
 
-    // ── RESEARCH PAGE sections ──
-    if (document.getElementById('themes')) {
+    // ── RESEARCH PAGE ──
+    if (document.getElementById('themes-deep')) {
+      const themesDetailed = LAB_DATA.themes.map(t => {
+        const papers = (t.keyPapers || []).map(pmid => {
+          const p = pubMap[pmid];
+          if (!p) return '';
+          const note = t.keyPaperNotes && t.keyPaperNotes[pmid] ? `\n        note: ${q(t.keyPaperNotes[pmid])}` : '';
+          return `      - pmid: ${pmid}\n        title: ${q(p.title)}\n        journal: ${q(p.journal)}\n        year: ${p.year}${note}\n        url: https://pubmed.ncbi.nlm.nih.gov/${pmid}/`;
+        }).filter(Boolean).join('\n');
+        const funding = (t.grants || []).map(num => {
+          const g = grantMap[num];
+          return g ? `      - ${q(g.number + ' (' + g.institute + ', ' + g.role + ') — ' + g.period)}` : `      - ${q(num)}`;
+        }).join('\n');
+        return [
+          `  - id: ${t.id}`,
+          `    title: ${q(t.title)}`,
+          `    subtitle: ${q(t.subtitle)}`,
+          `    summary: ${q(t.summary)}`,
+          `    detail: ${block(t.detail, 6)}`,
+          papers ? `    key_publications:\n${papers}` : '',
+          funding ? `    funding:\n${funding}` : ''
+        ].filter(Boolean).join('\n');
+      }).join('\n');
       injectMachine('#themes .container',
 `## Research Themes (Detailed)
 
 themes:
-${LAB_DATA.themes.map(t =>
-  `  - id: ${t.id}\n    title: "${t.title}"\n    description: "${t.description}"\n    detail: "${(t.detail || '').substring(0, 300)}..."`
-).join('\n')}
+${themesDetailed}
 
 connections:
 ${connText}`);
+    }
+
+    if (document.getElementById('model-grid')) {
+      injectMachine('#models .container',
+`## Model Systems
+
+models:
+${(LAB_DATA.models || []).map(m =>
+  `  - name: ${q(m.name)}\n    strength: ${q(m.strength)}\n    use: ${q(m.use)}` + (m.partner ? `\n    partner: ${q(m.partner)}` : '')
+).join('\n')}`);
+    }
+
+    if (document.getElementById('methods-grid')) {
+      injectMachine('#methods .container',
+`## Methods
+
+methods:${list(LAB_DATA.methods || [], 2)}`);
     }
 
     const pubList = document.querySelector('.pub-list');
@@ -513,36 +602,74 @@ ${pubs}`);
     const grantTable = document.querySelector('.grant-table');
     if (grantTable) {
       injectMachine(grantTable.parentElement || grantTable,
-`## Active Grants
+`## Grants
 
-| Grant | Role | Status |
-|-------|------|--------|
-${(LAB_DATA.grants || []).map(g => `| ${g.number} (${g.agency}) | ${g.role} | ${g.status} |`).join('\n')}`);
+| Grant | Institute | Role | Status | Period |
+|-------|-----------|------|--------|--------|
+${(LAB_DATA.grants || []).map(g => `| ${g.number} | ${g.institute} | ${g.role} | ${g.status} | ${g.period} |`).join('\n')}`);
     }
 
-    // ── NEWS PAGE sections ──
+    if (document.getElementById('society-list')) {
+      injectMachine('#societies .container',
+`## ${LAB_DATA.societiesLabel || 'Professional Societies'}
+
+${LAB_DATA.societiesDescription || ''}
+
+societies:
+${(LAB_DATA.societies || []).map(s => `  - abbrev: ${q(s.abbrev)}\n    name: ${q(s.name)}`).join('\n')}`);
+    }
+
+    // ── NEWS PAGE ──
+    const uwNews = document.getElementById('uw-news');
+    if (uwNews) {
+      const source = 'https://www.obgyn.wisc.edu/categories/stanic-kostic-research-team';
+      fetch('data/uw-news-cache.json')
+        .then(r => r.ok ? r.json() : null)
+        .then(data => {
+          const items = (data && data.articles) ? data.articles.map(a =>
+            `- [${a.date || ''}] ${a.title}\n  ${a.summary || ''}\n  link: ${a.link}`
+          ).join('\n') : '(no cached items)';
+          injectMachine('#uw-news .container',
+`## UW OB/GYN Department News (mirror)
+
+source: ${source}
+last_updated: ${(data && data.lastUpdated) || ''}
+
+${items}`);
+        })
+        .catch(() => {});
+    }
+
     const newsSection = document.getElementById('lab-news');
     if (newsSection) {
       injectMachine(newsSection,
-`## Lab News & Announcements
+`## Lab News (all ${LAB_DATA.labNews.length} items)
 
-${newsLines}`);
+${LAB_DATA.labNews.map(newsItem).join('\n')}`);
+    }
+
+    if (document.getElementById('gallery-grid')) {
+      injectMachine('#gallery .container',
+`## Gallery
+
+photos:
+${(LAB_DATA.gallery || []).map(g => `  - src: ${q(g.src)}\n    caption: ${q(g.caption)}` + (g.tags && g.tags.length ? `\n    tags:${list(g.tags, 6)}` : '')).join('\n')}`);
     }
 
     const timeline = document.querySelector('.timeline');
     if (timeline) {
-      const milestones = (LAB_DATA.timeline || []).map(t =>
-        `- [${t.year}] ${t.title}: ${t.description}`
+      const milestones = [...timeline.querySelectorAll('.timeline-item')].map(item =>
+        `- [${domText(item.querySelector('.timeline-year'))}] ${domText(item.querySelector('h4'))}: ${domText(item.querySelector('.timeline-content p:not(.timeline-year)'))}`
       ).join('\n');
       injectMachine(timeline.parentElement || timeline,
-`## Lab Timeline
+`## Lab Milestones
 
 ${milestones}`);
     }
   }
 
   function injectMachine(selector, mdText) {
-    const parent = document.querySelector(selector);
+    const parent = typeof selector === 'string' ? document.querySelector(selector) : selector;
     if (!parent) return;
     const div = document.createElement('div');
     div.className = 'machine-content';
