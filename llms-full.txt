@@ -81,7 +81,7 @@ Riley Huddleston (AE-PCOS 2025 travel award), Emily Grimes (Hilldale Fellowship,
 - **Dr. Jenna Schmidt** — WNPRC / OB-GYN, UW-Madison. Macaque biology, NHP models
 - **Dr. Ian Bird** — OB-GYN, UW-Madison. Endothelial biology, Ca2+ signaling
 - **Dr. Laura Cooney** — REI, UW-Madison. Clinical PCOS
-- **Dr. Maria Virumbrales-Munoz** — BME, UW-Madison. Microphysiological systems
+- **Dr. Maria Virumbrales-Munoz** — OB-GYN, UW-Madison. Microphysiological systems
 - **Dr. Samantha Schon** — U Michigan. PCOS / obesity, proteomics
 - **Dr. Oliver Wieben** — Medical Physics, UW-Madison. MRI methodology
 - **Dr. Andrea Putnam** — Biomolecular Chemistry, UW-Madison. Molecular interactions
@@ -126,7 +126,7 @@ Riley Huddleston (AE-PCOS 2025 travel award), Emily Grimes (Hilldale Fellowship,
 - **Rhesus Macaque**: Gold standard primate model; cross-gestational sampling. Used for spatial atlas and PCOS pilot. Led in partnership with Dr. Jenna Schmidt (Wisconsin National Primate Research Center).
 - **Human**: Clinical translation and biomarker validation. Used for CITE-seq and clinical sample analysis.
 - **Mouse**: Genetic manipulation and fate mapping. Used for T-bet/NK cell trafficking studies.
-- **MPS (Vessel-on-chip)**: Controlled conditions for therapeutic testing. Used for PE immune-endothelial crosstalk. Led in partnership with Dr. Maria Virumbrales-Munoz (Biomedical Engineering, UW-Madison).
+- **MPS (Vessel-on-chip)**: Controlled conditions for therapeutic testing. Used for PE immune-endothelial crosstalk. Led in partnership with Dr. Maria Virumbrales-Munoz (OB-GYN, UW-Madison).
 
 ---
 
