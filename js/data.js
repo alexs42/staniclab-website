@@ -32,7 +32,7 @@ const LAB_DATA = {
       "Faculty, Reproductive Endocrinology and Infertility"
     ],
     "identity": "Physician-scientist investigating how the immune system functions across the reproductive continuum — from ovarian biology through the maternal-fetal interface to postpartum recovery. Trained in fundamental NKT cell immunology before pioneering reproductive immunology approaches that integrate clinical REI practice, multi-omic technologies, and computational biology.",
-    "bio": "Dr. Stanic-Kostic is a physician-scientist whose laboratory investigates immune regulation across the reproductive continuum. He trained in the Medical Scientist Training Program at Vanderbilt University, earning his PhD in NKT cell immunology before completing residency in obstetrics and gynecology at Harvard Medical School (Massachusetts General and Brigham and Women's Hospitals) and fellowship in reproductive endocrinology and infertility at Massachusetts General Hospital. Board certified in both OB/GYN and REI, he established his independent program at UW-Madison in 2014 at the intersection of clinical reproductive medicine and basic immunology. His group has made key contributions to decidual innate lymphoid cell programming, T cell clonal architecture at the maternal-fetal interface, and immune dysregulation in polycystic ovary syndrome, integrating spectral flow cytometry, CITE-seq, spatial transcriptomics, and computational approaches across human, mouse, and rhesus macaque model systems. A March of Dimes Basil O'Connor Scholar and Burroughs Wellcome Fund awardee, he authored the reproductive immunology chapter in Yen &amp; Jaffe's Reproductive Endocrinology and served on the ASRM Practice Committee setting national guidelines for immunomodulation in IVF. As Vice Chair for Basic and Translational Research, he leads the Division of Reproductive Sciences and directs research strategy for the Department of Obstetrics and Gynecology.",
+    "bio": "Dr. Stanic-Kostic is a physician-scientist whose laboratory investigates immune regulation across the reproductive continuum. He trained in the Medical Scientist Training Program at Vanderbilt University, earning his PhD in NKT cell immunology before completing residency in obstetrics and gynecology at Harvard Medical School (Massachusetts General and Brigham and Women's Hospitals) and fellowship in reproductive endocrinology and infertility at Massachusetts General Hospital. Board certified in both OB/GYN and REI, he established his independent program at UW-Madison in 2014 at the intersection of clinical reproductive medicine and basic immunology. His group has made key contributions to decidual innate lymphoid cell programming, T cell clonal architecture at the maternal-fetal interface, and immune dysregulation in polycystic ovary syndrome, integrating spectral flow cytometry, CITE-seq, spatial transcriptomics, and computational approaches across human, mouse, and rhesus macaque model systems. A March of Dimes Basil O'Connor Scholar and Burroughs Wellcome Fund awardee, he authored the reproductive immunology chapter in Yen & Jaffe's Reproductive Endocrinology and served on the ASRM Practice Committee setting national guidelines for immunomodulation in IVF. As Vice Chair for Basic and Translational Research, he leads the Division of Reproductive Sciences and directs research strategy for the Department of Obstetrics and Gynecology.",
     "links": {
       "orcid": "https://orcid.org/0000-0003-1946-6436",
       "pubmed": "https://www.ncbi.nlm.nih.gov/myncbi/aleksandar.stanic-kostic.2/bibliography/public/",
@@ -322,7 +322,7 @@ const LAB_DATA = {
     },
     {
       "id": "tissue",
-      "title": "Tissue Architecture &amp; Injury",
+      "title": "Tissue Architecture & Injury",
       "subtitle": "Quantitative, multi-modal investigation of placental and decidual biology",
       "summary": "Understanding how tissue organization shapes function — and what goes wrong in disease. We integrate spatial transcriptomics, digital pathology, quantitative MRI, confocal microscopy, and immunofluorescence to characterize the placenta and decidua across gestation. Collaborative work with medical physics, bioengineering, and computational partners enables multi-scale analysis from molecular niches to whole-organ pathology, including placental mineralization, vascular injury, and trophoblast dynamics.",
       "icon": "map",
@@ -425,7 +425,7 @@ const LAB_DATA = {
     "Microphysiological Systems",
     "Digital Histopathology / QuPath",
     "AI/ML Multi-Omic Integration",
-    "Confocal &amp; Fluorescent Imaging",
+    "Confocal & Fluorescent Imaging",
     "MRI-Pathology Correlation"
   ],
   "grants": [
@@ -976,7 +976,7 @@ const LAB_DATA = {
     {
       "date": "2025-10",
       "title": "Stanic, Cooney research groups publish in Reproduction",
-      "description": "The Stanic-Cooney research teams recently published a new article in Reproduction, led by co-first authors Andrea Wegrzynowicz, PhD (postdoctoral fellow with Drs. Stanic &amp; Cooney) and Christina Dudley, MD (UW Ob-Gyn resident, who recently matched for Reproductive Endocrinology and Infertility (R",
+      "description": "The Stanic-Cooney research teams recently published a new article in Reproduction, led by co-first authors Andrea Wegrzynowicz, PhD (postdoctoral fellow with Drs. Stanic & Cooney) and Christina Dudley, MD (UW Ob-Gyn resident, who recently matched for Reproductive Endocrinology and Infertility (R",
       "tags": [
         "department-news"
       ],
