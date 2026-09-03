@@ -864,16 +864,6 @@ const LAB_DATA = {
   "labNews": [
     {
       "date": "2026-05",
-      "title": "Logan Keding graduates from the Endocrinology and Reproductive Physiology program",
-      "description": "Congratulations to Dr. Logan Keding, who earned his PhD from the UW–Madison Endocrinology and Reproductive Physiology program with a thesis on placental insufficiency in the macaque model, mentored by Dr. Stanic-Kostic. He continues in the lab as a postdoctoral fellow, linking placental pathology, perfusion, and gene expression through overlapping spatial transcriptomic and digital histopathology analyses in humans and rhesus macaques.",
-      "tags": [
-        "milestone",
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/graduation-spotlight-logan-keding-graduates-from-erp-program"
-    },
-    {
-      "date": "2026-05",
       "title": "Wegrzynowicz publishes an Editor's Choice article in Biology of Reproduction",
       "description": "Dr. Andrea Wegrzynowicz is lead author on a single-cell analysis of follicular fluid showing that, despite ovulation induction, the ovarian follicular environment in polycystic ovary syndrome remains immunologically dysregulated, with impaired ovulatory immune signaling and a persistent low-grade inflammatory state. The paper was featured as a Biology of Reproduction Editor's Choice article. Co-authors include Soma Banerjee, Emily Grimes, Riley Huddleston, Fernanda Leyva Jaimes, Laura Cooney, and Aleks Stanic.",
       "tags": [
@@ -957,6 +947,16 @@ const LAB_DATA = {
         "department-news"
       ],
       "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-cooney-research-groups-publish-in-reproduction"
+    },
+    {
+      "date": "2025-08",
+      "title": "Logan Keding graduates from the Endocrinology and Reproductive Physiology program",
+      "description": "Congratulations to Dr. Logan Keding, who completed his PhD in 2025 in the UW–Madison Endocrinology and Reproductive Physiology program with a thesis on placental insufficiency in the macaque model, mentored by Dr. Stanic-Kostic. He continues in the lab as a postdoctoral fellow, linking placental pathology, perfusion, and gene expression through overlapping spatial transcriptomic and digital histopathology analyses in humans and rhesus macaques.",
+      "tags": [
+        "milestone",
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/graduation-spotlight-logan-keding-graduates-from-erp-program"
     },
     {
       "date": "2025-08",
