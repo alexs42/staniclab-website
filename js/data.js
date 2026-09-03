@@ -814,6 +814,57 @@ const LAB_DATA = {
   ],
   "labNews": [
     {
+      "date": "2026-05",
+      "title": "Logan Keding graduates from the Endocrinology and Reproductive Physiology program",
+      "description": "Congratulations to Dr. Logan Keding, who earned his PhD from the UW–Madison Endocrinology and Reproductive Physiology program with a thesis on placental insufficiency in the macaque model, mentored by Dr. Stanic-Kostic. He continues in the lab as a postdoctoral fellow, linking placental pathology, perfusion, and gene expression through overlapping spatial transcriptomic and digital histopathology analyses in humans and rhesus macaques.",
+      "tags": [
+        "milestone",
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/graduation-spotlight-logan-keding-graduates-from-erp-program"
+    },
+    {
+      "date": "2026-05",
+      "title": "Wegrzynowicz publishes an Editor's Choice article in Biology of Reproduction",
+      "description": "Dr. Andrea Wegrzynowicz is lead author on a single-cell analysis of follicular fluid showing that, despite ovulation induction, the ovarian follicular environment in polycystic ovary syndrome remains immunologically dysregulated, with impaired ovulatory immune signaling and a persistent low-grade inflammatory state. The paper was featured as a Biology of Reproduction Editor's Choice article. Co-authors include Soma Banerjee, Emily Grimes, Riley Huddleston, Fernanda Leyva Jaimes, Laura Cooney, and Aleks Stanic.",
+      "tags": [
+        "publication",
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/wegrzynowicz-publishes-in-biology-of-reproduction"
+    },
+    {
+      "date": "2026-04",
+      "title": "Lab undergraduates present at the 2026 UW–Madison Undergraduate Symposium",
+      "description": "Undergraduate researchers mentored in the lab presented posters at the UW–Madison Undergraduate Symposium on April 17, 2026: Xiang Yi Chen and Roghyah Hasan (mentored by Mona Mohamed) on the regulation of natural killer cell trafficking and adaptation during pregnancy, and Arya Choudhury and Eiman Mir (mentored by Dr. Logan Keding) on the effects of transient ischemic injury in rhesus macaque pregnancies.",
+      "tags": [
+        "presentation",
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/department-of-ob-gyn-mentees-share-research-at-2026-uw-madison-undergraduate-symposium"
+    },
+    {
+      "date": "2026-03",
+      "title": "Mohamed and Stanic Lab team publish in the American Journal of Reproductive Immunology",
+      "description": "Mona Mohamed, MD, MSc, PhD candidate in the lab, is first author on a study using a genetic fate-mapping mouse model to follow T-bet-expressing decidual natural killer cells across pregnancy. The cells progressively silence T-bet in a tissue- and gestational-age-specific pattern, shut down cytotoxic programs, and acquire tissue-resident, regulatory features by late gestation while keeping their core identity. Co-authors include Yan Li, Andrea Wegrzynowicz, Payton Lindner, Jessica Vazquez, Gladys Lopez, and Aleks Stanic.",
+      "tags": [
+        "publication",
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/mohamed-and-stanic-lab-team-publish-study-in-american-journal-of-reproductive-immunology"
+    },
+    {
+      "date": "2026-03",
+      "title": "Stanic Lab at the SRI 2026 Annual Scientific Meeting",
+      "description": "At the Society for Reproductive Investigation 73rd Annual Scientific Meeting in San Juan, Puerto Rico (March 24–28, 2026), Dr. Andrea Wegrzynowicz gave an oral presentation on the transcriptional landscape of the macaque maternal-fetal interface, a collaboration with Dr. Jenna Schmidt's group, and received the SRI President's Presenter Award. Mona Mohamed presented a poster on gestational stage-specific regulation of NK cell trafficking and proliferation, and Dr. Stanic-Kostic moderated the Lunch and Learn symposium “Advancing Reproductive Health Through AI.”",
+      "tags": [
+        "conference",
+        "award",
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/division-of-reproductive-sciences-brings-research-to-sri-2026-annual-meeting"
+    },
+    {
       "date": "2026-01",
       "title": "Dr. Stanic appointed Vice Chair for Research",
       "description": "Effective January 2026, Dr. Stanic-Kostic begins new role as Vice Chair for Basic and Translational Research and Director of the Division of Reproductive Sciences.",
@@ -850,6 +901,33 @@ const LAB_DATA = {
       ]
     },
     {
+      "date": "2025-10",
+      "title": "Stanic, Cooney research groups publish in Reproduction",
+      "description": "The Stanic-Cooney research teams recently published a new article in Reproduction, led by co-first authors Andrea Wegrzynowicz, PhD (postdoctoral fellow with Drs. Stanic &amp; Cooney) and Christina Dudley, MD (UW Ob-Gyn resident, who recently matched for Reproductive Endocrinology and Infertility (R",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-cooney-research-groups-publish-in-reproduction"
+    },
+    {
+      "date": "2025-08",
+      "title": "Keding publishes study in Placenta, defends thesis on August 15",
+      "description": "Logan Keding, MS, PhD candidate in the Endocrinology and Reproductive Physiology Program mentored by Aleks Stanic, MD, PhD, co-authored a new publication published in Placenta. Co-authors include Jessica Vazquez, PhD, Ruo-Yu Liu, Emily Bove, Jessica Dorobek, Heather Simmons, DVM, DACVP, Kathleen Ant",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/keding-publishes-study-in-placenta-defends-thesis-on-august-15"
+    },
+    {
+      "date": "2025-08",
+      "title": "Stanic Lab publishes in Frontiers in Immunology",
+      "description": "Aleksander Stanic, MD, PhD, associate professor in the Divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences, recently co-authored a publication published in Frontiers in Immunology. Soma Banerjee, PhD, currently a postdoctoral scholar in the iPEND program, was first auth",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-lab-publishes-in-frontiers-in-immunology"
+    },
+    {
       "date": "2025-05",
       "title": "Presentations at Department Research Day 2025",
       "description": "On May 15, 2025, the UW Department of Obstetrics and Gynecology hosted Department Research Day, an annual presentation of graduating fellows’ thesis projects, research from members of the Department of Ob-Gyn, and posters showcasing a variety of ob-gyn and reproductive health research.Margareta Pisa",
@@ -866,6 +944,15 @@ const LAB_DATA = {
         "department-news"
       ],
       "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-lab-at-the-2025-asri-conference"
+    },
+    {
+      "date": "2025-05",
+      "title": "Wegrzynowicz receives oral presentation award at Madison Scholars Symposium",
+      "description": "Congratulations to Andrea Wegrzynowicz, PhD, postdoctoral trainee in the Stanic Lab in the Division of Reproductive Sciences, who received the oral presentation award at the Madison Scholars Symposium in early May 2025! The Madison Scholars Symposium was hosted by the T32 Biology of Aging and Age-Re",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/wegrzynowicz-receives-oral-presentation-award-at-madison-scholars-symposium"
     },
     {
       "date": "2025-03",
@@ -886,22 +973,23 @@ const LAB_DATA = {
       ]
     },
     {
-      "date": "2025-01",
-      "title": "Wegrzynowicz receives oral presentation award at Madison Scholars Symposium",
-      "description": "Congratulations to Andrea Wegrzynowicz, PhD, postdoctoral trainee in the Stanic Lab in the Division of Reproductive Sciences, who received the oral presentation award at the Madison Scholars Symposium in early May 2025! The Madison Scholars Symposium was hosted by the T32 Biology of Aging and Age-Re",
+      "date": "2024-11",
+      "title": "Postdoc Wegrzynowicz receives SMPH Collaborate travel award",
+      "description": "Congratulations to Andrea Wegrzynowicz, PhD, postdoctoral trainee in the Stanic Lab, who received a travel award at the 2024 SMPH Collaborate event! SMPH Collaborate fosters connections among investigators, researchers, and learners through the sharing of research discoveries and building of communi",
       "tags": [
         "department-news"
       ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/wegrzynowicz-receives-oral-presentation-award-at-madison-scholars-symposium"
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/postdoc-wegrzynowicz-receives-smph-collaborate-travel-award"
     },
     {
-      "date": "2024-09",
+      "date": "2024-08",
       "title": "Jessica Vazquez awarded NIH K01",
       "description": "Dr. Vazquez receives K01 award from NIH to support her research program on maternal immune programming using the rhesus macaque model.",
       "tags": [
         "grant",
         "milestone"
-      ]
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/vazquez-earns-k01-grant-from-nih"
     },
     {
       "date": "2024-05",
@@ -922,31 +1010,67 @@ const LAB_DATA = {
       "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/presentations-and-awards-at-the-2024-sri-annual-meeting"
     },
     {
+      "date": "2024-03",
+      "title": "Stanic, Golos co-author articles in Frontiers in Immunology and Journal of Magnetic Resonance Imaging",
+      "description": "Aleks Stanic, MD, PhD, associate professor in the divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences, as well as Thaddeus Golos, PhD, professor in Comparative Bioscience and Ob-Gyn, co-authored recent articles in two journals.In “Decidual leukocytes respond to African",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-golos-co-author-articles-in-frontiers-in-immunology-and-journal-of-magnetic-resonance-imaging"
+    },
+    {
       "date": "2024-01",
-      "title": "Postdoc Wegrzynowicz receives SMPH Collaborate travel award",
-      "description": "Congratulations to Andrea Wegrzynowicz, PhD, postdoctoral trainee in the Stanic Lab, who received a travel award at the 2024 SMPH Collaborate event! SMPH Collaborate fosters connections among investigators, researchers, and learners through the sharing of research discoveries and building of communi",
+      "title": "Stanic Lab publishes study in Frontiers in Immunology",
+      "description": "Aleksandar Stanic-Kostic, MD, PhD, associate professor in the Divisions of Reproductive Sciences and Reproductive Endocrinology and Infertility, co-authored a new article published in Frontiers in Immunology. Postdoctoral researcher Jessica Vazquez, PhD, is lead author on the article, and co-authors",
       "tags": [
         "department-news"
       ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/postdoc-wegrzynowicz-receives-smph-collaborate-travel-award"
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-lab-publishes-study-in-frontiers-in-immunology"
     },
     {
-      "date": "2023-01",
-      "title": "UW Ob-Gyn presentations at 2023 Society for Reproductive Investigation Conference",
-      "description": "In March 2023, the Society for Reproductive Investigation hosted their 70th Annual Scientific Meeting in Brisbane, Australia. Members of the UW Department of Ob-Gyn brought fantastic representation to the meeting: Irene Ong, PhD, assistant professor in the Division of Reproductive Sciences, was invi",
+      "date": "2023-09",
+      "title": "Cooney, Stanic co-author publication in Women",
+      "description": "Associate Professor Laura Cooney, MD, and Associate Professor Aleks Stanic-Kostic, MD, PhD, both of the UW Ob-Gyn Division of Reproductive Endocrinology and Infertility, co-authored a recent study in the journal Women. In “Rapid Ovarian Reserve Decline in a Woman with Pericentric Inv(9) Variant”, Co",
       "tags": [
         "department-news"
       ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/uw-ob-gyn-presentations-at-2023-society-for-reproductive-investigation-conference"
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/cooney-stanic-co-author-publication-in-women"
     },
     {
-      "date": "2023-01",
+      "date": "2023-07",
       "title": "Stanic, Ong Labs publish in the Journal of Immunology",
       "description": "A new study in collaboration between the Stanic and Ong research groups in the UW Department of Ob-Gyn will be published in the July 2023 issue of the Journal of Immunology!“Proteogenomic and V(D)J Analysis of Human Decidual T Cells Highlights Unique Transcriptional Programming and Clonal Distributi",
       "tags": [
         "department-news"
       ],
       "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-ong-labs-publish-in-the-journal-of-immunology"
+    },
+    {
+      "date": "2023-06",
+      "title": "Golos, Stanic receive NIH R21 grant",
+      "description": "Congratulations to Ted Golos, PhD, professor in the School of Veterinary Sciences and the UW Ob-Gyn Division of Reproductive Sciences, and Aleks Stanic, MD, PhD, associate professor in the Divisions of Reproductive Sciences and Reproductive Endocrinology and Infertility! They received a new NIH R21",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/golos-stanic-receive-nih-r21-grant"
+    },
+    {
+      "date": "2023-05",
+      "title": "Banerjee, Stanic, Cooney published in Immunohorizons",
+      "description": "Congratulations to Endocrinology and Reproductive Physiology graduate student Soma Banerjee, MD, who is lead author on a new article in the journal Immunohorizons! Aleks Stanic-Kostic, MD, PhD, associate professor in the Divisions of Reproductive Endocrinology and Infertility and Reproductive Scienc",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/banerjee-stanic-cooney-published-in-immunohorizons"
+    },
+    {
+      "date": "2023-03",
+      "title": "UW Ob-Gyn presentations at 2023 Society for Reproductive Investigation Conference",
+      "description": "In March 2023, the Society for Reproductive Investigation hosted their 70th Annual Scientific Meeting in Brisbane, Australia. Members of the UW Department of Ob-Gyn brought fantastic representation to the meeting: Irene Ong, PhD, assistant professor in the Division of Reproductive Sciences, was invi",
+      "tags": [
+        "department-news"
+      ],
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/uw-ob-gyn-presentations-at-2023-society-for-reproductive-investigation-conference"
     },
     {
       "date": "2022-07",
@@ -958,34 +1082,7 @@ const LAB_DATA = {
       "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-promoted-to-associate-professor-with-tenure"
     },
     {
-      "date": "",
-      "title": "Stanic earns best poster award at ASRI annual meeting",
-      "description": "Our congratulations to Aleks Stanic-Kostic, MD, PhD, of the UW Ob-Gyn Divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences! He attended the American Society for Reproductive Immunology virtual meeting in May, where he won the Best Poster award.\n\nStanic received the award",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-earns-best-poster-award-at-asri-annual-meeting"
-    },
-    {
-      "date": "",
-      "title": "Stanic presents at NICHD workshop on early pregnancy loss",
-      "description": "Aleks Stanic, MD, PhD, of the UW Ob-Gyn Divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences, was recently invited to speak as part of a group of experts at the NIH National Institute on Child Health and Human Development’s workshop “Idiopathic/Non-aneuploid Early Pregna",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-presents-at-nichd-workshop-on-early-pregnancy-loss"
-    },
-    {
-      "date": "",
-      "title": "Stanic Lab published in American Journal of Reproductive Immunology",
-      "description": "A new article out of collaborative research between Aleks Stanic-Kostic, MD, PhD and Irene Ong, PhD was published in the American Journal of Reproductive Immunology!“Multiomic analysis reveals decidual-specific transcriptional programing of MAIT cells” examines the possible role of Mucosal-Associate",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-lab-published-in-american-journal-of-reproductive-immunology"
-    },
-    {
-      "date": "",
+      "date": "2022",
       "title": "Stanic, Golos earn pilot grant from Wisconsin National Primate Research Center",
       "description": "Congratulations to Aleks Stanic, MD, PhD, associate professor in the UW Ob-Gyn Divisions of Reproductive Sciences and Reproductive Endocrinology and Infertility, and Ted Golos, PhD, professor and Chair of the Department of Comparative Biosciences in the UW School of Veterinary Medicine! They are co-",
       "tags": [
@@ -994,85 +1091,31 @@ const LAB_DATA = {
       "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-golos-earn-pilot-grant-from-wisconsin-national-primate-research-center"
     },
     {
-      "date": "",
-      "title": "Banerjee, Stanic, Cooney published in Immunohorizons",
-      "description": "Congratulations to Endocrinology and Reproductive Physiology graduate student Soma Banerjee, MD, who is lead author on a new article in the journal Immunohorizons! Aleks Stanic-Kostic, MD, PhD, associate professor in the Divisions of Reproductive Endocrinology and Infertility and Reproductive Scienc",
+      "date": "2021-10",
+      "title": "Stanic Lab published in American Journal of Reproductive Immunology",
+      "description": "A new article out of collaborative research between Aleks Stanic-Kostic, MD, PhD and Irene Ong, PhD was published in the American Journal of Reproductive Immunology!“Multiomic analysis reveals decidual-specific transcriptional programing of MAIT cells” examines the possible role of Mucosal-Associate",
       "tags": [
         "department-news"
       ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/banerjee-stanic-cooney-published-in-immunohorizons"
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-lab-published-in-american-journal-of-reproductive-immunology"
     },
     {
-      "date": "",
-      "title": "Golos, Stanic receive NIH R21 grant",
-      "description": "Congratulations to Ted Golos, PhD, professor in the School of Veterinary Sciences and the UW Ob-Gyn Division of Reproductive Sciences, and Aleks Stanic, MD, PhD, associate professor in the Divisions of Reproductive Sciences and Reproductive Endocrinology and Infertility! They received a new NIH R21",
+      "date": "2021-07",
+      "title": "Stanic presents at NICHD workshop on early pregnancy loss",
+      "description": "Aleks Stanic, MD, PhD, of the UW Ob-Gyn Divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences, was recently invited to speak as part of a group of experts at the NIH National Institute on Child Health and Human Development’s workshop “Idiopathic/Non-aneuploid Early Pregna",
       "tags": [
         "department-news"
       ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/golos-stanic-receive-nih-r21-grant"
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-presents-at-nichd-workshop-on-early-pregnancy-loss"
     },
     {
-      "date": "",
-      "title": "Cooney, Stanic co-author publication in Women",
-      "description": "Associate Professor Laura Cooney, MD, and Associate Professor Aleks Stanic-Kostic, MD, PhD, both of the UW Ob-Gyn Division of Reproductive Endocrinology and Infertility, co-authored a recent study in the journal Women. In “Rapid Ovarian Reserve Decline in a Woman with Pericentric Inv(9) Variant”, Co",
+      "date": "2021-05",
+      "title": "Stanic earns best poster award at ASRI annual meeting",
+      "description": "Our congratulations to Aleks Stanic-Kostic, MD, PhD, of the UW Ob-Gyn Divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences! He attended the American Society for Reproductive Immunology virtual meeting in May, where he won the Best Poster award.\n\nStanic received the award",
       "tags": [
         "department-news"
       ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/cooney-stanic-co-author-publication-in-women"
-    },
-    {
-      "date": "",
-      "title": "Stanic Lab publishes study in Frontiers in Immunology",
-      "description": "Aleksandar Stanic-Kostic, MD, PhD, associate professor in the Divisions of Reproductive Sciences and Reproductive Endocrinology and Infertility, co-authored a new article published in Frontiers in Immunology. Postdoctoral researcher Jessica Vazquez, PhD, is lead author on the article, and co-authors",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-lab-publishes-study-in-frontiers-in-immunology"
-    },
-    {
-      "date": "",
-      "title": "Vazquez earns K01 grant from NIH",
-      "description": "Congratulations to Jessica Vazquez, PhD, postdoctoral research associate in the lab of Aleks Stanic-Kostic, MD, Phd! Vazquez received a K01 award from the National Institutes of Health National Institute of Allergy and Infectious Diseases.Vazquez received a $219,000 grant for the project “Sterile in",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/vazquez-earns-k01-grant-from-nih"
-    },
-    {
-      "date": "",
-      "title": "Stanic, Golos co-author articles in Frontiers in Immunology and Journal of Magnetic Resonance Imaging",
-      "description": "Aleks Stanic, MD, PhD, associate professor in the divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences, as well as Thaddeus Golos, PhD, professor in Comparative Bioscience and Ob-Gyn, co-authored recent articles in two journals.In “Decidual leukocytes respond to African",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-golos-co-author-articles-in-frontiers-in-immunology-and-journal-of-magnetic-resonance-imaging"
-    },
-    {
-      "date": "",
-      "title": "Keding publishes study in Placenta, defends thesis on August 15",
-      "description": "Logan Keding, MS, PhD candidate in the Endocrinology and Reproductive Physiology Program mentored by Aleks Stanic, MD, PhD, co-authored a new publication published in Placenta. Co-authors include Jessica Vazquez, PhD, Ruo-Yu Liu, Emily Bove, Jessica Dorobek, Heather Simmons, DVM, DACVP, Kathleen Ant",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/keding-publishes-study-in-placenta-defends-thesis-on-august-15"
-    },
-    {
-      "date": "",
-      "title": "Stanic Lab publishes in Frontiers in Immunology",
-      "description": "Aleksander Stanic, MD, PhD, associate professor in the Divisions of Reproductive Endocrinology and Infertility and Reproductive Sciences, recently co-authored a publication published in Frontiers in Immunology. Soma Banerjee, PhD, currently a postdoctoral scholar in the iPEND program, was first auth",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-lab-publishes-in-frontiers-in-immunology"
-    },
-    {
-      "date": "",
-      "title": "Stanic, Cooney research groups publish in Reproduction",
-      "description": "The Stanic-Cooney research teams recently published a new article in Reproduction, led by co-first authors Andrea Wegrzynowicz, PhD (postdoctoral fellow with Drs. Stanic &amp; Cooney) and Christina Dudley, MD (UW Ob-Gyn resident, who recently matched for Reproductive Endocrinology and Infertility (R",
-      "tags": [
-        "department-news"
-      ],
-      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-cooney-research-groups-publish-in-reproduction"
+      "sourceUrl": "https://www.obgyn.wisc.edu/ob-gyn-department-news/stanic-earns-best-poster-award-at-asri-annual-meeting"
     }
   ],
   "gallery": [
