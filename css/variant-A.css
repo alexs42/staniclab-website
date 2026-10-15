@@ -1,0 +1,100 @@
+/* ============================================
+   Variant A — "Studiolo Warm"
+   Extracted from StanicLabOS styles.css
+   Warm linen, forest green, amber, walnut
+   ============================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+
+:root {
+  /* Studiolo warm linen backgrounds */
+  --bg-void: #F5F2ED;
+  --bg-primary: #FEFDFB;
+  --bg-secondary: #EFEBE4;
+  --bg-tertiary: #E4DFD7;
+
+  /* Studiolo accents */
+  --accent-primary: #1B4332;
+  --accent-secondary: #B45309;
+  --accent-tertiary: #6B4C3B;
+  --accent-warning: #CA8A04;
+  --accent-success: #166534;
+  --accent-danger: #991B1B;
+
+  /* Text */
+  --text-primary: #1C1917;
+  --text-secondary: #57534E;
+  --text-muted: #A8A29E;
+  --text-accent: #1B4332;
+
+  /* Borders */
+  --border-color: #D6D3CD;
+  --border-strong: #A8A29E;
+
+  /* Fonts */
+  --font-display: 'Sora', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+
+  /* Hero overlay (for gradient) */
+  --hero-overlay-rgb: 245, 242, 237;
+}
+
+/* Variant A nav: transparent → linen on scroll */
+.site-nav.scrolled {
+  background: rgba(254, 253, 251, 0.95);
+}
+
+/* Variant A hero: warm illustration + gradient overlay */
+.hero-bg {
+  background: url('../images/hero/hero-A.png') center center / cover no-repeat,
+    linear-gradient(135deg, #EFEBE4 0%, #F5F2ED 30%, #E4DFD7 60%, #D6D3CD 100%);
+}
+
+/* Variant A cards: no shadows, forest green left border */
+.card {
+  box-shadow: none;
+}
+
+.theme-card {
+  border-left-color: var(--accent-primary);
+}
+
+/* Variant A "For Machines": walnut border, amber accents */
+.for-machines {
+  border-color: var(--accent-tertiary);
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+}
+
+.for-machines h2 {
+  color: var(--accent-tertiary);
+}
+
+/* Variant A link colors */
+a:hover {
+  color: var(--accent-secondary);
+}
+
+/* Variant A selection */
+::selection {
+  background: rgba(27, 67, 50, 0.15);
+  color: var(--text-primary);
+}
+
+/* Variant A scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--border-strong);
+}

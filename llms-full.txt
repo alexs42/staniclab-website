@@ -1,0 +1,247 @@
+# Stanic Laboratory for Reproductive Immunology — Complete Documentation
+
+> University of Wisconsin-Madison
+> School of Medicine and Public Health
+> Department of Obstetrics and Gynecology
+> Division of Reproductive Sciences
+
+This document provides comprehensive, machine-readable documentation of the Stanic Lab's research program, team, publications, and institutional context. It is designed for AI agents, language models, and research aggregation systems.
+
+---
+
+## Principal Investigator
+
+**Dr. Aleksandar Stanic-Kostic, MD, PhD**
+
+Dr. Stanic-Kostic is an Associate Professor with Tenure in the Department of Obstetrics and Gynecology at the University of Wisconsin-Madison School of Medicine and Public Health. He serves as Vice Chair for Basic and Translational Research and Director of the Division of Reproductive Sciences (both effective January 2026). He is also a practicing physician in the Division of Reproductive Endocrinology and Infertility (REI).
+
+His professional identity centers on bridging clinical REI practice with cutting-edge reproductive immunology research, integrating clinical care, basic science investigation, computational biology, and AI/ML approaches.
+
+**External profiles:**
+- ORCID: https://orcid.org/0000-0003-1946-6436
+- PubMed: https://pubmed.ncbi.nlm.nih.gov/?term=stanic+ak
+- Google Scholar: https://scholar.google.com/citations?user=0w_z_EoAAAAJ
+- OB-GYN faculty profile: https://www.obgyn.wisc.edu/directory/profile/46689171
+- Stanic-Kostic Research Team (OB-GYN): https://www.obgyn.wisc.edu/stanic-kostic-research-team
+- Endocrinology and Reproductive Physiology Program: https://erp.wisc.edu/staff/stanic-kostic-aleksandar/
+- Immunology Program: https://immunology.wisc.edu/staff/stanic-md-phd-aleksandar/
+- UW Health provider profile: https://www.uwhealth.org/providers/aleksandar-stanic-kostic-md-phd
+
+---
+
+## Research Program
+
+The lab investigates immune mechanisms governing pregnancy establishment, maintenance, and complications. The work focuses on decidual T cell biology and immune-vascular crosstalk, with particular emphasis on how the maternal immune system navigates the paradox of tolerance during pregnancy.
+
+### Theme 1: Decidual Immune Regulation
+
+T cells, innate lymphoid cells, and immune-vascular crosstalk at the maternal-fetal interface
+
+Mapping the full immune landscape of the decidua across gestation — from the tissue-resident innate lymphoid cells of early pregnancy through the dynamic T cell and NK cell populations at term. Our work reveals temporal immune programming, novel restraint gene mechanisms, and the crosstalk between immune and vascular compartments that shapes pregnancy outcomes.
+
+Our foundational research program maps the full immune landscape of the decidua across gestation. We identified the transcriptional and functional programming of decidual innate lymphoid cells and demonstrated that the human maternal-fetal interface harbors a unique immune signature distinguishable by computational flow cytometry. Subsequent work characterized decidual T cell clonal architecture through proteogenomic and V(D)J analysis, revealed decidual-specific transcriptional programming of MAIT cells, and established serial intravascular staining as a method for deciphering leukocyte trafficking between maternal blood and decidual tissue. Most recently, T-bet fate mapping in mice has revealed gestational stage-specific transcriptional adaptation of decidual NK cells, a project led by Mona Mohamed. This work is supported by R21 AI175753 (NIAID) and underpins collaborations across all other research themes in the lab.
+
+### Theme 2: PCOS Immune Mechanisms
+
+Ovarian-specific inflammation and immunometabolic profiling
+
+Challenging the assumption that PCOS inflammation is purely systemic. Our CITE-seq studies reveal ovarian-specific immune signatures distinct from peripheral blood, and a paradoxical pattern of lower cytokine levels but upregulated inflammatory responsiveness.
+
+Polycystic ovary syndrome affects up to 15% of reproductive-age women, yet its immune dimensions have been largely overlooked. Our PCOS program, led by Dr. Andrea Wegrzynowicz in collaboration with Dr. Laura Cooney (REI) and Dr. Samantha Schon (U Michigan), produced the first high-dimensional immune profiling of follicular fluid and systemic circulation in PCOS patients. Using CITE-seq, we discovered that ovarian immune dysregulation in PCOS is distinct from peripheral blood signatures — a finding that fundamentally challenges the prevailing systemic inflammation hypothesis. Single-cell analysis of follicular fluid further revealed dysregulation of ovulatory immune function during ovarian stimulation. We have also reviewed the broader landscape of immune dysfunction in PCOS and maternal complications of pregnancy associated with the syndrome. Ongoing work explores the rhesus macaque as a translational model for PCOS immune mechanisms.
+
+### Theme 3: Immune Drivers of Pregnancy Complications
+
+Placental abruption, preeclampsia, and the immune-vascular interface
+
+Pregnancy complications such as placental abruption and preeclampsia arise where the immune, coagulation, and vascular systems meet. With Dr. Rashmi Sood (Medical College of Wisconsin) we are defining how decidual clotting triggers an immune response that drives abruption. In preeclampsia we study immune cell-endothelial interactions with Dr. Ian Bird's vascular biology group and map immune network differences between healthy and pathological pregnancies, pursuing checkpoint-based therapeutic targets.
+
+Placental abruption and preeclampsia are leading causes of maternal and perinatal morbidity, and both involve a breakdown of the normal dialogue between immune cells, the coagulation system, and the uterine vasculature. Our closest partnership in this area is with Dr. Rashmi Sood (Medical College of Wisconsin) through a shared NIH R01 (HL163623, NHLBI) on coagulation-inflammation crosstalk in placental abruption. In mice lacking the anticoagulant receptor EPCR, decidual blood clots progress to abruption through thrombin signaling and an acute leukocyte response, and the same changes are detectable in human placentas. Our lab contributes the immune and tissue analysis: spatial transcriptomics and digital histopathology across the decidua and placenta, and immune-cell profiling of the decidua. In preeclampsia, we contribute immune profiling and analysis to studies led by Dr. Ian Bird's vascular biology group, which showed that mononuclear cells negatively regulate endothelial calcium signaling, linking immune activation to vascular dysfunction, and revealed cytokine-induced emergence of immunomodulatory endothelial subtypes in single-cell analyses of uterine artery endothelial cells. We also contribute to clinical investigations of hypertensive complications of pregnancy, including studies of CPAP treatment for obstructive sleep apnea in high-risk pregnancies and a postpartum serum biomarker study with Dr. Kara Hoppe. This theme is supported by R01 HL163623 (NHLBI, Site-PI) and connects to our tissue architecture work through placental injury quantification in the rhesus macaque model.
+
+### Theme 4: Tissue Architecture & Injury
+
+Quantifying placental structure, perfusion, and injury across scales
+
+Understanding how placental and decidual architecture relates to tissue function, and what goes wrong in disease. Quantitative histopathology and MRI connect local placental lesions with blood perfusion, villus morphometry examines the structures that support maternal-fetal exchange, and confocal microscopy and spatial transcriptomics add cellular and molecular context. We are developing AI-assisted histology annotation and cross-species comparisons of human, rhesus macaque, and mouse placentas to define normal tissue organization and its disruption by injury.
+
+This collaborative research theme integrates imaging and molecular modalities to understand placental and decidual tissue organization across gestation. Dr. Logan Keding leads the integration of quantitative whole-slide placental histopathology with cotyledon-level MRI perfusion in the rhesus macaque, in collaboration with Dr. Oliver Wieben (Medical Physics). Two 2026 studies in Placenta linked local histopathology to perfusion in healthy pregnancy and tracked cotyledon perfusion longitudinally after thrombotic injury, and earlier work showed that MCP-1 decreases mineralization of the villous stroma, connecting inflammatory signaling to structural pathology. His current work integrates histological annotation with spatial transcriptomics to study placental injury with Dr. Rashmi Sood (Medical College of Wisconsin) and is building comparisons of normal placental organization across human, rhesus macaque, and mouse. Marco Cordero, a PhD student in Endocrinology and Reproductive Physiology, is developing quantitative villus morphometry and AI-assisted histology annotation to test how villus size, capillary organization, and proximity to lesions relate to perfusion, with extension to human tissue under development. He also brings confocal 3D imaging and immunofluorescence expertise to the program, with mentorship from Dr. Maria Virumbrales-Munoz (OB-GYN) and Dr. Laura Hernandez (Animal and Dairy Sciences). Dr. Jessica Vazquez leads the Visium FFPE spatial transcriptomics atlas of the primate maternal-fetal interface, building the first cross-gestational spatial map. This work is supported by R01 HD103443 (NICHD) and involves collaboration with Dr. Jenna Schmidt (WNPRC).
+
+### Theme 5: Translational Platforms
+
+MPS, digital pathology, AI/ML, and new approach methodologies
+
+Developing next-generation tools for reproductive immunology: decidual vessel-on-chip microphysiological systems for therapeutic testing, automated digital pathology pipelines for quantitative placental analysis, and AI/ML approaches for multi-omic data integration.
+
+Our translational platforms program develops methodological tools that serve all other research themes. In microphysiological systems, we are building decidual vessel-on-chip models with Dr. Maria Virumbrales-Munoz (OB-GYN) for controlled testing of immune-endothelial crosstalk relevant to preeclampsia. Our computational approaches include multiparameter flow cytometry methods for characterizing peritoneal and decidual immune cells, single-cell technologies in reproductive immunology, and the cytoPipe R package for automated high-parameter flow analysis. In digital pathology, Dr. Logan Keding and Marco Cordero are developing automated QuPath pipelines and 3D confocal approaches for quantitative tissue analysis. Their machine learning work targets computer vision for histological image classification and multi-modal data integration. These platforms are supported across multiple grants including R01 AI182082 (NIAID, Co-I) and strengthen the lab's capacity for mechanistic discovery and clinical translation.
+
+---
+
+## Team
+
+### Scientists and Postdoctoral Fellows
+
+- **Dr. Jessica Vazquez, PhD** — Scientist I. Awards: SRI President's Presenter Award (2018), AAI Minority Scientist Travel Award (2020, 2023–2025). Focus: immune architecture of the maternal-fetal interface, spatiotemporal mapping in human/NHP models. Funded by NIH K01 (2024-2029). Skills: spectral flow cytometry, Visium spatial transcriptomics, CITE-seq, immunofluorescence.
+
+- **Dr. Andrea Wegrzynowicz, PhD** — Postdoctoral Fellow (2024–2026); now Tenure-track Assistant Professor, Colby College. Awards: SRI President's Presenter Award (2026), Best Oral Presentation, Madison Scholars Symposium (2025). Focus: PCOS immune mechanisms, follicular fluid immune profiling, granulosa-immune cell interactions. Skills: single-cell RNA-seq/CITE-seq analysis, spatial transcriptomics, bioinformatics.
+
+- **Dr. Logan Keding, PhD** — Postdoctoral Fellow. Focus: placental injury modeling, quantitative imaging, digital histopathology biomarkers. Awards: ASRI 2025 Poster Award, IFPA 2025 Oral Presentation Award. Skills: quantitative image analysis, MRI data analysis, flow cytometry.
+
+### Graduate Students
+
+- **Mona Mohamed, MD, MSc** — PhD Candidate (ASRI Travel Award and Trainee Poster Competition Finalist, 2025), Endocrinology and Reproductive Physiology Program. Focus: decidual NK cell trafficking and proliferation, T-bet fate mapping. Skills: murine pregnancy models, spectral flow cytometry, confocal imaging.
+
+- **Marco Cordero, MS** — PhD Student (CIRM Bridges Fellowship 2023; SciMed GRS Fellowship 2025–2026), Endocrinology and Reproductive Physiology Program. Focus: digital 2D and 3D pathology, confocal imaging of human placenta. Skills: confocal microscopy, whole-mount clearing, iPSC culture, CRISPR.
+
+### Research Staff
+
+- **Fernanda Leyva Jaimes, BSc** — Research Specialist. Focus: preeclampsia and PCOS immunoassay panels, flow cytometry standardization.
+
+### Administration Team
+
+- **Ally Torres** — Medical Program Assistant, Department of Obstetrics and Gynecology. Administrative support for Dr. Stanic-Kostic and the Division of Reproductive Sciences; first point of contact for inquiries and meeting requests. Email and phone are shown to human visitors on people.html#connect after a short check. Profile: https://www.obgyn.wisc.edu/directory/profile/259426545
+
+### Undergraduate Researchers
+
+Riley Huddleston (AE-PCOS 2025 travel award), Emily Grimes (Hilldale Fellowship, Phi Beta Kappa), Eavan Finnerty (Sophomore Research Fellowship 2026), Roghyah Hasan, Xiang Yi Chen, Arya Choudhury, Sophia Schoenfeld (M1, Shapiro Fellow; Hilldale Fellowship, Ginsberg Family Award), Eiman Mir, Elizabeth Tressler (M2, Shapiro Fellow; Outstanding Medical Student Award 2026), Mercy Kim (visiting from Bowdoin College, summer 2026).
+
+---
+
+## Key Collaborators
+
+- **Dr. Rashmi Sood** — Medical College of Wisconsin. Shared NIH R01 (HL163623, NHLBI): coagulation–inflammation crosstalk in placental abruption. In mice lacking the anticoagulant receptor EPCR, decidual blood clots progress to abruption through thrombin signaling and an acute leukocyte response, changes also detected in human placentas. Our lab contributes the immune and tissue analysis: spatial transcriptomics and digital histopathology across the decidua and placenta, and immune-cell profiling of the decidua.
+- **Dr. Jenna Schmidt** — WNPRC / OB-GYN, UW-Madison. Macaque biology, NHP models
+- **Dr. Ian Bird** — OB-GYN, UW-Madison. Endothelial biology, Ca2+ signaling
+- **Dr. Laura Cooney** — REI, UW-Madison. Clinical PCOS
+- **Dr. Maria Virumbrales-Munoz** — OB-GYN, UW-Madison. Microphysiological systems
+- **Dr. Samantha Schon** — U Michigan. PCOS / obesity, proteomics
+- **Dr. Oliver Wieben** — Medical Physics, UW-Madison. MRI methodology
+- **Dr. Kara Hoppe** — MFM, OB-GYN, UW-Madison. Hypertensive disorders of pregnancy, clinical trials
+- **Dr. João Dorea** — Animal and Dairy Sciences, CALS, UW-Madison.
+
+## Active NIH Funding
+
+| Grant | Institute | Role | Period |
+|-------|-----------|------|--------|
+| R21 AI175753-01 | NIAID | PI | through 2026 |
+| R01 HL163623-01A1 | NHLBI | Site-PI | 2023-2027 |
+| R01 AI182082-01 | NIAID | Co-I | 2024-2029 |
+| R01 HD103443-01 | NICHD | Co-I | 2020-2026 |
+
+---
+
+## Publications (62, from PubMed; the website also merges newer PubMed records at load time)
+
+- Liu RY, Keding LT, Edmondson R, Vazquez J, Antony KM, Johnson KM, Shah DM, Golos TG, Stanic AK, Wieben O (2026). Ferumoxytol dynamic contrast-enhanced MRI for in vivo longitudinal cotyledon perfusion assessment with pathology correlation in a rhesus macaque thrombotic injury model. *Placenta*. PMID 42800416; doi:10.1016/j.placenta.2026.09.014
+- Keding LT, Liu RY, Keding TJ, Vazquez J, Bockoven CG, Shah DM, Golos TG, Wieben O, Stanic AK (2026). Bridging cotyledon histopathology and perfusion in healthy primate pregnancy. *Placenta*. PMID 42696960; doi:10.1016/j.placenta.2026.08.340
+- Mohamed MA, Li Y, Wegrzynowicz AK, Lindner PN, Vazquez J, Lopez GE, Stanic AK (2026). T-bet Fate Mapping Reveals Gestational Stage-Specific Transcriptional Adaptation of Decidual NK Cells. *Am J Reprod Immunol*. PMID 41782473; doi:10.1111/aji.70220
+- Wegrzynowicz AK, Banerjee S, Grimes E, Huddleston R, Jaimes FL, Cooney LG, Stanic AK (2026). Single-cell analysis of follicular fluid reveals dysregulation of ovulatory immune function in PCOS patients undergoing ovarian stimulation. *Biol Reprod*. PMID 41766605; doi:10.1093/biolre/ioag051
+- Wegrzynowicz AK, Dudley CM, Cooney LG, Stanic AK (2025). Maternal complications of pregnancy in polycystic ovary syndrome. *Reproduction*. PMID 41175857; doi:10.1530/REP-25-0108
+- Dahn RL, Lett BM, Clemente L, Austin JL, Yi FX, Boeldt DS, Stanic AK, Ong IM, Bird IM (2025). Single-cell analysis of uterine artery endothelial cells reveals cytokine-induced emergence of specific immunomodulatory subtypes: implications for preeclampsia. *J Mol Endocrinol*. PMID 41001725; doi:10.1530/JME-24-0086
+- Banerjee S, Jaimes FL, Mohamed MA, Zettel A, Graupe NG, Cooney LG, Stanic AK (2025). High-dimensional immune profiling of follicular fluid and systemic circulation reveals distinct immune signatures in women with polycystic ovary syndrome. *Front Immunol*. PMID 40861442; doi:10.3389/fimmu.2025.1628031
+- Keding LT, Vazquez J, Liu RY, Bove E, Dorobek J, Simmons HA, Antony KM, Racine JL, Shah DM, Wieben O, Golos TG, Stanic AK (2025). Monocyte chemoattractant Protein-1 (MCP-1) decreases mineralization of the villous stroma in the macaque placenta. *Placenta*. PMID 40738045; doi:10.1016/j.placenta.2025.07.083
+- Koenig MR, Vazquez J, Leyva Jaimes FB, Mitzey AM, Stanic AK, Golos TG (2024). Decidual leukocytes respond to African lineage Zika virus infection with mild anti-inflammatory changes during acute infection in rhesus macaques. *Front Immunol*. PMID 38515747; doi:10.3389/fimmu.2024.1363169
+- Chen R, Seiter D, Keding LT, Vazquez J, Antony KM, Simmons HA, Basu P, Mejia AF, Johnson KM, Stanic AK, Liu RY, Shah DM, Golos TG, Wieben O (2024). Cotyledon-Specific Flow Evaluation of Rhesus Macaque Placental Injury Using Ferumoxytol Dynamic Contrast-Enhanced MRI. *J Magn Reson Imaging*. PMID 38375996; doi:10.1002/jmri.29291
+- Vazquez J, Mohamed MA, Banerjee S, Keding LT, Koenig MR, Leyva Jaimes F, Fisher RC, Bove EM, Golos TG, Stanic AK (2023). Deciphering decidual leukocyte traffic with serial intravascular staining. *Front Immunol*. PMID 38268922; doi:10.3389/fimmu.2023.1332943
+- Chasman DA, Welch Schwartz R, Vazquez J, Chavarria M, Jenkins ET, Lopez GE, Tyler CT, Stanic AK, Ong IM (2023). Proteogenomic and V(D)J Analysis of Human Decidual T Cells Highlights Unique Transcriptional Programming and Clonal Distribution. *J Immunol*. PMID 37195197; doi:10.4049/jimmunol.2200061
+- Banerjee S, Cooney LG, Stanic AK (2023). Immune Dysfunction in Polycystic Ovary Syndrome. *ImmunoHorizons*. PMID 37195871; doi:10.4049/immunohorizons.2200033
+- Lo JO, Boniface ER, Heflin A, Stanic-Kostic AK, Fuh KC, Schust DJ (2023). Reproductive Scientist Development Program: Bridging the Gap to the Physician Scientist Career. *Reprod Sci*. PMID 37020073; doi:10.1007/s43032-023-01234-8
+- Rengarajan A, Austin JL, Stanic AK, Patankar MS, Boeldt DS (2023). Mononuclear Cells Negatively Regulate Endothelial Ca2+ Signaling. *Reprod Sci*. PMID 36717462; doi:10.1007/s43032-023-01164-5
+- Antony KM, Rice AL, Bajaj S, Wiedmer AM, Jacobson N, Nick J, Eichmann A, Stanic AK, Bazalakova MH (2023). Determinants of non-completion of sleep apnea testing during pregnancy. *Front Sleep*. PMID 41426449; doi:10.3389/frsle.2023.1144213
+- Rice AL, Bajaj S, Wiedmer AM, Jacobson N, Stanic AK, Antony KM, Bazalakova MH (2023). Continuous positive airway pressure treatment of obstructive sleep apnea and hypertensive complications in high-risk pregnancy. *Sleep Breath*. PMID 35750926; doi:10.1007/s11325-022-02669-0
+- Vazquez J, Sheerar D, Stanic AK, Patankar MS (2022). Multiparameter Flow Cytometry for Detailed Characterization of Peritoneal Immune Cells from Patients with Ovarian Cancer. *Methods Mol Biol*. PMID 34918286; doi:10.1007/978-1-0716-1956-8_3
+- Vazquez J, Chavarria M, Chasman DA, Welch Schwartz R, Tyler CT, Lopez G, Fisher RC, Ong IM, Stanic AK (2021). Multiomic analysis reveals decidual-specific transcriptional programing of MAIT cells. *Am J Reprod Immunol*. PMID 34411378; doi:10.1111/aji.13495
+- Uppal S, Medlin E, Felder M, Kapur A, Sterner RC, Vazquez J, Lindner PN, Stanic AK, Barroilhet L, Gonzalez-Bosquet J, Patankar MS (2021). Identifying novel ovarian tumor biomarkers through mining of the transcriptome of circulating immune cells. *Am J Reprod Immunol*. PMID 34022086; doi:10.1111/aji.13469
+- Block LN, Bowman BD, Schmidt JK, Keding LT, Stanic AK, Golos TG (2021). The promise of placental extracellular vesicles: models and challenges for diagnosing placental dysfunction in utero. *Biol Reprod*. PMID 32856695; doi:10.1093/biolre/ioaa152
+- Carballo EV, Gyorfi KM, Stanic AK, Weisman P, Flynn CG, Kushner DM (2020). Benign ovarian thecoma with markedly elevated serum inhibin B levels mimicking adult granulosa cell tumor. *Gynecol Oncol Rep*. PMID 33204793; doi:10.1016/j.gore.2020.100658
+- Hess NJ, Lindner PN, Vazquez J, Grindel S, Hudson AW, Stanic AK, Ikeda A, Hematti P, Gumperz JE (2020). Different Human Immune Lineage Compositions Are Generated in Non-Conditioned NBSGW Mice Depending on HSPC Source. *Front Immunol*. PMID 33193358; doi:10.3389/fimmu.2020.573406
+- Vazquez J, Chavarria M, Lopez GE, Felder MA, Kapur A, Romo Chavez A, Karst N, Barroilhet L, Patankar MS, Stanic AK (2020). Identification of unique clusters of T, dendritic, and innate lymphoid cells in the peritoneal fluid of ovarian cancer patients. *Am J Reprod Immunol*. PMID 32524661; doi:10.1111/aji.13284
+- Li Y, Lopez GE, Lindner PN, Parrella L, Larson M, Sun Y, Stanic AK (2020). The role of RORγt at maternal-fetal interface during murine pregnancy. *Am J Reprod Immunol*. PMID 32314428; doi:10.1111/aji.13250
+- Vazquez J, Chasman DA, Lopez GE, Tyler CT, Ong IM, Stanic AK (2019). Transcriptional and Functional Programming of Decidual Innate Lymphoid Cells. *Front Immunol*. PMID 32038619; doi:10.3389/fimmu.2019.03065
+- Vazquez J, Ong IM, Stanic AK (2019). Single-cell technologies in reproductive immunology. *Am J Reprod Immunol*. PMID 31206899; doi:10.1111/aji.13157
+- Li Y, Lopez GE, Vazquez J, Sun Y, Chavarria M, Lindner PN, Fredrickson S, Karst N, Stanic AK (2018). Decidual-Placental Immune Landscape During Syngeneic Murine Pregnancy. *Front Immunol*. PMID 30283441; doi:10.3389/fimmu.2018.02087
+- Vazquez J, Chavarria M, Li Y, Lopez GE, Stanic AK (2018). Computational flow cytometry analysis reveals a unique immune signature of the human maternal-fetal interface. *Am J Reprod Immunol*. PMID 29030900; doi:10.1111/aji.12774
+- Kumar A, Gordy LE, Bezbradica JS, Stanic AK, Hill TM, Boothby MR, Van Kaer L, Joyce S (2017). NF-kappaB Protects NKT Cells from Tumor Necrosis Factor Receptor 1-induced Death. *Sci Rep*. PMID 29142275; doi:10.1038/s41598-017-15461-y
+- Kumar A, Bezbradica JS, Stanic AK, Joyce S (2017). Characterization and Functional Analysis of Mouse Semi-invariant Natural T Cells. *Curr Protoc Immunol*. PMID 28369682; doi:10.1002/cpim.22
+- Romanski PA, Melamed A, Elias KM, Stanic AK, Anchan RM (2017). Association between peak estradiol levels and ovarian torsion among symptomatic patients receiving gonadotropin treatment. *J Assist Reprod Genet*. PMID 28299550; doi:10.1007/s10815-017-0901-y
+- Botzolakis EJ, Gurba KN, Lagrange AH, Feng HJ, Stanic AK, Hu N, Macdonald RL (2016). Comparison of GABAA Receptor alphabetagamma and alphabetadelta Expression Using Flow Cytometry and Electrophysiology. *J Biol Chem*. PMID 27493204; doi:10.1074/jbc.M115.698860
+- Todd E, Gurba KN, Botzolakis EJ, Stanic AK, Macdonald RL (2014). GABAA receptor biogenesis is impaired by the gamma2 subunit febrile seizure-associated mutation, GABRG2(R177G). *Neurobiol Dis*. PMID 24874541; doi:10.1016/j.nbd.2014.05.013
+- Attaman JA, Stanic AK, Kim M, Lynch MP, Rueda BR, Styer AK (2014). The anti-inflammatory impact of omega-3 polyunsaturated Fatty acids during the establishment of endometriosis-like lesions. *Am J Reprod Immunol*. PMID 24898804; doi:10.1111/aji.12276
+- Stanic AK, Kim M, Styer AK, Rueda BR (2014). Dendritic cells attenuate the early establishment of endometriosis-like lesions in a murine model. *Reprod Sci*. PMID 24594835; doi:10.1177/1933719114525267
+- Young BC, Stanic AK, Panda B, Rueda BR, Panda A (2014). Longitudinal expression of Toll-like receptors on dendritic cells in uncomplicated pregnancy and postpartum. *Am J Obstet Gynecol*. PMID 24291497; doi:10.1016/j.ajog.2013.11.037
+- Brady PC, Stanic AK, Styer AK (2013). Uterine fibroids and subfertility: an update on the role of myomectomy. *Curr Opin Obstet Gynecol*. PMID 23562956; doi:10.1097/GCO.0b013e3283612188
+- Panda B, Panda A, Ueda I, Abrahams VM, Norwitz ER, Stanic AK, Young BC, Ecker JL, Altfeld M, Shaw AC, Rueda BR (2012). Dendritic cells in the circulation of women with preeclampsia demonstrate a pro-inflammatory bias secondary to dysregulation of TLR receptors. *J Reprod Immunol*. PMID 22440523; doi:10.1016/j.jri.2012.01.008
+- Gordy LE, Bezbradica JS, Flyak AI, Spencer CT, Dunkle A, Sun J, Stanic AK, Boothby MR, He YW, Zhao Z, Van Kaer L, Joyce S (2011). IL-15 regulates homeostasis and terminal maturation of NKT cells. *J Immunol*. PMID 22084435; doi:10.4049/jimmunol.1003965
+- Bezbradica JS, Stanic AK, Joyce S (2006). Characterization and functional analysis of mouse invariant natural T (iNKT) cells. *Curr Protoc Immunol*. PMID 18432968; doi:10.1002/0471142735.im1413s73
+- Bezbradica JS, Gordy LE, Stanic AK, Dragovic S, Hill T, Hawiger J, Unutmaz D, Van Kaer L, Joyce S (2006). Granulocyte-macrophage colony-stimulating factor regulates effector differentiation of invariant natural killer T cells during thymic ontogeny. *Immunity*. PMID 16949316; doi:10.1016/j.immuni.2006.06.017
+- Stanic AK, Stein CM, Morgan AC, Fazio S, Linton MF, Wakeland EK, Olsen NJ, Major AS (2006). Immune dysregulation accelerates atherosclerosis and modulates plaque composition in systemic lupus erythematosus. *Proc Natl Acad Sci U S A*. PMID 16636270; doi:10.1073/pnas.0602311103
+- Bezbradica JS, Stanic AK, Matsuki N, Bour-Jordan H, Bluestone JA, Thomas JW, Unutmaz D, Van Kaer L, Joyce S (2005). Distinct roles of dendritic cells and B cells in Va14Ja18 natural T cell activation in vivo. *J Immunol*. PMID 15814694; doi:10.4049/jimmunol.174.8.4696
+- Bezbradica JS, Hill T, Stanic AK, Van Kaer L, Joyce S (2005). Commitment toward the natural T (iNKT) cell lineage occurs at the CD4+8+ stage of thymic ontogeny. *Proc Natl Acad Sci U S A*. PMID 15792999; doi:10.1073/pnas.0408449102
+- Major AS, Wilson MT, McCaleb JL, Ru Su Y, Stanic AK, Joyce S, Van Kaer L, Fazio S, Linton MF (2004). Quantitative and qualitative differences in proatherogenic NKT cells in apolipoprotein E-deficient mice. *Arterioscler Thromb Vasc Biol*. PMID 15472130; doi:10.1161/01.ATV.0000147112.84168.87
+- Stanic AK, Bezbradica JS, Park JJ, Van Kaer L, Boothby MR, Joyce S (2004). Cutting edge: the ontogeny and function of Va14Ja18 natural T lymphocytes require signal processing by protein kinase C theta and NF-kappa B. *J Immunol*. PMID 15067039; doi:10.4049/jimmunol.172.8.4667
+- Stanic AK, Bezbradica JS, Park JJ, Matsuki N, Mora AL, Van Kaer L, Boothby MR, Joyce S (2004). NF-kappa B controls cell fate specification, survival, and molecular differentiation of immunoregulatory natural T lymphocytes. *J Immunol*. PMID 14764695; doi:10.4049/jimmunol.172.4.2265
+- Park JJ, Kang SJ, De Silva AD, Stanic AK, Casorati G, Hachey DL, Cresswell P, Joyce S (2004). Lipid-protein interactions: biosynthetic assembly of CD1 with lipids in the endoplasmic reticulum is evolutionarily conserved. *Proc Natl Acad Sci U S A*. PMID 14722359; doi:10.1073/pnas.0307847100
+- Stanic AK, Shashidharamurthy R, Bezbradica JS, Matsuki N, Yoshimura Y, Miyake S, Choi EY, Schell TD, Van Kaer L, Tevethia SS, Roopenian DC, Yamamura T, Joyce S (2003). Another view of T cell antigen recognition: cooperative engagement of glycolipid antigens by Va14Ja18 natural T(iNKT) cell receptor [corrected]. *J Immunol*. PMID 14568927; doi:10.4049/jimmunol.171.9.4539
+- Wilson MT, Johansson C, Olivares-Villagómez D, Singh AK, Stanic AK, Wang CR, Joyce S, Wick MJ, Van Kaer L (2003). The response of natural killer T cells to glycolipid antigens is characterized by surface receptor down-modulation and expansion. *Proc Natl Acad Sci U S A*. PMID 12960397; doi:10.1073/pnas.1833166100
+- Mora AL, Corn RA, Stanic AK, Goenka S, Aronica M, Stanley S, Ballard DW, Joyce S, Boothby M (2003). Antiapoptotic function of NF-kappaB in T lymphocytes is influenced by their differentiation status: roles of Fas, c-FLIP, and Bcl-xL. *Cell Death Differ*. PMID 12934078; doi:10.1038/sj.cdd.4401257
+- Yang JQ, Singh AK, Wilson MT, Satoh M, Stanic AK, Park JJ, Hong S, Gadola SD, Mizutani A, Kakumanu SR, Reeves WH, Cerundolo V, Joyce S, Van Kaer L, Singh RR (2003). Immunoregulatory role of CD1d in the hydrocarbon oil-induced model of lupus nephritis. *J Immunol*. PMID 12902521; doi:10.4049/jimmunol.171.4.2142
+- Motsinger A, Azimzadeh A, Stanic AK, Johnson RP, Van Kaer L, Joyce S, Unutmaz D (2003). Identification and simian immunodeficiency virus infection of CD1d-restricted macaque natural killer T cells. *J Virol*. PMID 12829854; doi:10.1128/jvi.77.14.8153-8158.2003
+- Matsuki N, Stanic AK, Embers ME, Van Kaer L, Morel L, Joyce S (2003). Genetic dissection of V alpha 14J alpha 18 natural T cell number and function in autoimmune-prone mice. *J Immunol*. PMID 12759418; doi:10.4049/jimmunol.170.11.5429
+- Stanic AK, Park JJ, Joyce S (2003). Innate self recognition by an invariant, rearranged T-cell receptor and its immune consequences. *Immunology*. PMID 12757612; doi:10.1046/j.1365-2567.2003.01657.x
+- Yadav R, Yoshimura Y, Boesteanu A, Christianson GJ, Ajayi WU, Shashidharamurthy R, Stanic AK, Roopenian DC, Joyce S (2003). The H4b minor histocompatibility antigen is caused by a combination of genetically determined and posttranslational modifications. *J Immunol*. PMID 12734360; doi:10.4049/jimmunol.170.10.5133
+- Chun T, Page MJ, Gapin L, Matsuda JL, Xu H, Nguyen H, Kang HS, Stanic AK, Joyce S, Koltun WA, Chorney MJ, Kronenberg M, Wang CR (2003). CD1d-expressing dendritic cells but not thymic epithelial cells can mediate negative selection of NKT cells. *J Exp Med*. PMID 12682110; doi:10.1084/jem.20021366
+- Stanic AK, De Silva AD, Park JJ, Sriram V, Ichikawa S, Hirabyashi Y, Hayakawa K, Van Kaer L, Brutkiewicz RR, Joyce S (2003). Defective presentation of the CD1d1-restricted natural Va14Ja18 NKT lymphocyte antigen caused by beta-D-glucosylceramide synthase deficiency. *Proc Natl Acad Sci U S A*. PMID 12576547; doi:10.1073/pnas.0430327100
+- Motsinger A, Haas DW, Stanic AK, Van Kaer L, Joyce S, Unutmaz D (2002). CD1d-restricted human natural killer T cells are highly susceptible to human immunodeficiency virus 1 infection. *J Exp Med*. PMID 11927631; doi:10.1084/jem.20011712
+- De Silva AD, Park JJ, Matsuki N, Stanic AK, Brutkiewicz RR, Medof ME, Joyce S (2002). Lipid protein interactions: the assembly of CD1d1 with cellular phospholipids occurs in the endoplasmic reticulum. *J Immunol*. PMID 11777966; doi:10.4049/jimmunol.168.2.723
+- Singh AK, Wilson MT, Hong S, Olivares-Villagómez D, Du C, Stanic AK, Joyce S, Sriram S, Koezuka Y, Van Kaer L (2001). Natural killer T cell activation protects mice against experimental autoimmune encephalomyelitis. *J Exp Med*. PMID 11748281; doi:10.1084/jem.194.12.1801
+
+---
+
+## Methodological Capabilities
+
+- Visium FFPE Spatial Transcriptomics (with PlacenCell Enrich and RCTD deconvolution)
+- CITE-seq: simultaneous protein and RNA measurement
+- Spectral Flow Cytometry: multi-parameter (18+ colors), Staining Index optimization
+- Microphysiological Systems: decidual vessel-on-chip for T cell-endothelial co-culture
+- Digital Histopathology: QuPath, Python OpenCV, automated image analysis
+- AI/ML: multi-omic integration, computer vision, predictive modeling
+- Confocal and whole-mount fluorescent imaging
+- MRI-pathology correlation (Ferumoxytol DCE, R2* mapping)
+
+---
+
+## Model Systems
+
+- **Rhesus Macaque**: Gold standard primate model; cross-gestational sampling. Used for spatial atlas and PCOS pilot. Led in partnership with Dr. Jenna Schmidt (Wisconsin National Primate Research Center).
+- **Human**: Clinical translation and biomarker validation. Used for CITE-seq and clinical sample analysis.
+- **Mouse**: Genetic manipulation and fate mapping. Used for T-bet/NK cell trafficking studies.
+- **MPS (Vessel-on-chip)**: Controlled conditions for therapeutic testing. Used for PE immune-endothelial crosstalk. Led in partnership with Dr. Maria Virumbrales-Munoz (OB-GYN, UW-Madison).
+
+---
+
+## Professional Societies
+
+Communities where our lab presents research, shapes the field, and advocates for reproductive immunology.
+
+- Society for Reproductive Investigation (SRI): https://www.sri-online.org/
+- American Society for Reproductive Immunology (ASRI): https://www.theasri.org/
+- American Society for Reproductive Medicine (ASRM): https://www.asrm.org/
+- Society for Maternal-Fetal Medicine (SMFM): https://www.smfm.org/
+- International Federation of Placenta Associations (IFPA): https://ifpaofficial.com/
+- American Association of Immunologists (AAI): https://www.aai.org/
+
+---
+
+## Connect with us
+[Get in touch](people.html#connect)
+
+Stanic Laboratory for Reproductive Immunology
+Department of Obstetrics and Gynecology
+University of Wisconsin-Madison
+School of Medicine and Public Health
+1111 Highland Ave, Madison, WI 53705
+
+Inquiries and meeting requests: Ally Torres, Medical Program Assistant. Email and phone are shown to human visitors on people.html#connect after a short check. Profile: https://www.obgyn.wisc.edu/directory/profile/259426545
+Office: McConnell Hall, 2nd Floor, 1010 Mound St., Madison, WI 53715
+Department website: https://www.obgyn.wisc.edu
+Twitter: @StanicLabUW (lab), @WiscObGyn (department)
+
+Code and data: Lab datasets & code — https://github.com/staniclab; Personal projects — https://github.com/alexs42

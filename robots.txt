@@ -1,0 +1,35 @@
+# Stanic Lab — Reproductive Immunology
+# University of Wisconsin-Madison
+#
+# We welcome AI agents and crawlers.
+# This site is built for both humans and machines.
+
+User-agent: *
+Allow: /
+
+# AI crawlers explicitly welcome
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+# Machine-readable documentation
+# llms.txt: Brief lab overview for LLM context
+# llms-full.txt: Complete documentation (~3000 words)
+# agents.txt: Agent capability declarations
+# sitemap.xml: All pages with metadata
+
+Sitemap: https://staniclab.org/sitemap.xml
