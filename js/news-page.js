@@ -26,18 +26,26 @@
     `).join('');
   }
 
-  fetch('data/uw-news-cache.json')
+  window.renderUwNews = function(articles) {
+    window.UW_NEWS_ARTICLES = articles.slice(0, 6);
+    if (!window.UW_NEWS_ARTICLES.length) return;
+    const container = document.getElementById('uw-news-container');
+    container.innerHTML = '<div class="uw-news-grid">' + window.UW_NEWS_ARTICLES.map(article => `
+      <div class="uw-news-card">
+        <p class="date">${html(article.date || '')}</p>
+        <h4><a href="${href(article.link)}" target="_blank" rel="noopener">${html(article.title)}</a></h4>
+        <p>${html(article.summary || '')}</p>
+      </div>
+    `).join('') + '</div>';
+  };
+
+  window.UW_NEWS_READY = fetch('data/uw-news-cache.json')
     .then(response => response.ok ? response.json() : null)
     .then(data => {
-      if (!data || !Array.isArray(data.articles) || data.articles.length === 0) return;
-      const container = document.getElementById('uw-news-container');
-      container.innerHTML = '<div class="uw-news-grid">' + data.articles.map(article => `
-        <div class="uw-news-card">
-          <p class="date">${html(article.date || '')}</p>
-          <h4><a href="${href(article.link)}" target="_blank" rel="noopener">${html(article.title)}</a></h4>
-          <p>${html(article.summary || '')}</p>
-        </div>
-      `).join('') + '</div>';
+      if (!data || !Array.isArray(data.articles)) return;
+      window.UW_NEWS_LAST_UPDATED = data.lastUpdated;
+      window.renderUwNews(data.articles);
+      return data.articles;
     })
     .catch(() => {});
 })();

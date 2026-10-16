@@ -667,8 +667,10 @@ ${(LAB_DATA.societies || []).map(s => `  - abbrev: ${q(s.abbrev)}\n    name: ${q
     const uwNews = document.getElementById('uw-news');
     if (uwNews) {
       const source = 'https://www.obgyn.wisc.edu/categories/stanic-kostic-research-team';
-      fetch('data/uw-news-cache.json')
-        .then(r => r.ok ? r.json() : null)
+      const newsData = Array.isArray(window.UW_NEWS_ARTICLES)
+        ? Promise.resolve({ articles: window.UW_NEWS_ARTICLES, lastUpdated: window.UW_NEWS_LAST_UPDATED })
+        : fetch('data/uw-news-cache.json').then(r => r.ok ? r.json() : null);
+      newsData
         .then(data => {
           const items = (data && data.articles) ? data.articles.map(a =>
             `- [${a.date || ''}] ${a.title}\n  ${a.summary || ''}\n  link: ${a.link}`

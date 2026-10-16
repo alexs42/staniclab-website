@@ -7,7 +7,7 @@
 - [Home](index.html): Lab overview, mission, research highlights, team preview
 - [People](people.html): Team members, collaborator network, alumni
 - [Research](research.html): Research directions, publications, methods, model systems
-- [News](news.html): Lab news, UW OB/GYN news mirror, photo gallery, timeline
+- [News](news.html): Lab news, UW OB/GYN news mirror (new department posts are merged in the browser at load time), photo gallery, timeline
 
 ## Research Themes
 1. **Decidual Immune Regulation** — T cells, innate lymphoid cells, and immune-vascular crosstalk at the maternal-fetal interface
